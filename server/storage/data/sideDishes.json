@@ -1,0 +1,42 @@
+[
+    {
+        "id": 11,
+        "name": "Сheese sauce",
+        "description": "Perfect for any pizza",
+        "price": 2,
+        "img": "../image/sidedish-1.jpeg",
+        "category": "side-dishes",
+        "type": "sauce",
+        "rating": 5
+    },
+    {
+        "id": 12,
+        "name": "Hot sauce",
+        "description": "Dangerously spicy",
+        "price": 2,
+        "img": "../image/sidedish-2.jpeg",
+        "category": "side-dishes",
+        "type": "sauce",
+        "rating": 3
+    },
+    {
+        "id": 13,
+        "name": "French fries",
+        "description": "Crispy fries",
+        "price": 7,
+        "img": "../image/sidedish-3.jpeg",
+        "category": "side-dishes",
+        "type": "deep-frying",
+        "rating": 5
+    },
+    {
+        "id": 14,
+        "name": "Onion rings",
+        "description": "Spicy crispy rings",
+        "price": 9,
+        "img": "../image/sidedish-4.jpeg",
+        "category": "side-dishes",
+        "type": "deep-frying",
+        "rating": 4
+    }
+]
