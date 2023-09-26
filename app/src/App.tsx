@@ -1,11 +1,10 @@
-import React from 'react';
-import './App.css';
+import styles from './App.module.scss';
 
 function App() {
   return (
-    <>
+    <div className={styles.wrapper}>
       
-    </>
+    </div>
   );
 }
 
