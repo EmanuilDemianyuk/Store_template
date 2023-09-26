@@ -1,10 +1,14 @@
-import styles from './App.module.scss';
+// import styles from './App.module.scss';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className={styles.wrapper}>
-      
+    <div>
+      <Navbar />
     </div>
+    // <div className={styles.wrapper}>
+    //   <Navbar />
+    // </div>
   );
 }
 
