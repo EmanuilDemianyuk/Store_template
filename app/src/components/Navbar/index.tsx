@@ -6,8 +6,9 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
  
-export default function Header() {
+export default function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
  
   React.useEffect(() => {
@@ -25,9 +26,9 @@ export default function Header() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Pages
-        </a>
+        <Link to="/" className="flex items-center">
+          Home
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -35,9 +36,9 @@ export default function Header() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Account
-        </a>
+        <Link to="/menu" className="flex items-center">
+          Menu
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -45,9 +46,9 @@ export default function Header() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Blocks
-        </a>
+        <Link to="/about" className="flex items-center">
+          About
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -55,9 +56,9 @@ export default function Header() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
-          Docs
-        </a>
+        <Link to="/contact" className="flex items-center">
+          Contact
+        </Link>
       </Typography>
     </ul>
   );
