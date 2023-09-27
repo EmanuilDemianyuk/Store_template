@@ -1,5 +1,4 @@
 // import styles from './App.module.scss';
-import Header from "./components/NavBar";
 import {
   BrowserRouter,
   Link,
