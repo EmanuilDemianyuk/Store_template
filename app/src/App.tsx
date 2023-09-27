@@ -1,14 +1,19 @@
 // import styles from './App.module.scss';
-import Navbar from './components/Navbar';
+import Header from "./components/Navbar";
+import {
+  BrowserRouter,
+  Link,
+  Route,
+  Routes,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-    </div>
-    // <div className={styles.wrapper}>
-    //   <Navbar />
-    // </div>
+    <BrowserRouter>
+      <Routes>
+        
+      </Routes>
+    </BrowserRouter>
   );
 }
 
