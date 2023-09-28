@@ -4,10 +4,9 @@ import  NavMenu from '../../components/NavMenu';
 const Header = ():JSX.Element => {
   return (
     <>
-        <NavMenu/>
-        
+      <NavMenu/>
     </>
-  )
+  );
 }
 
 export default Header;

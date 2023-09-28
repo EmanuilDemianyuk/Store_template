@@ -10,9 +10,12 @@ module.exports = withMT({
       center: true,
     },
     fontFamily: {
-      'logo': ['Paytone One', 'sans-serif'],
-      'content': ['Nunito'],
-      'header': ['Josefin Sans']
+      logo: ['Paytone One', 'sans-serif'],
+      content: ['Nunito'],
+      header: ['Josefin Sans']
+    },
+    colors: {
+      'light-green': '#dcfce7'
     },
     extend: {},
   },

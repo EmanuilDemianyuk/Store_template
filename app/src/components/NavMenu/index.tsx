@@ -4,6 +4,7 @@ import {
   MobileNav,
   Typography,
   Button,
+  ButtonGroup,
   IconButton,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
@@ -22,41 +23,37 @@ export default function NavMenu() {
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-content"
+        color="black"
+        className="p-1 font-content font-bold"
       >
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center hover:text-green-700 hover:underline">
           Home
         </Link>
       </Typography>
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+        color="black"
+        className="p-1 font-content font-bold"
       >
-        <Link to="/menu" className="flex items-center">
+        <Link to="/menu" className="flex items-center hover:text-green-700 hover:underline">
           Menu
         </Link>
       </Typography>
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+        color="black"
+        className="p-1 font-content font-bold"
       >
-        <Link to="/about" className="flex items-center">
+        <Link to="/about" className="flex items-center hover:text-green-700 hover:underline">
           About
         </Link>
       </Typography>
       <Typography
         as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+        color="black"
+        className="p-1 font-content font-bold"
       >
-        <Link to="/contact" className="flex items-center">
+        <Link to="/contact" className="flex items-center hover:text-green-700 hover:underline">
           Contact
         </Link>
       </Typography>
@@ -64,19 +61,24 @@ export default function NavMenu() {
   );
  
   return (
-    <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
-      <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+    <Navbar className="bg-light-green rounded-none border-none shadow-none mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
+      <div className="container flex items-center justify-between text-green-700">
         <Typography
           as="a"
           href="#"
-          className="mr-4 cursor-pointer py-1.5 font-medium"
+          className="mr-4 cursor-pointer py-1.5 font-logo text-4xl"
         >
-          Material Tailwind
+          <span className='text-green-700'>Yum</span><span className='text-orange-500'>Pizza</span>
         </Typography>
         <div className="hidden lg:block">{navList}</div>
-        <Button variant="gradient" size="sm" className="hidden lg:inline-block">
-          <span>Buy Now</span>
-        </Button>
+        <div className="flex items-center gap-4">
+        <IconButton className="rounded-full bg-green-700 hidden lg:inline-block">
+          <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
+        </IconButton>
+        <IconButton className="rounded-full bg-green-700 hidden lg:inline-block">
+          <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
+        </IconButton>
+        </div>
         <IconButton
           variant="text"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -116,11 +118,20 @@ export default function NavMenu() {
         </IconButton>
       </div>
       <MobileNav open={openNav}>
-        <div className="container mx-auto">
+        <div className="container">
           {navList}
-          <Button variant="gradient" size="sm" fullWidth className="mb-2">
-            <span>Buy Now</span>
-          </Button>
+          <ButtonGroup fullWidth size="sm">
+            <Button className="bg-green-700">
+            <IconButton className="bg-transparent border-none shadow-none">
+              <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
+            </IconButton>
+            </Button>
+            <Button className="bg-green-700">
+            <IconButton className="bg-transparent border-none shadow-none">
+              <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
+            </IconButton>
+            </Button>
+          </ButtonGroup>
         </div>
       </MobileNav>
     </Navbar>

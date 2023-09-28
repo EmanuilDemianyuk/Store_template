@@ -1,7 +1,6 @@
 // import styles from './App.module.scss';
 import {
   BrowserRouter,
-  Link,
   Route,
   Routes,
 } from "react-router-dom";
