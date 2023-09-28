@@ -7,7 +7,7 @@ import ptwohome from '../../assets/img/ptwohome.png';
 
 function Welcome():JSX.Element {
     return (
-        <section className='container rounded bg-green-700 max-h-max max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4'>
+        <section className='container rounded bg-green-700 mb-5 max-h-max max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4'>
             <div className='flex text-white'>
                 <div className='mt-10 mb-10 sm:basis-1/2 md:basis-2/5 md:mt-24 md:mb-24 lg:basis-1/2 lg:mt-24 lg:mb-24'>
                     <h2 className='font-header text-3xl lg:text-5xl mb-3'>
