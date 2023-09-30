@@ -1,10 +1,10 @@
 import React from 'react';
-import NavBar from '../../components/NavBar';
+import  NavMenu from '../../components/NavMenu';
 
 const Header = ():JSX.Element => {
   return (
     <>
-        <NavBar/>
+        <NavMenu/>
         
     </>
   )

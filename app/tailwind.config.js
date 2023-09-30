@@ -9,6 +9,11 @@ module.exports = withMT({
     container: {
       center: true,
     },
+    fontFamily: {
+      'logo': ['Paytone One', 'sans-serif'],
+      'content': ['Nunito'],
+      'header': ['Josefin Sans']
+    },
     extend: {},
   },
   plugins: [],

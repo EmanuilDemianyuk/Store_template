@@ -8,7 +8,7 @@ import {
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
  
-export default function NavBar() {
+export default function NavMenu() {
   const [openNav, setOpenNav] = React.useState(false);
  
   React.useEffect(() => {
@@ -24,7 +24,7 @@ export default function NavBar() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-1 font-content"
       >
         <Link to="/" className="flex items-center">
           Home
