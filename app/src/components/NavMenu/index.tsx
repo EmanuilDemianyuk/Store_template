@@ -8,6 +8,12 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+
+type Options = {
+  ul: string,
+  link: string,
+  icon: string
+}
  
 export default function NavMenu() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -18,15 +24,22 @@ export default function NavMenu() {
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
+
+  const options: Options = {
+    ul: 'mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6',
+    link: 'flex items-center hover:text-BrandDarkGreen hover:underline',
+    icon: 'rounded-full bg-BrandDarkGreen hidden lg:inline-block'
+  }
+  const { ul, link, icon } = options;
  
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className={ul}>
       <Typography
         as="li"
         color="black"
         className="p-1 font-content font-bold"
       >
-        <Link to="/" className="flex items-center hover:text-green-700 hover:underline">
+        <Link to="/" className={link}>
           Home
         </Link>
       </Typography>
@@ -35,7 +48,7 @@ export default function NavMenu() {
         color="black"
         className="p-1 font-content font-bold"
       >
-        <Link to="/menu" className="flex items-center hover:text-green-700 hover:underline">
+        <Link to="/menu" className={link}>
           Menu
         </Link>
       </Typography>
@@ -44,7 +57,7 @@ export default function NavMenu() {
         color="black"
         className="p-1 font-content font-bold"
       >
-        <Link to="/about" className="flex items-center hover:text-green-700 hover:underline">
+        <Link to="/about" className={link}>
           About
         </Link>
       </Typography>
@@ -53,7 +66,7 @@ export default function NavMenu() {
         color="black"
         className="p-1 font-content font-bold"
       >
-        <Link to="/contact" className="flex items-center hover:text-green-700 hover:underline">
+        <Link to="/contact" className={link}>
           Contact
         </Link>
       </Typography>
@@ -62,20 +75,20 @@ export default function NavMenu() {
  
   return (
     <Navbar className="bg-inherit rounded-none border-none shadow-none mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
-      <div className="container flex items-center justify-between text-green-700">
+      <div className="container flex items-center justify-between text-BrandDarkGreen">
         <Typography
           as="a"
           href="#"
           className="mr-4 cursor-pointer py-1.5 font-logo text-4xl"
         >
-          <span className='text-green-700'>Yum</span><span className='text-orange-500'>Pizza</span>
+          <span className='text-BrandDarkGreen'>Yum</span><span className='text-orange-500'>Pizza</span>
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <div className="flex items-center gap-4">
-        <IconButton className="rounded-full bg-green-700 hidden lg:inline-block">
+        <IconButton className={icon}>
           <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
         </IconButton>
-        <IconButton className="rounded-full bg-green-700 hidden lg:inline-block">
+        <IconButton className={icon}>
           <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
         </IconButton>
         </div>
@@ -121,12 +134,12 @@ export default function NavMenu() {
         <div className="container">
           {navList}
           <ButtonGroup fullWidth size="sm">
-            <Button className="bg-green-700">
+            <Button className="bg-BrandDarkGreen">
             <IconButton className="bg-transparent border-none shadow-none">
               <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
             </IconButton>
             </Button>
-            <Button className="bg-green-700">
+            <Button className="bg-BrandDarkGreen">
             <IconButton className="bg-transparent border-none shadow-none">
               <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
             </IconButton>

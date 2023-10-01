@@ -8,7 +8,7 @@ import logotwitter  from './../../assets/svg/SocialIcons/logo-twitter.svg';
 const WetPrinting = ():JSX.Element => {
   return (
     <>
-        <p className='text-customs-lightGreenWetPrinting'>© 2023 Dlex, Inc. All rights reserved</p>
+        <p className='text-customs-lightGreenWetPrinting font-content'>© 2023 Dlex, Inc. All rights reserved</p>
         <div className='flex gap-8'>
             <a href='https://www.facebook.com/' target='_blank'>
                 <img src={logofacebook} alt='socialLogo'/>
