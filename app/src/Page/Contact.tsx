@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Connection from '../components/Connection';
 
-export const Contact = () => {
+export const Contact = ():JSX.Element => {
   return (
-    <div>Contact</div>
-  )
+    <>
+      <Connection />
+    </>
+  );
 }
