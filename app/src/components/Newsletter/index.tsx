@@ -1,6 +1,9 @@
 import React from 'react'
 
 const  Newsletter = ():JSX.Element => {
+  const handlerForm = () => {
+    
+  }
   return (
     <div className='basis-full md:basis-1/2 lg:basis-2/5'>
         <h5 className='text-BrandDarkGreen font-header leading-7 pb-5'>SUBSCRIBE TO OUR NEWSLETTER</h5>
