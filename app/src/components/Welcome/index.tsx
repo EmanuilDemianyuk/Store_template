@@ -26,7 +26,7 @@ function Welcome():JSX.Element {
                         View Menu
                     </Button>
                 </div>
-                {/* <div className='hidden sm:block sm:basis-3/5 lg:basis-1/2 relative'>
+                <div className='hidden sm:block sm:basis-3/5 lg:basis-1/2 relative'>
 
                         <div className='hidden md:block md:absolute md:w-32 md:h-32 md:top-10 md:left-10 lg:left-20 rounded-full bg-light-green'>
                             <img className='w-24 ml-2 mt-2' src={lemonade} alt='lemonade'/>
@@ -43,8 +43,8 @@ function Welcome():JSX.Element {
                         <div className='hidden md:block md:absolute md:w-52 md:h-52 md:top-64 md:right-0 lg:-right-5 lg:top-60 rounded-full bg-light-green'>
                             <img className='w-48 ml-2 mt-2' src={ptwohome} alt='pizza'/>
                         </div>
-                </div> */}
-                <div className='flex relative basis-1/2 w-full flex-wrap md:basis-3/5'>
+                </div>
+                {/* <div className='flex relative basis-1/2 w-full flex-wrap md:basis-3/5'>
 
                         <div className='flex basis-1/2 justify-center items-center'>
                             <div className='p-2 bg-BrandWrapperGB rounded-full overflow-hidden'>
@@ -69,7 +69,7 @@ function Welcome():JSX.Element {
                                 <img className='w-full h-full object-fill' src={ptwohome} alt='pizza'/>
                             </div>
                         </div>
-                </div>
+                </div> */}
         </section>
     );
 }
