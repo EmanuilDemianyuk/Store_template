@@ -14,7 +14,7 @@ function Connection():JSX.Element {
                     opacity:'0.2'}}>
                 </div>
                 <div className='absolute top-0 left-0 w-full h-full'>
-                    <div className='m-4 flex flex-wrap justify-between'>
+                    <div className='m-4 flex justify-between'>
                         <div className=''>
                             <h3 className='font-header text-2xl mb-4'>To place an order</h3>
                             <ul>
