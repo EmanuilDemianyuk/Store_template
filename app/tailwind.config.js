@@ -17,6 +17,7 @@ module.exports = withMT({
     colors: {
       'light-green': '#dcfce7',
       'white': '#ffff',
+      'BrandWrapperGB': '#F3FFF9',
       'BrandLightGreen': '#E0FFDB',
       'BrandDarkGreen': ' #068C52',
       'BrandFooterBg': '#000000',
