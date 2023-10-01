@@ -69,12 +69,6 @@ function Welcome():JSX.Element {
                                 <img className='w-full h-full object-fill' src={fries} alt='pizza'/>
                             </div>
                         </div>
-
-                        <div className='flex basis-1/2'>
-                            <div className='p-2 bg-BrandWrapperGB rounded-full max-w-52 max-h-52'>
-                                <img className='w-full h-full object-fill' src={ptwohome} alt='pizza'/>
-                            </div>
-                        </div>
                 </div>
         </section>
     );
