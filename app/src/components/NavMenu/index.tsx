@@ -61,7 +61,7 @@ export default function NavMenu() {
   );
  
   return (
-    <Navbar className="bg-light-green rounded-none border-none shadow-none mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
+    <Navbar className="bg-inherit rounded-none border-none shadow-none mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
       <div className="container flex items-center justify-between text-green-700">
         <Typography
           as="a"

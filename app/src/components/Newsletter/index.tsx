@@ -2,10 +2,10 @@ import React from 'react'
 
 const  Newsletter = ():JSX.Element => {
   return (
-    <div>
+    <div className='basis-full md:basis-1/2 lg:basis-2/5'>
         <h5 className='text-BrandDarkGreen leading-7 pb-5'>SUBSCRIBE TO OUR NEWSLETTER</h5>
         <p className='text-white leading-7'>The latest news, articles, and resources, sent to your inbox weekly</p>
-        <div className='flex gap-3 py-3'>
+        <div className='flex flex-col gap-3 py-3 sm:flex-row'>
             <input 
             type='email' 
             min={1} max={99} 
