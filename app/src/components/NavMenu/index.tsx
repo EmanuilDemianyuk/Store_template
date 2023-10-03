@@ -1,72 +1,73 @@
-import React from "react";
+import React, { useId } from "react";
 import {
   Navbar,
-  MobileNav,
+  Collapse,
   Typography,
   Button,
   ButtonGroup,
   IconButton,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-
-type Options = {
-  ul: string,
-  link: string,
-  icon: string
-}
+import styles from './style.module.scss';
  
 export default function NavMenu() {
   const [openNav, setOpenNav] = React.useState(false);
- 
+  const navId = useId();
+
   React.useEffect(() => {
+    // const handlerClick = ( { target }: { target: EventTarget | null } ) => {
+    //   if (target && document.getElementById(navId)?.contains(target)) {
+    //     setOpenNav(false);
+    //   }
+    // }
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
+    // window.addEventListener(
+    //   "click",
+    //   handlerClick
+    // )
+    // return () => {
+    //   window.removeEventListener('click', handlerClick);
+    // }
   }, []);
 
-  const options: Options = {
-    ul: 'mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6',
-    link: 'flex items-center hover:text-BrandDarkGreen hover:underline',
-    icon: 'rounded-full bg-BrandDarkGreen hidden lg:inline-block'
-  }
-  const { ul, link, icon } = options;
- 
   const navList = (
-    <ul className={ul}>
+    <ul className={styles.ul}>
       <Typography
         as="li"
         color="black"
-        className="p-1 font-content font-bold"
+        className={styles.ul__Typography}
       >
-        <Link to="/" className={link}>
+        <Link to="/" className={styles.ul__link}>
           Home
         </Link>
       </Typography>
       <Typography
         as="li"
         color="black"
-        className="p-1 font-content font-bold"
+        className={styles.ul__Typography}
       >
-        <Link to="/menu" className={link}>
+        <Link to="/menu" className={styles.ul__link}>
           Menu
         </Link>
       </Typography>
       <Typography
         as="li"
         color="black"
-        className="p-1 font-content font-bold"
+        className={styles.ul__Typography}
       >
-        <Link to="/about" className={link}>
+        <Link to="/about" className={styles.ul__link}>
           About
         </Link>
       </Typography>
       <Typography
         as="li"
         color="black"
-        className="p-1 font-content font-bold"
+        className={styles.ul__Typography}
       >
-        <Link to="/contact" className={link}>
+        <Link to="/contact" className={styles.ul__link}>
           Contact
         </Link>
       </Typography>
@@ -74,27 +75,28 @@ export default function NavMenu() {
   );
  
   return (
-    <Navbar className="bg-inherit rounded-none border-none shadow-none mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
-      <div className="container flex items-center justify-between text-BrandDarkGreen">
+    <Navbar className={styles.NavBar} id={navId}>
+      <div className={styles.NavBar__container}>
         <Typography
           as="a"
           href="#"
-          className="mr-4 cursor-pointer py-1.5 font-logo text-4xl"
+          className={styles.NavBar__Typography}
         >
-          <span className='text-BrandDarkGreen'>Yum</span><span className='text-orange-500'>Pizza</span>
+          <span className={styles.NavBar__mainLogo_behind}>Yum</span>
+          <span className={styles.NavBar__mainLogo_after}>Pizza</span>
         </Typography>
-        <div className="hidden lg:block">{navList}</div>
-        <div className="flex items-center gap-4">
-        <IconButton className={icon}>
+        <div className={styles.NavBar__container_navList}>{navList}</div>
+        <div className={styles.NavBar__container_iconButton}>
+        <IconButton className={styles.NavBar__icon}>
           <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
         </IconButton>
-        <IconButton className={icon}>
+        <IconButton className={styles.NavBar__icon}>
           <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
         </IconButton>
         </div>
         <IconButton
           variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className={styles.NavBar__burgerMenu}
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
@@ -102,7 +104,7 @@ export default function NavMenu() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              className="h-6 w-6"
+              className={styles.NavBar__svg}
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
@@ -116,7 +118,7 @@ export default function NavMenu() {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className={styles.NavBar__svg}
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
@@ -130,23 +132,23 @@ export default function NavMenu() {
           )}
         </IconButton>
       </div>
-      <MobileNav open={openNav}>
-        <div className="container">
+      <Collapse open={openNav}>
+        <div className={styles.MobileNav__container}>
           {navList}
           <ButtonGroup fullWidth size="sm">
-            <Button className="bg-BrandDarkGreen">
-            <IconButton className="bg-transparent border-none shadow-none">
+            <Button className={styles.MobileNav__Button}>
+            <IconButton className={styles.MobileNav__IconButton}>
               <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
             </IconButton>
             </Button>
-            <Button className="bg-BrandDarkGreen">
-            <IconButton className="bg-transparent border-none shadow-none">
+            <Button className={styles.MobileNav__Button}>
+            <IconButton className={styles.MobileNav__IconButton}>
               <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
             </IconButton>
             </Button>
           </ButtonGroup>
         </div>
-      </MobileNav>
+      </Collapse>
     </Navbar>
   );
 }

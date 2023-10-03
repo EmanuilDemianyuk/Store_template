@@ -1,5 +1,7 @@
 import { Carousel } from "@material-tailwind/react";
 import Customer from '../Customer';
+import classnames from 'classnames';
+import styles from './style.module.scss';
 import avatarone from '../../assets/img/customer-1.jpeg';
 import avatartwo from '../../assets/img/customer-2.jpeg';
 import avatarthree from '../../assets/img/customer-3.jpeg';
@@ -8,15 +10,16 @@ import avatarfour from '../../assets/img/customer-4.jpeg';
 export function CarouselCustom() {
   return (
     <Carousel
-      className="rounded-none"
+      className='rounded-none3'
       navigation={({ setActiveIndex, activeIndex, length }) => (
-        <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+        <div className={styles.Carousel__container}>
           {new Array(length).fill("").map((_, i) => (
             <span
               key={i}
-              className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                activeIndex === i ? "w-8 bg-green-700" : "w-4 bg-green-200"
-              }`}
+              className={
+                classnames(styles.Carousel__navPaginations, 
+                  {[styles.Carousel__elect]: activeIndex === i})
+              }
               onClick={() => setActiveIndex(i)}
             />
           ))}

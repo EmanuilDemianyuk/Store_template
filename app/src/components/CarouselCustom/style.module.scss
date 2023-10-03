@@ -1,0 +1,11 @@
+.Carousel {
+    &__container {
+        @apply absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2;
+    }
+    &__navPaginations {
+        @apply block h-1 cursor-pointer rounded-2xl transition-all content-[''] w-4 bg-green-200;
+    }
+    &__elect {
+        @apply w-8 bg-green-700;
+    }
+}

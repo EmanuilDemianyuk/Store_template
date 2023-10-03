@@ -1,0 +1,52 @@
+.NavBar {
+    @apply bg-inherit rounded-none border-none shadow-none mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4;
+
+    &__container {
+        @apply container flex items-center justify-between text-BrandDarkGreen;
+    }
+    &__mainLogo_behind {
+        @apply text-BrandDarkGreen;
+    }
+    &__mainLogo_after {
+        @apply text-orange-500;
+    }
+    &__Typography {
+        @apply mr-4 cursor-pointer py-1.5 font-logo text-4xl;
+    }
+    &__container_navList {
+        @apply hidden lg:block;
+    }
+    &__container_iconButton {
+        @apply flex items-center gap-4;
+    }
+    &__icon {
+        @apply rounded-full bg-BrandDarkGreen hidden lg:inline-block;
+    }
+    &__burgerMenu {
+        @apply ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden;
+    }
+    &__svg {
+        @apply h-6 w-6;
+    }
+}
+.MobileNav {
+    &__container {
+        @apply container;
+    }
+    &__Button {
+        @apply bg-BrandDarkGreen;
+    }
+    &__IconButton {
+        @apply bg-transparent border-none shadow-none;
+    }
+}
+.ul {
+    @apply mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6;
+
+    &__Typography {
+        @apply p-1 font-content font-bold;
+    }
+    &__link {
+        @apply flex items-center hover:text-BrandDarkGreen hover:underline;
+    }  
+}
