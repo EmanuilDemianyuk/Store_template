@@ -15,8 +15,6 @@ module.exports = withMT({
       header: ['Josefin Sans']
     },
     colors: {
-      'light-green': '#dcfce7',
-      'white': '#ffff',
       'BrandWrapperGB': '#F3FFF9',
       'BrandLightGreen': '#E0FFDB',
       'BrandDarkGreen': ' #068C52',
