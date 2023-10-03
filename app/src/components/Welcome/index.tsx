@@ -53,13 +53,13 @@ function Welcome():JSX.Element {
                         </div>
 
                         <div className='flex basis-1/2'>
-                            <div className='hidden p-2 bg-BrandWrapperGB rounded-full sm:block sm:w-32 sm:h-32 md:w-48 md:h-48 lg:w-52 lg:h-52 xl:w-72 xl:h-72'>
+                            <div className='hidden p-2 bg-BrandWrapperGB rounded-full sm:block sm:w-28 sm:h-28 md:w-48 md:h-48 lg:w-52 lg:h-52 xl:w-72 xl:h-72'>
                                 <img className='w-full h-full object-fill' src={ponehome} alt='pizza'/>
                             </div>
                         </div>
 
                         <div className='flex basis-1/2'>
-                            <div className='hidden p-2 bg-BrandWrapperGB rounded-full sm:block sm:w-28 sm:h-28 md:w-40 md:h-40 lg:w-44 lg:h-44 xl:w-52 xl:h-52'>
+                            <div className='hidden p-2 bg-BrandWrapperGB rounded-full sm:block sm:w-24 sm:h-24 md:w-40 md:h-40 lg:w-44 lg:h-44 xl:w-52 xl:h-52'>
                                 <img className='w-full h-full object-fill' src={ptwohome} alt='pizza'/>
                             </div>
                         </div>
