@@ -15,7 +15,7 @@ export function DefaultTimeline():JSX.Element {
           <TimelineItem>
             <TimelineConnector />
             <TimelineHeader className="h-3">
-              <TimelineIcon className="bg-green-700" />
+              <TimelineIcon className="bg-BrandDarkGreen" />
               <Typography variant="h6" className="font-content">
                 Premium Ingredients: 
               </Typography>
@@ -29,7 +29,7 @@ export function DefaultTimeline():JSX.Element {
           <TimelineItem>
             <TimelineConnector />
             <TimelineHeader className="h-3">
-              <TimelineIcon className="bg-green-700" />
+              <TimelineIcon className="bg-BrandDarkGreen" />
               <Typography variant="h6" className="font-content">
                 Meticulous Preparation:
               </Typography>
@@ -42,7 +42,7 @@ export function DefaultTimeline():JSX.Element {
           </TimelineItem>
           <TimelineItem>
             <TimelineHeader className="h-3">
-              <TimelineIcon className="bg-green-700" />
+              <TimelineIcon className="bg-BrandDarkGreen" />
               <Typography variant="h6" className="font-content">
                 Crafted Perfection: 
               </Typography>
