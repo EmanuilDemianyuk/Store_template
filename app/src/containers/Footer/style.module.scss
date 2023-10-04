@@ -2,7 +2,7 @@
     @apply bg-BrandFooterBg;
     
     &__mainContainer {
-        @apply container max-h-max max-w-screen-xl py-10 px-4 lg:px-8 lg:py-20;
+        @apply container max-h-max max-w-screen-xl pt-10 px-4 lg:px-8 lg:pt-10;
     }
     &__container {
         @apply flex flex-wrap justify-start lg:flex-nowrap lg:justify-between border-b border-customs-borderFooter py-11 px-8;
