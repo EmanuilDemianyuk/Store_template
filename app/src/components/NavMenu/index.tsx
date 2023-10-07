@@ -75,80 +75,83 @@ export default function NavMenu() {
   );
  
   return (
-    <Navbar className={styles.NavBar} id={navId}>
-      <div className={styles.NavBar__container}>
-        <Typography
-          as="a"
-          href="#"
-          className={styles.NavBar__Typography}
-        >
-          <span className={styles.NavBar__mainLogo_behind}>Yum</span>
-          <span className={styles.NavBar__mainLogo_after}>Pizza</span>
-        </Typography>
-        <div className={styles.NavBar__container_navList}>{navList}</div>
-        <div className={styles.NavBar__container_iconButton}>
-        <IconButton className={styles.NavBar__icon}>
-          <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
-        </IconButton>
-        <IconButton className={styles.NavBar__icon}>
-          <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
-        </IconButton>
+    <div className={styles.NavBar__Wrapper}>
+      <Navbar className={styles.NavBar} id={navId}>
+        <div className={styles.NavBar__container}>
+          <Typography
+            as="a"
+            href="#"
+            className={styles.NavBar__Typography}
+          >
+            <span className={styles.NavBar__mainLogo_behind}>Yum</span>
+            <span className={styles.NavBar__mainLogo_after}>Pizza</span>
+          </Typography>
+          <div className={styles.NavBar__container_navList}>{navList}</div>
+          <div className={styles.NavBar__container_iconButton}>
+          <IconButton className={styles.NavBar__icon}>
+            <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
+          </IconButton>
+          <IconButton className={styles.NavBar__icon}>
+            <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
+          </IconButton>
+          </div>
+          <IconButton
+            variant="text"
+            className={styles.NavBar__burgerMenu}
+            ripple={false}
+            onClick={() => setOpenNav(!openNav)}
+          >
+            {openNav ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                className={styles.NavBar__svg}
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className={styles.NavBar__svg}
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </IconButton>
         </div>
-        <IconButton
-          variant="text"
-          className={styles.NavBar__burgerMenu}
-          ripple={false}
-          onClick={() => setOpenNav(!openNav)}
-        >
-          {openNav ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              className={styles.NavBar__svg}
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className={styles.NavBar__svg}
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          )}
-        </IconButton>
-      </div>
-      <Collapse open={openNav}>
-        <div className={styles.MobileNav__container}>
-          {navList}
-          <ButtonGroup fullWidth size="sm">
-            <Button className={styles.MobileNav__Button}>
-            <IconButton className={styles.MobileNav__IconButton}>
-              <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
-            </IconButton>
-            </Button>
-            <Button className={styles.MobileNav__Button}>
-            <IconButton className={styles.MobileNav__IconButton}>
-              <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
-            </IconButton>
-            </Button>
-          </ButtonGroup>
-        </div>
-      </Collapse>
-    </Navbar>
+        <Collapse open={openNav}>
+          <div className={styles.MobileNav__container}>
+            {navList}
+            <ButtonGroup fullWidth size="sm">
+              <Button className={styles.MobileNav__Button}>
+              <IconButton className={styles.MobileNav__IconButton}>
+                <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
+              </IconButton>
+              </Button>
+              <Button className={styles.MobileNav__Button}>
+              <IconButton className={styles.MobileNav__IconButton}>
+                <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
+              </IconButton>
+              </Button>
+            </ButtonGroup>
+          </div>
+        </Collapse>
+      </Navbar>
+    </div>
+   
   );
 }
