@@ -14,7 +14,7 @@ function Welcome():JSX.Element {
     //     backgroundItem: '',
     // }
     return (
-        <section className='container flex justify-center flex-wrap sm:flex-nowrap text-white rounded bg-BrandDarkGreen mb-5 max-h-max max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4'>
+        <section className='container flex justify-center flex-wrap sm:flex-nowrap text-white rounded bg-BrandDarkGreen my-10 max-h-max max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4'>
                 <div className='mt-10 mb-10 sm:basis-1/2 md:basis-2/5 md:mt-24 md:mb-24 lg:basis-1/2 lg:mt-24 lg:mb-24'>
                     <h2 className='font-header text-3xl lg:text-5xl mb-3'>
                         Tasty Meals made for You

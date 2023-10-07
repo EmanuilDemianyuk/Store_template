@@ -12,8 +12,10 @@ function SocialMedia():JSX.Element {
                 <h3 className='font-header text-3xl mb-3 sm:mb-0'>Tag @yumpizza!</h3>
                 <div className='basis-full sm:basis-auto'>
                     <Button variant="outlined" className="rounded-full w-full sm:w-auto">
-                        Insta
-                        <i className="fa-solid fa-arrow-right ms-1" style={{color: '#000000'}}></i>
+                        <a href='https://www.instagram.com/' target="_blank" rel="noreferrer">
+                            Insta
+                            <i className="fa-solid fa-arrow-right ms-1" style={{color: '#000000'}}></i>
+                        </a>
                     </Button>
                 </div>
             </div>
@@ -28,7 +30,7 @@ function SocialMedia():JSX.Element {
                     />
                     <figcaption className="absolute bottom-4 left-2/4 w-[calc(100%-4rem)] -translate-x-2/4 rounded-xl bg-white/75 py-2 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
                         <div className='text-center'>
-                            <a href='' className='font-content text-md'>
+                            <a href='https://www.instagram.com/' target="_blank" rel="noreferrer" className='font-content text-md hover:text-BrandDarkGreen'>
                                 Pizza in the process
                             </a>
                         </div>
@@ -45,9 +47,9 @@ function SocialMedia():JSX.Element {
                     />
                     <figcaption className="absolute bottom-4 left-2/4 w-[calc(100%-4rem)] -translate-x-2/4 rounded-xl bg-white/75 py-2 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
                         <div className='text-center'>
-                            <p className='font-content text-md'>
+                            <a href='https://www.instagram.com/' target="_blank" rel="noreferrer" className='font-content text-md hover:text-BrandDarkGreen'>
                                 Take a photo
-                            </p>
+                            </a>
                         </div>
                     </figcaption>
                 </figure>
@@ -62,9 +64,9 @@ function SocialMedia():JSX.Element {
                     />
                     <figcaption className="absolute bottom-4 left-2/4 w-[calc(100%-4rem)] -translate-x-2/4 rounded-xl bg-white/75 py-2 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
                         <div className='text-center'>
-                            <p className='font-content text-md'>
+                            <a href='https://www.instagram.com/' target="_blank" rel="noreferrer" className='font-content text-md hover:text-BrandDarkGreen'>
                                 Enjoy
-                            </p>
+                            </a>
                         </div>
                     </figcaption>
                 </figure>
@@ -79,9 +81,9 @@ function SocialMedia():JSX.Element {
                     />
                     <figcaption className="absolute bottom-4 left-2/4 w-[calc(100%-4rem)] -translate-x-2/4 rounded-xl bg-white/75 py-2 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
                         <div className='text-center'>
-                            <p className='font-content text-md'>
+                            <a href='https://www.instagram.com/' target="_blank" rel="noreferrer" className='font-content text-md hover:text-BrandDarkGreen'>
                                 Share with friends
-                            </p>
+                            </a>
                         </div>
                     </figcaption>
                 </figure>
