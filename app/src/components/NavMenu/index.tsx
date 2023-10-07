@@ -7,12 +7,14 @@ import {
   ButtonGroup,
   IconButton,
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import classnames from 'classnames';
 import styles from './style.module.scss';
  
 export default function NavMenu() {
   const [openNav, setOpenNav] = React.useState(false);
   const navId = useId();
+  const location = useLocation();
 
   React.useEffect(() => {
     // const handlerClick = ( { target }: { target: EventTarget | null } ) => {
@@ -40,7 +42,8 @@ export default function NavMenu() {
         color="black"
         className={styles.ul__Typography}
       >
-        <Link to="/" className={styles.ul__link}>
+        <Link to="/" className={classnames(styles.ul__link, 
+          {[styles.ul__active]: location.pathname === '/'})}>
           Home
         </Link>
       </Typography>
@@ -49,7 +52,8 @@ export default function NavMenu() {
         color="black"
         className={styles.ul__Typography}
       >
-        <Link to="/menu" className={styles.ul__link}>
+        <Link to="/menu" className={classnames(styles.ul__link, 
+          {[styles.ul__active]: location.pathname === '/menu'})}>
           Menu
         </Link>
       </Typography>
@@ -58,7 +62,8 @@ export default function NavMenu() {
         color="black"
         className={styles.ul__Typography}
       >
-        <Link to="/about" className={styles.ul__link}>
+        <Link to="/about" className={classnames(styles.ul__link, 
+          {[styles.ul__active]: location.pathname === '/about'})}>
           About
         </Link>
       </Typography>
@@ -67,7 +72,8 @@ export default function NavMenu() {
         color="black"
         className={styles.ul__Typography}
       >
-        <Link to="/contact" className={styles.ul__link}>
+        <Link to="/contact" className={classnames(styles.ul__link, 
+          {[styles.ul__active]: location.pathname === '/contact'})}>
           Contact
         </Link>
       </Typography>

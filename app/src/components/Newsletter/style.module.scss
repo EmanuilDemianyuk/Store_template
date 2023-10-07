@@ -1,0 +1,25 @@
+.Newsletter {
+    @apply basis-full md:basis-1/2 lg:basis-2/5;
+
+    h5 {
+        @apply text-BrandDarkGreen leading-7 pb-3 font-header;
+    }
+    p {
+        @apply text-white leading-7 font-content;
+    }
+    form {
+        @apply flex flex-col gap-3 py-3 sm:flex-row;
+
+        .inputEmail {
+            @apply text-white bg-inherit border leading-7 rounded-md py-1.5 px-3 font-content invalid:border-red-500 invalid:text-red-500;
+        }
+        .inputSubmit {
+            @apply text-white 
+            bg-BrandDarkGreen cursor-pointer
+            font-content
+            hover:bg-BrandLightGreen 
+            hover:text-black
+              hover:font-medium py-2 px-6 rounded-md leading-7;
+        }
+    }
+}

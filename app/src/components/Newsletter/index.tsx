@@ -1,12 +1,6 @@
 import React, { useState, ChangeEvent } from 'react';
+import styles from './style.module.scss';
 
-type StyleOptions = {
-  default: string;
-};
-
-const styleOptions: StyleOptions = {
-  default: "text-white bg-inherit border leading-7 rounded-md py-1.5 px-3 invalid:border-red-500 invalid:text-red-500",
-}
 
 const  Newsletter = ():JSX.Element => {
   const [inpValue, setInpValue] = useState<string>('');  
@@ -19,10 +13,10 @@ const  Newsletter = ():JSX.Element => {
     setInpValue(value);
   }
   return (
-    <div className='basis-full md:basis-1/2 lg:basis-2/5'>
-        <h5 className='text-BrandDarkGreen leading-7 pb-5'>SUBSCRIBE TO OUR NEWSLETTER</h5>
-        <p className='text-white leading-7'>The latest news, articles, and resources, sent to your inbox weekly</p>
-        <form onSubmit={handlerForm} className='flex flex-col gap-3 py-3 sm:flex-row'>
+    <div className={styles.Newsletter}>
+        <h5>SUBSCRIBE TO OUR NEWSLETTER</h5>
+        <p>The latest news, articles, and resources, sent to your inbox weekly</p>
+        <form onSubmit={handlerForm}>
             <input 
             type='email' 
             value={inpValue}
@@ -30,15 +24,11 @@ const  Newsletter = ():JSX.Element => {
             minLength={1}
             maxLength={99}
             placeholder='Enter your email'
-            className={styleOptions.default}/>
+            className={styles.inputEmail}/>
             <input
             value="Subscribe"
             type='submit'
-            className='text-white 
-             bg-BrandDarkGreen cursor-pointer
-             hover:bg-BrandLightGreen 
-             hover:text-black
-               hover:font-medium py-2 px-6 rounded-md leading-7'/>
+            className={styles.inputSubmit}/>
         </form>
     </div>
   )

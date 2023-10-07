@@ -3,6 +3,7 @@ import {
   BrowserRouter,
   Route,
   Routes,
+  useLocation,
 } from "react-router-dom";
 import { Layout } from "./containers/Layouts/Layout";
 import { Home } from "./Page/Home";

@@ -1,0 +1,14 @@
+.WetPrinting {
+    @apply flex w-full justify-between;
+
+    p {
+        @apply text-customs-lightGreenWetPrinting font-content;
+    }
+    div {
+       @apply flex gap-8;
+
+       a {
+        @apply hover:scale-125
+       }
+    }
+}
