@@ -1,0 +1,20 @@
+.DefaultTimeline {
+    @apply pe-10;
+
+    .TimelineHeader {
+        @apply h-3;
+    }
+    .TimelineIcon{
+        @apply bg-BrandDarkGreen;
+    }
+    .Typograph_header {
+        @apply font-content;
+    }
+    .Typograph_boddy {
+        @apply font-content text-gray-600 pl-5;
+    }
+    .TimelineBody {
+        @apply pb-8;
+    }
+
+}

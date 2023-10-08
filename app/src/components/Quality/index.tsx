@@ -29,8 +29,8 @@ function Quality():JSX.Element {
             <div>
                 <div className={styles.MadeToOrder}>
                     <h3>Made-to-Order: Every Dish Prepared Fresh!</h3>
-                    <DefaultTimeline />
-                    <div>
+                        <DefaultTimeline />
+                    <div className={styles.MadeToOrder__imgBox}>
                         <img src={tomatos} alt="basil"/>
                     </div>
                 </div>
