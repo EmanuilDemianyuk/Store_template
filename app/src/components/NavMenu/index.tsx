@@ -1,4 +1,4 @@
-import React, { useId } from "react";
+import React, { useEffect, useId, useRef } from "react";
 import {
   Navbar,
   Collapse,
@@ -7,32 +7,25 @@ import {
   ButtonGroup,
   IconButton,
 } from "@material-tailwind/react";
+import useClickOutside  from '../../hooks/useClickOutside';
+import useScrollToCloseMenu  from '../../hooks/useScrollToCloseMenu';
 import { Link, useLocation } from "react-router-dom";
 import classnames from 'classnames';
 import styles from './style.module.scss';
  
 export default function NavMenu() {
   const [openNav, setOpenNav] = React.useState(false);
-  const navId = useId();
   const location = useLocation();
+  const menuRef = useRef(null);
+
+  useClickOutside(menuRef, () => !openNav || setTimeout(() => setOpenNav(false), 50));
+  useScrollToCloseMenu(openNav, () => setOpenNav(!openNav));
 
   React.useEffect(() => {
-    // const handlerClick = ( { target }: { target: EventTarget | null } ) => {
-    //   if (target && document.getElementById(navId)?.contains(target)) {
-    //     setOpenNav(false);
-    //   }
-    // }
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
-    // window.addEventListener(
-    //   "click",
-    //   handlerClick
-    // )
-    // return () => {
-    //   window.removeEventListener('click', handlerClick);
-    // }
   }, []);
 
   const navList = (
@@ -82,7 +75,7 @@ export default function NavMenu() {
  
   return (
     <div className={styles.NavBar__Wrapper}>
-      <Navbar className={styles.NavBar} id={navId}>
+      <Navbar ref={menuRef} className={styles.NavBar} >
         <div className={styles.NavBar__container}>
           <Typography
             as="a"
