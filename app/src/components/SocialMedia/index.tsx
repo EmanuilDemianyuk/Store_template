@@ -28,13 +28,11 @@ function SocialMedia():JSX.Element {
                         src={igOne}
                         alt="process"
                     />
-                    <figcaption className="absolute bottom-4 left-2/4 w-[calc(100%-4rem)] -translate-x-2/4 rounded-xl bg-white/75 py-2 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
-                        <div className='text-center'>
-                            <a href='https://www.instagram.com/' target="_blank" rel="noreferrer" className='font-content text-md hover:text-BrandDarkGreen'>
-                                Pizza in the process
-                            </a>
-                        </div>
-                    </figcaption>
+                    <a className="absolute bottom-4 left-2/4 w-[calc(100%-4rem)] -translate-x-2/4 rounded-xl bg-white/75 py-2 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm text-center hover:text-BrandDarkGreen" href='https://www.instagram.com/' target="_blank">
+                        <button className='font-content text-md'>
+                            Pizza in the process
+                        </button>
+                    </a>
                 </figure>
                 </div>
 
@@ -45,13 +43,11 @@ function SocialMedia():JSX.Element {
                         src={igTwo}
                         alt="share in insta"
                     />
-                    <figcaption className="absolute bottom-4 left-2/4 w-[calc(100%-4rem)] -translate-x-2/4 rounded-xl bg-white/75 py-2 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
-                        <div className='text-center'>
-                            <a href='https://www.instagram.com/' target="_blank" rel="noreferrer" className='font-content text-md hover:text-BrandDarkGreen'>
-                                Take a photo
-                            </a>
-                        </div>
-                    </figcaption>
+                    <a className="absolute bottom-4 left-2/4 w-[calc(100%-4rem)] -translate-x-2/4 rounded-xl bg-white/75 py-2 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm text-center hover:text-BrandDarkGreen" href='https://www.instagram.com/' target="_blank">
+                        <button className='font-content text-md'>
+                            Take a photo
+                        </button>
+                    </a>
                 </figure>
                 </div>
 
@@ -62,13 +58,11 @@ function SocialMedia():JSX.Element {
                         src={igThree}
                         alt="pizza"
                     />
-                    <figcaption className="absolute bottom-4 left-2/4 w-[calc(100%-4rem)] -translate-x-2/4 rounded-xl bg-white/75 py-2 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
-                        <div className='text-center'>
-                            <a href='https://www.instagram.com/' target="_blank" rel="noreferrer" className='font-content text-md hover:text-BrandDarkGreen'>
-                                Enjoy
-                            </a>
-                        </div>
-                    </figcaption>
+                    <a className="absolute bottom-4 left-2/4 w-[calc(100%-4rem)] -translate-x-2/4 rounded-xl bg-white/75 py-2 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm text-center hover:text-BrandDarkGreen" href='https://www.instagram.com/' target="_blank">
+                        <button className='font-content text-md'>
+                            Enjoy
+                        </button>
+                    </a>
                 </figure>
                 </div>
 
@@ -79,13 +73,11 @@ function SocialMedia():JSX.Element {
                         src={igFour}
                         alt="pizza on table"
                     />
-                    <figcaption className="absolute bottom-4 left-2/4 w-[calc(100%-4rem)] -translate-x-2/4 rounded-xl bg-white/75 py-2 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
-                        <div className='text-center'>
-                            <a href='https://www.instagram.com/' target="_blank" rel="noreferrer" className='font-content text-md hover:text-BrandDarkGreen'>
-                                Share with friends
-                            </a>
-                        </div>
-                    </figcaption>
+                    <a className="absolute bottom-4 left-2/4 w-[calc(100%-4rem)] -translate-x-2/4 rounded-xl bg-white/75 py-2 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm text-center hover:text-BrandDarkGreen" href='https://www.instagram.com/' target="_blank">
+                        <button className='font-content text-md'>
+                            Share with friends
+                        </button>
+                    </a>
                 </figure>
                 </div>
             </div>
