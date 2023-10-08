@@ -1,0 +1,7 @@
+.Reviews {
+    @apply container my-20 max-h-max max-w-screen-xl py-10 px-4 lg:px-8 lg:py-20;
+
+    h3 {
+        @apply font-header text-2xl md:text-4xl mb-8;
+    }
+}

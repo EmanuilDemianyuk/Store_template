@@ -1,0 +1,53 @@
+.OurApp {
+    @apply bg-BrandLightGreen;
+
+    &__container {
+        @apply container flex flex-wrap justify-between items-center mt-20 max-h-max max-w-screen-xl py-10 px-4 lg:px-8 lg:py-20;
+        
+        .textBox {
+            @apply basis-full md:basis-1/2;
+
+            h3 {
+                @apply font-header text-4xl mb-2;
+            }
+            p {
+                @apply font-content text-lg mb-5;
+            }
+            div {
+                @apply flex flex-wrap items-center space-x-2;
+
+                .textBtn {
+                    @apply flex items-center gap-3 rounded-full;
+                }
+            }
+        }
+
+        .promptMessage {
+            @apply basis-full mt-2 md:basis-1/2 md:mt-0;
+
+            figure {
+                @apply relative h-full w-full;
+
+                img {
+                    @apply w-80 md:w-[450px] mx-auto;
+                }
+
+                figcaption {
+                    @apply absolute bottom-8 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 justify-between rounded-xl border border-white bg-white/75 py-4 px-6 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm;
+
+                    .title {
+                        @apply font-content text-lg lg:text-2xl;
+                    }
+                    .message {
+                        @apply mt-1 md:mt-2 font-content text-gray-600;
+                    }
+            
+                    div {
+                        @apply mx-2;
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -7,6 +7,7 @@ import {
     Avatar,
 } from "@material-tailwind/react";
 import ReadonlyRating from '../ReadonlyRating';
+import styles from './style.module.scss';
 
 interface CustomerProps {
     fullName: string,
@@ -17,12 +18,12 @@ interface CustomerProps {
 
 function Customer({fullName, rate, date, imageSrc}: CustomerProps):JSX.Element {
     return (
-        <Card color="white" shadow={true} className="w-full max-w-[50rem] p-4 mx-auto">
+      <Card color="white" shadow={true} className={styles.cardContainer}>
         <CardHeader
           color="transparent"
           floated={false}
           shadow={false}
-          className="mx-0 flex items-center gap-4 pt-0 pb-8"
+          className={styles.cardContainer__CardHeader}
         >
           <Avatar
             size="lg"
@@ -30,18 +31,18 @@ function Customer({fullName, rate, date, imageSrc}: CustomerProps):JSX.Element {
             src={imageSrc}
             alt="avatar"
           />
-          <div className="flex w-full flex-col gap-0.5">
-            <div className="flex items-center justify-between">
-              <Typography variant="h5" color="blue-gray" className='font-content'>
+          <div className={styles.containerUserStat}>
+            <div>
+              <Typography variant="h5" color="blue-gray" className={styles.Typography}>
                 {fullName}
               </Typography>
               <ReadonlyRating rate={rate} />
             </div>
-            <Typography color="blue-gray" className='font-content'>{date}</Typography>
+            <Typography color="blue-gray" className={styles.Typography}>{date}</Typography>
           </div>
         </CardHeader>
-        <CardBody className="mb-6 p-0">
-          <Typography className='font-content'>
+        <CardBody className={styles.cardContainer__CardBody}>
+          <Typography className={styles.Typography}>
             &quot;I'm incredibly impressed with the food delivery service. The food arrived promptly, was delicious, and the delivery person was friendly and professional. Highly recommended!&quot;
           </Typography>
         </CardBody>
