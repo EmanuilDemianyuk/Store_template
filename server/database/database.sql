@@ -23,3 +23,8 @@ create TABLE orders {
     user_id INTEGER,
     FOREING KEY (user_id) REFERENCES persone (id)
 }
+
+create TABLE ordersProducts {
+    id SERIAL PRIMARY KEY,
+    FOREING KEY (id) REFERENCES orders (id),
+}

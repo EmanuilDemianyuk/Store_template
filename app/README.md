@@ -1,20 +1,35 @@
 # Getting Started with Create React App
 
-# Юзер икон
-# Order icon \ \ window
-# menu page
+# SQL Em
+
+
+# Create Redux + context Em
+
+
+# Create new component
+
+## Юзер икон
+## Order icon \ \ window
+## menu page
+## Simple Meals for You
+
+
+
 
 # Fixed
 
-## Пенрепис на scss module Em -- 
-## Створити хендлер на закриття бургер 
+## Пенрепис на scss module Em 
+## Створити хендлер на закриття бургер  AR
     меню якщо клік відбувся поза його межі / мишка вийшла за межы батьківського контейнеру 
     якщо скрол почав опускатись 
-
+## Chenge div to button from about page AR
+## Change view menu btn AR
 
 
 
 # done 
+## fix name wetPritter Em
+## FIX header and delete scroll bar em
 ## Опрацювання Лінків в wetpritting Em
 ## fix footer font Em
 ## пІДСВІТКА Лінка сторінки  Em 

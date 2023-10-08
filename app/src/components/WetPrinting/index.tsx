@@ -9,7 +9,7 @@ import styles from './style.module.scss';
 const WetPrinting = ():JSX.Element => {
   return (
     <div className={styles.WetPrinting}>
-        <p>© 2023 Dlex, Inc. All rights reserved</p>
+        <p>© 2023 All rights reserved</p>
         <div>
             <a href='https://www.facebook.com/' target='_blank'>
                 <img src={logofacebook} alt='socialLogo' />

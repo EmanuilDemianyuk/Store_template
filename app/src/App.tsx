@@ -3,7 +3,6 @@ import {
   BrowserRouter,
   Route,
   Routes,
-  useLocation,
 } from "react-router-dom";
 import { Layout } from "./containers/Layouts/Layout";
 import { Home } from "./Page/Home";
@@ -13,7 +12,7 @@ import { Contact } from "./Page/Contact";
 
 function App() {
   return (
-    <BrowserRouter >
+    <BrowserRouter>
       <Routes>
           <Route element={<Layout/>}>
             <Route path="/" element={<Home/>}/>
