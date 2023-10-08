@@ -9,33 +9,33 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footer__mainContainer}>
         <div className={styles.footer__container}>
-          <div className={styles.footer__divBox}>
-            <h5 className={styles.footer__h5}>SOLUTIONS</h5>
-            <a href='#' target='_blank' className={styles.footer__a}>Marketing</a>
-            <a href='#' target='_blank' className={styles.footer__a}>Analutics</a>
-            <a href='#' target='_blank' className={styles.footer__a}>Commerce</a>
-            <a href='#' target='_blank' className={styles.footer__a}>Insights</a>
+          <div>
+            <h5>SOLUTIONS</h5>
+            <a href='#' target='_blank'>Marketing</a>
+            <a href='#' target='_blank'>Analutics</a>
+            <a href='#' target='_blank'>Commerce</a>
+            <a href='#' target='_blank'>Insights</a>
           </div>
-          <div className={styles.footer__divBox}>
-            <h5 className={styles.footer__h5}>SUPPORT</h5>
-            <a href='#'  target='_blank' className={styles.footer__a}>Pricing</a>
-            <a href='#'  target='_blank' className={styles.footer__a}>Documentation</a>
-            <a href='#'  target='_blank' className={styles.footer__a}>Guides</a>
-            <a href='#'  target='_blank' className={styles.footer__a}>API Status</a>
+          <div>
+            <h5>SUPPORT</h5>
+            <a href='#'  target='_blank'>Pricing</a>
+            <a href='#'  target='_blank'>Documentation</a>
+            <a href='#'  target='_blank'>Guides</a>
+            <a href='#'  target='_blank'>API Status</a>
           </div>
-          <div className={styles.footer__divBox}>
-            <h5 className={styles.footer__h5}>COMPANY</h5>
-            <a href='#'  target='_blank' className={styles.footer__a}>About</a>
-            <a href='#'  target='_blank' className={styles.footer__a}>Blogs</a>
-            <a href='#'  target='_blank' className={styles.footer__a}>Jobs</a>
-            <a href='#'  target='_blank' className={styles.footer__a}>Press</a>
-            <a href='#'  target='_blank' className={styles.footer__a}>Partners</a>
+          <div>
+            <h5>COMPANY</h5>
+            <a href='#'  target='_blank'>About</a>
+            <a href='#'  target='_blank'>Blogs</a>
+            <a href='#'  target='_blank'>Jobs</a>
+            <a href='#'  target='_blank'>Press</a>
+            <a href='#'  target='_blank'>Partners</a>
           </div>
-          <div className={styles.footer__divBox}>
-            <h5 className={styles.footer__h5}>LEGAL</h5>
-            <a href='#'  target='_blank' className={styles.footer__a}>Claim</a>
-            <a href='#'  target='_blank' className={styles.footer__a}>Privacy</a>
-            <a href='#'  target='_blank' className={styles.footer__a}>Terms</a>
+          <div>
+            <h5>LEGAL</h5>
+            <a href='#'  target='_blank'>Claim</a>
+            <a href='#'  target='_blank'>Privacy</a>
+            <a href='#'  target='_blank'>Terms</a>
           </div>
           <Newsletter/>
         </div>

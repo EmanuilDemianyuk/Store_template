@@ -14,17 +14,19 @@
 ## Simple Meals for You
 
 
+# work on
+## Simple Meals for You
+## /memu
+
+
 
 
 # Fixed
-
-## Пенрепис на scss module Em 
-
-
-
+## fix Burger menu callback func
 
 
 # done 
+## Пенрепис на scss module Em 
 ## fix name wetPritter Em
 ## FIX header and delete scroll bar em
 ## Опрацювання Лінків в wetpritting Em

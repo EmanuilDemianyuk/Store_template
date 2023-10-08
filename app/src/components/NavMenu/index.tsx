@@ -19,7 +19,7 @@ export default function NavMenu() {
   const menuRef = useRef(null);
 
   useClickOutside(menuRef, () => !openNav || setTimeout(() => setOpenNav(false), 50));
-  useScrollToCloseMenu(openNav, () => setOpenNav(!openNav));
+  useScrollToCloseMenu(openNav, setOpenNav);
 
   React.useEffect(() => {
     window.addEventListener(

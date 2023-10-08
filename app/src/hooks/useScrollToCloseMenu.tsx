@@ -1,16 +1,18 @@
 import { useEffect } from 'react';
 
-const useScrollToCloseMenu = (isOpen: boolean, closeMenu: () => void) => {
+const useScrollToCloseMenu = (isOpen: boolean, setOpenNav: (state:boolean) => void) => {
   useEffect(() => {
     const handlerScroll = () => {
       if (isOpen) {
-        closeMenu();
+        setOpenNav(!isOpen);
       }
     };
 
     window.addEventListener('scroll', handlerScroll);
 
     return () => {
+      console.log('sss');
+      
       window.removeEventListener('scroll', handlerScroll);
     };
   });
