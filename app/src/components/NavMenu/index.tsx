@@ -1,4 +1,4 @@
-import React, { useEffect, useId, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Navbar,
   Collapse,
@@ -21,7 +21,7 @@ export default function NavMenu() {
   useClickOutside(menuRef, () => !openNav || setTimeout(() => setOpenNav(false), 50));
   useScrollToCloseMenu(openNav, setOpenNav);
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false),
