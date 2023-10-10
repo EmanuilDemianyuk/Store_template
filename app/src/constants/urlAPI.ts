@@ -1,4 +1,4 @@
-const path = "http://localhost:4000";
+const path = "http://localhost:8000";
 
 export const BASE__URL__API = `${path}/products`;
 export const PATH__ITEM__PIZZAS = "/pizzas";
