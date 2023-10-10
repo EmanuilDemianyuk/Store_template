@@ -24,7 +24,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   rating,
 }) => {
   return (
-    <Card className="mt-6 w-96">
+    <Card className="mt-6 w-80 h-[425px]">
       <CardHeader className="relative h-56 text-black">
         <img src={imgSrc} alt={name} />
       </CardHeader>
@@ -41,10 +41,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
             ></i>
           </Typography>
         </div>
-        <Typography className='font-content'>{description}</Typography>
+        <Typography className='font-content h-16'>{description}</Typography>
       </CardBody>
       <CardFooter className="pt-0 flex justify-between items-center">
-        <Typography variant="h5" className="text-black font-content">
+        <Typography variant="h4" className="text-black font-content">
           {price}$
         </Typography>
         <Button
@@ -59,41 +59,3 @@ const ProductCard: React.FC<ProductCardProps> = ({
 };
 
 export default ProductCard;
-
-
-
-// function ProductCard({name, description, price, imgSrc, rating}) {
-//     return (
-//         <Card className="mt-6 w-96">
-//           <CardHeader className="relative h-56 text-black">
-//             <img
-//               src={imgSrc}
-//             />
-//           </CardHeader>
-//           <CardBody className='text-black'>
-//             <div className='flex justify-between items-center mb-2'>
-//                 <Typography variant="h5" className="mb-2 text-black">
-//                     {name}
-//                 </Typography>
-//                 <Typography variant="h6">
-//                     <span className='me-2'>{rating}</span>
-//                     <i className="fa-solid fa-star bg-BrandLightGreen p-2 rounded-full" style={{color: '#068c52'}}></i>
-//                 </Typography>
-//             </div>
-//             <Typography>
-//                 {description}
-//             </Typography>
-//           </CardBody>
-//           <CardFooter className="pt-0 flex justify-between items-center">
-//             <Typography variant="h5" className='text-black'>
-//                 {price}$
-//             </Typography>
-//             <Button variant='outlined' className='rounded-full border-BrandDarkGreen text-BrandDarkGreen hover:bg-BrandDarkGreen hover:text-white'>
-//                 Add to Cart
-//             </Button>
-//           </CardFooter>
-//         </Card>
-//     );
-// }
-
-// export default ProductCard;

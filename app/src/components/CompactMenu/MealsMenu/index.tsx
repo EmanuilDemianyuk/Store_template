@@ -1,87 +1,78 @@
-import React from 'react';
-import {
-    Tabs,
-    TabsHeader,
-    TabsBody,
-    Tab,
-    TabPanel,
-  } from "@material-tailwind/react";
+import { useState } from 'react';
+import { ProgressBar } from  'react-loader-spinner'
 import { useGetProductsQuery, useGetTopProductsQuery } from '../../../store/products/products.api';
 import { PATH__ITEM__DESSERTS } from '../../../constants/urlAPI';
+import ProductsSwipper from '../../ProductsSwipper';
+import { CustomStepper } from '../CustomStepper';
+import styles from './style.module.scss';
 
 const MealsMenu = () => {
-  // const { data, isLoading, error } = useGetTopProductsQuery(5);
-  const { data, isLoading, error } = useGetProductsQuery(PATH__ITEM__DESSERTS)
+  const [activeStep, setActiveStep] = useState<number>(0);
+  const { data, isLoading, error } = useGetTopProductsQuery(5);
+  const pizza = data?.filter(item => item.category === 'pizza');
+  const sideDishes = data?.filter(item => item.category === 'side-dishes');
+  const desserts = data?.filter(item => item.category === 'desserts');
+  const drinks = data?.filter(item => item.category === 'drinks');
+  // const { data, isLoading, error } = useGetProductsQuery(PATH__ITEM__DESSERTS)
 
   console.log(data);
-  
-  // const data = [
-  //     {
-  //       label: "All",
-  //       value: "all",
-  //       desc: `It really matters and then like it really doesn't matter.
-  //       What matters is the people who are sparked by it. And the people 
-  //       who are like offended by it, it doesn't matter.`,
-  //     },
-  //     {
-  //       label: "Pizza",
-  //       value: "pizza",
-  //       desc: `Because it's about motivating the doers. Because I'm here
-  //       to follow my dreams and inspire other people to follow their dreams, too.`,
-  //     },
-  //     {
-  //       label: "Sidedishes",
-  //       value: "sidedishes",
-  //       desc: `We're not always in the position that we want to be at.
-  //       We're constantly growing. We're constantly making mistakes. We're
-  //       constantly trying to express ourselves and actualize our dreams.`,
-  //     },
-  //     {
-  //       label: "Drinks",
-  //       value: "drinks",
-  //       desc: `Because it's about motivating the doers. Because I'm here
-  //       to follow my dreams and inspire other people to follow their dreams, too.`,
-  //     },
-  //     {
-  //       label: "Desserts",
-  //       value: "desserts",
-  //       desc: `We're not always in the position that we want to be at.
-  //       We're constantly growing. We're constantly making mistakes. We're
-  //       constantly trying to express ourselves and actualize our dreams.`,
-  //     },
-  // ];
 
   return (
-    <div >
-      <p>menu</p>
-    </div>
-      // <Tabs value="all" className="w-full">
-      //   <div className='flex justify-between items-center '>
-      //     <h2 className='font-header text-4xl'>Simple Meals for You</h2>
-      //     <TabsHeader
-      //       className="bg-transparent space-x-4"
-      //       indicatorProps={{
-      //         className: "bg-transparent border-2 border-BrandDarkGreen rounded-full shadow-none",
-      //       }}
-      //     >
-      //       {data.map(({ label, value }) => (
-      //         <Tab 
-      //         className="rounded-full text-lg text-BrandDarkGreen font-content px-4" 
-      //         key={value} 
-      //         value={value}>
-      //           {label}
-      //         </Tab>
-      //       ))}
-      //     </TabsHeader>
-      //   </div>
-      //   <TabsBody>
-      //     {data.map(({ value, desc }) => (
-      //       <TabPanel key={value} value={value}>
-      //         {desc}
-      //       </TabPanel>
-      //     ))}
-      //   </TabsBody>
-      // </Tabs>
+    <>
+        <div className='flex justify-between items-center'>
+          <h3 className="font-header text-4xl">Simple Meals for You</h3>
+          {
+          isLoading ? 
+            <ProgressBar
+            height="100"
+            width="80"
+            ariaLabel="progress-bar-loading"
+            wrapperStyle={{}}
+            wrapperClass="progress-bar-wrapper"
+            borderColor = '#068C52'
+            barColor = '#068C52'
+            />
+            : error ? 
+            <div>
+              <h1>Error</h1>
+            </div>
+            :
+            <CustomStepper activeStep={activeStep} setActiveStep={setActiveStep} />
+          }
+        </div>
+        {/* <div className='flex justify-center'> */}
+          {
+            activeStep === 0 ? 
+              <ProductsSwipper products={data} />
+            :
+            <></>
+          }
+          {
+            activeStep === 1 ? 
+              <ProductsSwipper products={pizza} />
+            :
+            <></>
+          }
+          {
+            activeStep === 2 ? 
+              <ProductsSwipper products={sideDishes} />
+            :
+            <></>
+          }
+          {
+            activeStep === 3 ? 
+              <ProductsSwipper products={drinks} />
+            :
+            <></>
+          }
+          {
+            activeStep === 4 ? 
+              <ProductsSwipper products={desserts} />
+            :
+            <></>
+          }
+        {/* </div> */}
+    </>
   );
 }
 
