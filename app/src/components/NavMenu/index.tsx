@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Navbar,
   Collapse,
@@ -6,20 +6,36 @@ import {
   Button,
   ButtonGroup,
   IconButton,
+  Badge,
 } from "@material-tailwind/react";
 import useClickOutside  from '../../hooks/useClickOutside';
 import useScrollToCloseMenu  from '../../hooks/useScrollToCloseMenu';
 import { Link, useLocation } from "react-router-dom";
 import classnames from 'classnames';
 import styles from './style.module.scss';
+import { useTypedSelector } from "../../hooks/useTypedSelector";
+import { useActions } from "../../hooks/useActions";
+import ProfileMenu from "../ProfileMenu";
  
 export default function NavMenu() {
-  const [openNav, setOpenNav] = React.useState(false);
+  const [openNav, setOpenNav] = useState(false);
   const location = useLocation();
   const menuRef = useRef(null);
 
+  const { card } = useTypedSelector(state => state)
+  const isSomethingExists = card.length + 1;
+
+  const USER__ACTIVE = true;
+
+  const { openRight } = useTypedSelector(state => state.drawer);
+  const { handlerDrawerSlide } = useActions();
+
+  const handlerDrawButton = () => {
+    handlerDrawerSlide(!openRight);
+  }
+  
   useClickOutside(menuRef, () => !openNav || setTimeout(() => setOpenNav(false), 50));
-  useScrollToCloseMenu(openNav, setOpenNav);
+  // useScrollToCloseMenu(openNav, setOpenNav);
 
   useEffect(() => {
     window.addEventListener(
@@ -79,7 +95,7 @@ export default function NavMenu() {
         <div className={styles.NavBar__container}>
           <Typography
             as="a"
-            href="#"
+            href="/"
             className={styles.NavBar__Typography}
           >
             <span className={styles.NavBar__mainLogo_behind}>Yum</span>
@@ -87,12 +103,26 @@ export default function NavMenu() {
           </Typography>
           <div className={styles.NavBar__container_navList}>{navList}</div>
           <div className={styles.NavBar__container_iconButton}>
-          <IconButton className={styles.NavBar__icon}>
-            <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
-          </IconButton>
-          <IconButton className={styles.NavBar__icon}>
-            <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
-          </IconButton>
+            
+          {
+            !USER__ACTIVE 
+            ? <IconButton className={styles.NavBar__icon}>
+                <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
+              </IconButton>
+            : <ProfileMenu/>
+          }
+
+          <Badge 
+          content={isSomethingExists} 
+          color="orange" 
+          invisible={(isSomethingExists === 0)}>
+            <IconButton 
+            className={styles.NavBar__icon}
+            onClick={handlerDrawButton}>
+              <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
+            </IconButton>
+          </Badge>
+
           </div>
           <IconButton
             variant="text"

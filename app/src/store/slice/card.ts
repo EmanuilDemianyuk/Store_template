@@ -1,17 +1,21 @@
-// import { createSlice } from "@reduxjs/toolkit";
-// import { IProduct } from "../../types/products.type";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { IProduct } from "../../types/products.type";
 
-// const initialState: IProduct[] = [];
+const initialState: IProduct[] = [];
 
-// export const cardSlice = cardSlice({
-//     name: 'cart',
-//     initialState,
-//     reducers: {
-//         addItem: (state, action) => {
+export const cardSlice = createSlice({
+    name: 'card',
+    initialState,
+    reducers: {
+        addItem: (state, action:PayloadAction<IProduct>) => {
+            state.push(action.payload)
+        },
+        remodeItem: (state, action:PayloadAction<{id: number}>) => {
+            return state.filter(p => p.id !== action.payload.id)
+        },
+    }
+})
 
-//         },
-//         remodeItem: () => {
 
-//         }
-//     }
-// })
+export const cardReducer = cardSlice.reducer;
+export const cardAction = cardSlice.actions;
