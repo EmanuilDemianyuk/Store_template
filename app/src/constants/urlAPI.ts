@@ -1,8 +1,7 @@
-const path = "http://localhost:3000";
+const path = "http://localhost:5000";
 
 export const BASE__URL__API = `${path}/products`;
-
-// export const REQUEST__URL__PRODUCTS__PIZZAS = `${path}/products/pizzas`;
-// export const REQUEST__URL__PRODUCTS__DESSERTS = `${path}/products/desserts`;
-// export const REQUEST__URL__PRODUCTS__DRINKS = `${path}/products/drinks`;
-// export const REQUEST__URL__PRODUCTS__SIDE_DISHES = `${path}/products/sideDishes`;
+export const PATH__ITEM__PIZZAS = "/pizzas";
+export const PATH__ITEM__DESSERTS = "/desserts";
+export const PATH__ITEM__DRINKS = "/drinks";
+export const PATH__ITEM__SIDE_DISHES = "/sideDishes";

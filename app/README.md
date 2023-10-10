@@ -2,10 +2,6 @@
 
 # SQL Em
 
-
-# Create Redux + context Em
-
-
 # Create new component
 
 ## Юзер икон
@@ -14,7 +10,12 @@
 ## Simple Meals for You
 
 
-# work on
+# 10/10
+
+
+
+
+# work on ARINA
 ## Simple Meals for You
 ## /memu
 
@@ -26,6 +27,7 @@
 
 
 # done 
+## Create Redux + context Em
 ## Пенрепис на scss module Em 
 ## fix name wetPritter Em
 ## FIX header and delete scroll bar em
