@@ -1,0 +1,7 @@
+.CategoryBlock {
+    @apply mb-8 pb-8 border-b-4 border-orange-400;
+
+    h3 {
+        @apply font-header mb-8 text-3xl border-b-4 border-BrandDarkGreen;
+    }
+}
