@@ -1,0 +1,18 @@
+.CategoryBlock {
+    @apply mb-8 border-b-4 border-orange-400;
+
+    h3 {
+        @apply font-header mb-8 text-3xl border-b-4 border-BrandDarkGreen;
+    }
+
+    div {
+        @apply mb-4;
+    }
+
+    &__leftBtn {
+        @apply text-BrandDarkGreen border-BrandDarkGreen rounded-s-3xl font-content hover:bg-BrandDarkGreen hover:text-white;
+    }
+    &__rightBtn {
+        @apply text-BrandDarkGreen border-BrandDarkGreen rounded-e-3xl font-content hover:bg-BrandDarkGreen hover:text-white;
+    }
+}

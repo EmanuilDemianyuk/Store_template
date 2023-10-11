@@ -7,6 +7,7 @@ import {
     Typography,
     Button,
 } from "@material-tailwind/react";
+import pizzaMock from '../../assets/img/pizza-mock.jpeg';
 
 interface ProductCardProps {
   name: string;
@@ -26,17 +27,17 @@ const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <Card className="mt-6 w-72 md:w-80 h-[425px]">
       <CardHeader className="relative h-56 text-black">
-        <img src={imgSrc} alt={name} />
+        <img src={pizzaMock} alt={name} />
       </CardHeader>
       <CardBody className="text-black">
         <div className="flex justify-between items-center mb-2">
-          <Typography variant="h5" className="mb-2 text-black font-content">
+          <Typography className="text-black font-content text-lg font-bold">
             {name}
           </Typography>
-          <Typography variant="h6">
-            <span className="me-2 font-content">{rating}.0</span>
+          <Typography>
+            <span className="font-content text-sm font-bold">{rating}.0</span>
             <i
-              className="fa-solid fa-star bg-BrandLightGreen p-2 rounded-full"
+              className="fa-solid fa-star bg-BrandLightGreen p-1 rounded-full"
               style={{ color: '#068c52' }}
             ></i>
           </Typography>
