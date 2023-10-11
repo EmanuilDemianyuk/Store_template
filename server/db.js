@@ -1,12 +1,21 @@
-const Pool = require('pg').Pool;
-const HOST = "localhost"
-const pool = new Pool({
-    user: 'postgres',
-    password: 585999,
-    host: HOST,
-    port: 5050,
-    database: ''
-});
+const { MongoClient } = require('mongodb');
 
+const URL = 'mongodb://0.0.0.0:27017/Store_Template';
 
-module.exports = pool;
+let dbConnection;
+
+module.exports = {
+    connectToDb: (cb) => {
+        MongoClient
+            .connect(URL)
+            .then((client) => {
+                console.log('Connected to MongoDB');
+                dbConnection = client.db();
+                return cb();
+            })
+            .catch((err) => {
+                return cb(err)
+            })
+    },
+    getDb: () => dbConnection
+}
