@@ -3,13 +3,11 @@ import {
   Navbar,
   Collapse,
   Typography,
-  Button,
-  ButtonGroup,
   IconButton,
   Badge,
 } from "@material-tailwind/react";
 import useClickOutside  from '../../hooks/useClickOutside';
-import useScrollToCloseMenu  from '../../hooks/useScrollToCloseMenu';
+// import useScrollToCloseMenu  from '../../hooks/useScrollToCloseMenu';
 import { Link, useLocation } from "react-router-dom";
 import classnames from 'classnames';
 import styles from './style.module.scss';
@@ -179,7 +177,6 @@ export default function NavMenu() {
                       <ProfileMenu/>
                     </div>
                 }
-  
                 <Badge 
                 content={isSomethingExists} 
                 color="orange" 
@@ -187,7 +184,7 @@ export default function NavMenu() {
                   <IconButton 
                     onClick={handlerDrawButton}
                     className={styles.IconButton}>
-                      <i className="fa-solid fa-basket-shopping fa-2xl"     style={{color: "#dcfce7"}}></i>
+                      <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
                   </IconButton>
                 </Badge>
               </div>
