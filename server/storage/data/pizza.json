@@ -4,7 +4,7 @@
         "name": "Margherita",
         "description": "Classic delight with 100% real mozzarella cheese",
         "price": 25,
-        "img": "../image/pizza-1.jpeg",
+        "img": "./../image/pizza-1.jpeg",
         "category": "pizza",
         "type": "vegetarian",
         "rating": 4
@@ -14,7 +14,7 @@
         "name": "Barbecue Chicken",
         "description": "Barbecue chicken for that extra zing",
         "price": 29,
-        "img": "../image/pizza-2.jpeg",
+        "img": "./../image/pizza-2.jpeg",
         "category": "pizza",
         "type": "not-vegetarian",
         "rating": 5
@@ -24,7 +24,7 @@
         "name": "Farmhouse",
         "description": "Delightful combo of grilled mushroom & veggies",
         "price": 27,
-        "img": "../image/pizza-3.jpeg",
+        "img": "./../image/pizza-3.jpeg",
         "category": "pizza",
         "type": "vegetarian",
         "rating": 3
@@ -34,7 +34,7 @@
         "name": "Non Veg Supreme",
         "description": "Supreme combo of 3 types of meat",
         "price": 34,
-        "img": "../image/pizza-4.jpeg",
+        "img": "./../image/pizza-4.jpeg",
         "category": "pizza",
         "type": "not-vegetarian",
         "rating": 5
@@ -44,7 +44,7 @@
         "name": "Veggie Paradise",
         "description": "The awesome foursome with exotic veggies",
         "price": 29,
-        "img": "../image/pizza-5.jpeg",
+        "img": "./../image/pizza-5.jpeg",
         "category": "pizza",
         "type": "vegetarian",
         "rating": 4
@@ -54,7 +54,7 @@
         "name": "Pepperoni Special",
         "description": "Relish the delectable flavor of chicken meat and pepperoni",
         "price": 32,
-        "img": "../image/pizza-6.jpeg",
+        "img": "./../image/pizza-6.jpeg",
         "category": "pizza",
         "type": "not-vegetarian",
         "rating": 4
@@ -64,7 +64,7 @@
         "name": "Cheese n Corn",
         "description": "A delicacy prepared with golden corn",
         "price": 19,
-        "img": "../image/pizza-7.jpeg",
+        "img": "./../image/pizza-7.jpeg",
         "category": "pizza",
         "type": "vegetarian",
         "rating": 5
@@ -74,7 +74,7 @@
         "name": "Hot Pepper",
         "description": "Flavorful trio: chili pepper, capsicum, red paprika",
         "price": 23,
-        "img": "../image/pizza-8.jpeg",
+        "img": "./../image/pizza-8.jpeg",
         "category": "pizza",
         "type": "vegetarian",
         "rating": 3
@@ -84,7 +84,7 @@
         "name": "Bacon Dominator",
         "description": "Beware! You'll be left craving for more",
         "price": 32,
-        "img": "../image/pizza-9.jpeg",
+        "img": "./../image/pizza-9.jpeg",
         "category": "pizza",
         "type": "not-vegetarian",
         "rating": 4
@@ -94,7 +94,7 @@
         "name": "Classic Pizza",
         "description": "It includes: salami, mozzarella, tomato sauce",
         "price": 32,
-        "img": "../image/pizza-10.jpeg",
+        "img": "./../image/pizza-10.jpeg",
         "category": "pizza",
         "type": "not-vegetarian",
         "rating": 5

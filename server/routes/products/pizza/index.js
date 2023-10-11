@@ -4,15 +4,16 @@ const fs = require('fs');
 const router = express.Router();
 const filePath = `${__dirname}/../../../storage/data/pizza.json`; 
 
-const checker = (rawData) => {
-    return (rawData === 0) ? [] : rawData
-}
+
 
 const getJsonData = () => {
-    const rawData = fs.readFileSync(filePath);
-    return JSON.parse(checker(rawData));
+    const rawData = JSON.parse(fs.readFileSync(filePath));
+    // const Data = rawData.map(item => fs.readdirSync(`${item.img}`))
+    
+    //     console.log(Data);
+    
+    return rawData;
 }
-
 router.get('/', (req, res) => {
     return res.json(getJsonData())
 })

@@ -26,6 +26,9 @@
     &__icon {
         @apply rounded-full bg-BrandDarkGreen hidden lg:inline-block;
     }
+    &____profileMenu {
+        @apply rounded-full bg-BrandDarkGreen hidden lg:inline-block;
+    }
     &__burgerMenu {
         @apply ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden;
     }

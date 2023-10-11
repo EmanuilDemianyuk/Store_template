@@ -114,6 +114,7 @@ export default function NavMenu() {
 
           <Badge 
           content={isSomethingExists} 
+          className={styles.NavBar__profileMenu}
           color="orange" 
           invisible={(isSomethingExists === 0)}>
             <IconButton 
