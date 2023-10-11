@@ -24,7 +24,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   rating,
 }) => {
   return (
-    <Card className="mt-6 w-80 h-[425px]">
+    <Card className="mt-6 w-72 md:w-80 h-[425px]">
       <CardHeader className="relative h-56 text-black">
         <img src={imgSrc} alt={name} />
       </CardHeader>

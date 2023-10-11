@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { ProgressBar } from  'react-loader-spinner'
 import { useGetProductsQuery, useGetTopProductsQuery } from '../../../store/products/products.api';
-import { PATH__ITEM__DESSERTS } from '../../../constants/urlAPI';
 import ProductsSwipper from '../../ProductsSwipper';
 import { CustomStepper } from '../CustomStepper';
 import styles from './style.module.scss';
@@ -15,12 +14,10 @@ const MealsMenu = () => {
   const drinks = data?.filter(item => item.category === 'drinks');
   // const { data, isLoading, error } = useGetProductsQuery(PATH__ITEM__DESSERTS)
 
-  console.log(data);
-
   return (
     <>
-        <div className='flex justify-between items-center'>
-          <h3 className="font-header text-4xl">Simple Meals for You</h3>
+        <div className='flex flex-wrap items-center'>
+          <h3 className="mt-4 lg:mt-0 basis-full lg:basis-1/2 font-header text-3xl lg:text-4xl">Simple Meals for You</h3>
           {
           isLoading ? 
             <ProgressBar
@@ -40,7 +37,6 @@ const MealsMenu = () => {
             <CustomStepper activeStep={activeStep} setActiveStep={setActiveStep} />
           }
         </div>
-        {/* <div className='flex justify-center'> */}
           {
             activeStep === 0 ? 
               <ProductsSwipper products={data} />
@@ -71,7 +67,7 @@ const MealsMenu = () => {
             :
             <></>
           }
-        {/* </div> */}
+       
     </>
   );
 }

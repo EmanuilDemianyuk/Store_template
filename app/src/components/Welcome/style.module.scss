@@ -11,7 +11,7 @@
             @apply font-content text-lg lg:text-xl mb-4;
         }
         .viewBtn {
-            @apply w-full md:w-1/2 lg:w-1/3 rounded-full font-content;
+            @apply w-full md:w-1/2 lg:w-1/3 rounded-full font-content hover:bg-BrandWrapperGB hover:text-BrandDarkGreen;
         }
     }
     &__smImgLinkMenu {

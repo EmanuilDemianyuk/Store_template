@@ -8,16 +8,16 @@ interface CustomStepperProps {
 
 export function CustomStepper({ activeStep, setActiveStep }: CustomStepperProps) {
     return (
-        <div className="py-4 w-1/2 bg-inherit">
-            <CardHeader floated={false} className="grid h-20 m-0 place-items-end bg-BrandLightGreen shadow-none rounded-none">
-                <div className="w-full px-10 pt-4 pb-8">
+        <div className="basis-full lg:basis-1/2 py-4 w-full bg-inherit">
+            <CardHeader floated={false} className="grid h-16 lg:h-20 m-0 place-items-end bg-BrandLightGreen shadow-none rounded-none">
+                <div className="w-full pe-20 lg:pe-0 lg:px-2 pt-4 pb-8">
                     <Stepper
                         activeStep={activeStep}
                         lineClassName="bg-BrandLightGreen"
                         activeLineClassName="bg-BrandLightGreen"
                     >
                         <Step
-                            className="h-6 w-12 text-BrandDarkGreen cursor-pointer"
+                            className="h-6 w-10 md:w-12 text-BrandDarkGreen cursor-pointer md:me-2"
                             activeClassName="ring-0 !bg-BrandLightGreen border-[1px] border-BrandDarkGreen"
                             completedClassName="!bg-gray-300"
                             onClick={() => setActiveStep(0)}
@@ -27,7 +27,7 @@ export function CustomStepper({ activeStep, setActiveStep }: CustomStepperProps)
                             </div>
                         </Step>
                         <Step
-                            className="h-6 w-14 text-BrandDarkGreen cursor-pointer"
+                            className="h-6 w-14 text-BrandDarkGreen cursor-pointer md:me-2"
                             activeClassName="ring-0 !bg-BrandLightGreen border-[1px] border-BrandDarkGreen"
                             completedClassName="!bg-gray-300"
                             onClick={() => setActiveStep(1)}
@@ -37,7 +37,7 @@ export function CustomStepper({ activeStep, setActiveStep }: CustomStepperProps)
                             </div>
                         </Step>
                         <Step
-                            className="h-6 w-28 text-BrandDarkGreen cursor-pointer"
+                            className="h-6 w-24 md:w-28 text-BrandDarkGreen cursor-pointer md:me-2"
                             activeClassName="ring-0 !bg-BrandLightGreen border-[1px] border-BrandDarkGreen"
                             completedClassName="!bg-gray-300"
                             onClick={() => setActiveStep(2)}
@@ -47,7 +47,7 @@ export function CustomStepper({ activeStep, setActiveStep }: CustomStepperProps)
                             </div>
                         </Step>
                         <Step
-                            className="h-6 w-20 text-BrandDarkGreen cursor-pointer"
+                            className="h-6 w-16 md:w-20 text-BrandDarkGreen cursor-pointer md:me-2"
                             activeClassName="ring-0 !bg-BrandLightGreen border-[1px] border-BrandDarkGreen"
                             completedClassName="!bg-gray-300"
                             onClick={() => setActiveStep(3)}
@@ -57,7 +57,7 @@ export function CustomStepper({ activeStep, setActiveStep }: CustomStepperProps)
                             </div>
                         </Step>
                         <Step
-                            className="h-6 w-24 text-BrandDarkGreen cursor-pointer"
+                            className="h-6 w-20 md:w-24 text-BrandDarkGreen cursor-pointer md:me-2"
                             activeClassName="ring-0 !bg-BrandLightGreen border-[1px] border-BrandDarkGreen"
                             completedClassName="!bg-gray-300"
                             onClick={() => setActiveStep(4)}
