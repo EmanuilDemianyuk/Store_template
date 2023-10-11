@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { CompleteMenu } from '../components/CompleteMenu';
 
 export const Menu = () => {
   return (
-    <div>
-      
-    </div>
-  )
+    <CompleteMenu />
+  );
 }
