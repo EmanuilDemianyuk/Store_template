@@ -8,3 +8,6 @@ export interface IProduct {
     type: string;
     rating: number;
 }
+export interface ProductsSwipperProps {
+    products: IProduct[] | undefined;
+}

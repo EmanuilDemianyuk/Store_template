@@ -2,20 +2,19 @@ import React from 'react';
 import ProductCard from '../ProductCard';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { IProduct } from '../../types/products.type';
+import { IProduct, ProductsSwipperProps } from '../../types/products.type';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-interface ProductsSwipperProps {
-    products: IProduct[] | undefined;
-}
 
 function ProductsSwipper (props: ProductsSwipperProps) {
+    const styleSwiper: { [key: string]: string } = { "--swiper-navigation-color": "#068C52" };
+
     const { products } = props;
     return (
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
-            style={{"--swiper-navigation-color": "#068C52"}}
+            style={styleSwiper}
             spaceBetween={30}
             slidesPerView={3}
             navigation
@@ -54,10 +53,13 @@ function ProductsSwipper (props: ProductsSwipperProps) {
             products?.map(card => (
             <SwiperSlide key={card.id}>
                 <ProductCard 
+                    id={card.id}
                     name={card.name} 
                     description={card.description} 
                     price={card.price} 
-                    imgSrc={card.img} 
+                    img={card.img} 
+                    category={card.category}
+                    type={card.type}
                     rating={card.rating} />
             </SwiperSlide>
             ))

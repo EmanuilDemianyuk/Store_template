@@ -1,0 +1,22 @@
+.DrawerNav {
+    @apply flex flex-col ;
+
+    &__amount {
+        @apply text-center tracking-wider font-header text-xl py-4 my-4 border-b-2 border-gray-400;
+    }
+    &__btnCon {
+        
+
+        button {
+            @apply text-white 
+            w-full
+            bg-BrandDarkGreen font-content cursor-pointer
+            rounded-full
+            hover:bg-BrandLightGreen
+            hover:border-2
+            hover:border-BrandDarkGreen 
+            hover:text-BrandDarkGreen
+              hover:font-medium py-2 px-6 leading-7;
+        }
+    }
+}

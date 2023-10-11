@@ -23,7 +23,7 @@ export default function NavMenu() {
   const menuRef = useRef(null);
 
   const { card } = useTypedSelector(state => state)
-  const isSomethingExists = card.length + 1;
+  const isSomethingExists = card.length;
 
   const USER__ACTIVE = true;
 
@@ -109,7 +109,9 @@ export default function NavMenu() {
             ? <IconButton className={styles.NavBar__icon}>
                 <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
               </IconButton>
-            : <ProfileMenu/>
+            : <div className={styles.NavBar__icon} >
+                <ProfileMenu/>
+              </div>
           }
 
           <Badge 
@@ -166,18 +168,29 @@ export default function NavMenu() {
         <Collapse open={openNav}>
           <div className={styles.MobileNav__container}>
             {navList}
-            <ButtonGroup fullWidth size="sm">
-              <Button className={styles.MobileNav__Button}>
-              <IconButton className={styles.MobileNav__IconButton}>
-                <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
-              </IconButton>
-              </Button>
-              <Button className={styles.MobileNav__Button}>
-              <IconButton className={styles.MobileNav__IconButton}>
-                <i className="fa-solid fa-basket-shopping fa-2xl" style={{color: "#dcfce7"}}></i>
-              </IconButton>
-              </Button>
-            </ButtonGroup>
+              <div className={styles.MobileNav__iconBox}>
+                {
+                  !USER__ACTIVE 
+                  ? <IconButton 
+                    className={styles.IconButton}>
+                      <i className="fa-solid fa-circle-user fa-2xl"     style={{color: "#dcfce7"}}></i>
+                    </IconButton>
+                  : <div  >
+                      <ProfileMenu/>
+                    </div>
+                }
+  
+                <Badge 
+                content={isSomethingExists} 
+                color="orange" 
+                invisible={(isSomethingExists === 0)}>
+                  <IconButton 
+                    onClick={handlerDrawButton}
+                    className={styles.IconButton}>
+                      <i className="fa-solid fa-basket-shopping fa-2xl"     style={{color: "#dcfce7"}}></i>
+                  </IconButton>
+                </Badge>
+              </div>
           </div>
         </Collapse>
       </Navbar>

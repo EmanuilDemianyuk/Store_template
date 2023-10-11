@@ -18,20 +18,24 @@ function OurApp():JSX.Element {
                     </p>
                     <div>
                         <div>
-                            <Button
-                            size="sm"
-                            className={styles.textBtn}>
-                                <img src={google} alt="google" className="h-6 w-6" />
-                                Google Play
-                            </Button>
+                            <a href='https://play.google.com/' target='_blanck'>
+                                <Button
+                                size="sm"
+                                className={styles.textBtn}>
+                                    <img src={google} alt="google" className="h-6 w-6" />
+                                    Google Play
+                                </Button>
+                            </a>
                         </div>
                         <div>
-                            <Button
-                            size="sm"
-                            className={styles.textBtn}>
-                                <img src={apple} alt="apple" className="h-6 w-6" />
-                                App Store
-                            </Button>
+                            <a href='https://www.apple.com/ua/app-store/' target='_blanck'>
+                                <Button
+                                size="sm"
+                                className={styles.textBtn}>
+                                    <img src={apple} alt="apple" className="h-6 w-6" />
+                                    App Store
+                                </Button>
+                            </a>
                         </div>
                     </div>
                 </div>

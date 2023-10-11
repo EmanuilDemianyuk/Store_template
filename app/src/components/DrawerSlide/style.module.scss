@@ -1,0 +1,22 @@
+.drawerMainCon {
+    @apply h-full;
+
+    .drawer {
+        @apply p-4 bg-BrandWrapperGB;
+    }
+    .container {
+        @apply mb-6 flex items-center justify-between;
+
+        .Typography {
+            @apply text-4xl font-header;
+        }
+        .svg {
+            @apply h-7 w-7 text-BrandDarkGreen;
+        }
+    }
+    .containerCart {
+        .triger {
+            @apply font-header text-center
+        }
+    }
+}

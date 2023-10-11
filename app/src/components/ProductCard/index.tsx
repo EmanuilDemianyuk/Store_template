@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import {
     Card,
     CardHeader,
@@ -7,26 +7,40 @@ import {
     Typography,
     Button,
 } from "@material-tailwind/react";
+import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { useActions } from '../../hooks/useActions';
+import { IProduct } from '../../types/products.type';
 
-interface ProductCardProps {
-  name: string;
-  description: string;
-  price: number;
-  imgSrc: string;
-  rating: number;
-}
 
-const ProductCard: React.FC<ProductCardProps> = ({
+
+const ProductCard: FC<IProduct> = ({
+  id,
   name,
   description,
   price,
-  imgSrc,
-  rating,
+  img,
+  category,
+  type,
+  rating
 }) => {
+  const { addItem } = useActions();
+
+  const handlerClick = () => {
+    addItem({
+      id,
+      name,
+      description,
+      price,
+      img,
+      category,
+      type,
+      rating,
+    })
+  }
   return (
     <Card className="mt-6 w-72 md:w-80 h-[425px]">
       <CardHeader className="relative h-56 text-black">
-        <img src={imgSrc} alt={name} />
+        <img src={img} alt={name} />
       </CardHeader>
       <CardBody className="text-black">
         <div className="flex justify-between items-center mb-2">
@@ -50,6 +64,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <Button
           variant="outlined"
           className="font-content rounded-full border-BrandDarkGreen text-BrandDarkGreen hover:bg-BrandDarkGreen hover:text-white"
+          onClick={handlerClick}
         >
           Add to Cart
         </Button>

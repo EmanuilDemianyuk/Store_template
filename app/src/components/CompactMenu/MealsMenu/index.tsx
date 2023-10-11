@@ -12,7 +12,6 @@ const MealsMenu = () => {
   const sideDishes = data?.filter(item => item.category === 'side-dishes');
   const desserts = data?.filter(item => item.category === 'desserts');
   const drinks = data?.filter(item => item.category === 'drinks');
-  // const { data, isLoading, error } = useGetProductsQuery(PATH__ITEM__DESSERTS)
 
   return (
     <>

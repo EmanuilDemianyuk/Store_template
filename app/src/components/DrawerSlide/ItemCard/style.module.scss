@@ -1,0 +1,27 @@
+.ItemCard {
+    @apply flex py-3 justify-between items-center border-b-2 border-gray-400; 
+
+    &__imgCon {
+        @apply flex max-w-[3.75rem] max-h-[3.75rem] overflow-hidden rounded-md;
+
+        img {
+            @apply w-full h-full object-cover;
+        }
+
+    }
+    &__infoCon {
+        .text {
+            span {
+                @apply tracking-wide;
+            }
+        }
+        .price {
+            p {
+                @apply text-left font-medium;
+            }
+        }
+    }
+    .svg {
+        @apply h-4 w-4 text-red-500;
+    }
+}

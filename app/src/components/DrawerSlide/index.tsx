@@ -3,14 +3,15 @@ import {
     Typography,
     IconButton,
     Drawer,
-    DrawerStylesType
   } from "@material-tailwind/react";
-import { useActionData } from 'react-router-dom';
+import styles from './style.module.scss';
+import ItemCard from './ItemCard';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
+import DrawerNav from './DrawerNav';
 
 const DrawerSlide:FC = () => {
-  const { openRight } = useTypedSelector(state => state.drawer);
+  const { drawer: {openRight}, card } = useTypedSelector(state => state);
   const { handlerDrawerSlide } = useActions();
 
   const handlerClose = () => {
@@ -18,16 +19,16 @@ const DrawerSlide:FC = () => {
   }
   
   return (
-    <div className='h-full'>
+    <div className={styles.drawerMainCon}>
       <Drawer
       placement="right"
       open={openRight}
       onClose={handlerClose}
-      className="p-4 bg-BrandWrapperGB"
+      className={styles.drawer}
       overlay={false}
       >
-        <div className="mb-6 flex items-center justify-between">
-          <Typography variant="h5" className='text-4xl font-header'>
+        <div className={styles.container}>
+          <Typography variant="h5" className={styles.Typography}>
             Cart
           </Typography>
           <IconButton variant="text" onClick={handlerClose}>
@@ -37,7 +38,7 @@ const DrawerSlide:FC = () => {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="h-5 w-5 text-BrandDarkGreen"
+              className={styles.svg}
             >
               <path
                 strokeLinecap="round"
@@ -46,6 +47,30 @@ const DrawerSlide:FC = () => {
               />
             </svg>
           </IconButton>
+        </div>
+        <div className={styles.containerCart}>
+        {
+          (card.length === 0)
+          ? <p className={styles.triger}>
+              Your basket is empty
+            </p>
+          : <>
+              {card.map(item => 
+                <ItemCard
+                  id={item.id}
+                  name={item.name} 
+                  description={item.description} 
+                  price={item.price} 
+                  img={item.img} 
+                  category={item.category}
+                  type={item.type}
+                  rating={item.rating}
+                />)}
+                <DrawerNav 
+                  products={card}
+                />  
+            </>
+          }
         </div>
       </Drawer>
     </div>
