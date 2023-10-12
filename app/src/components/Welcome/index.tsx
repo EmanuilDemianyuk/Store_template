@@ -26,7 +26,7 @@ function Welcome():JSX.Element {
                     </Link>
                 </div>
                 <div className={styles.Welcome__smImgLinkMenu}>
-                    <Avatar
+                    {/* <Avatar
                     variant="circular"
                     alt="user 1"
                     className={styles.Avatar}
@@ -53,10 +53,10 @@ function Welcome():JSX.Element {
                     className={styles.Avatar}
                     src={ptwohome}
                     size="xl"
-                    />
+                    /> */}
                 </div>
                 <div className={styles.Welcome__imgMainBox}>
-                        <div className={styles.lemonade}>
+                        {/* <div className={styles.lemonade}>
                             <div>
                                 <img src={lemonade} alt='lemonade'/>
                             </div>
@@ -78,7 +78,7 @@ function Welcome():JSX.Element {
                             <div>
                                 <img src={fries} alt='pizza'/>
                             </div>
-                        </div>
+                        </div> */}
                 </div>
         </section>
     );

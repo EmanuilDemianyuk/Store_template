@@ -11,3 +11,7 @@ export interface IProduct {
 export interface ProductsSwipperProps {
     products: IProduct[] | undefined;
 }
+export interface CustomStepperProps {
+    activeStep: number;
+    setActiveStep: React.Dispatch<React.SetStateAction<number>>;
+}

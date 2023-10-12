@@ -1,4 +1,4 @@
-import React, { FC} from 'react';
+import { FC } from 'react';
 import { ProductsSwipperProps } from '../../../types/products.type';
 import styles from './style.module.scss';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ const DrawerNav:FC<ProductsSwipperProps> = ({products}):JSX.Element => {
   return (
     <div className={styles.DrawerNav}>   
         <div className={styles.DrawerNav__amount}>
-            <p>Summary : {totalPrice} $</p>
+            <p>Total: {totalPrice} $</p>
         </div>
         <div className={styles.DrawerNav__btnCon}>
            <Link to='/checkout'>

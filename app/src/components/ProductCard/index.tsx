@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import {
     Card,
     CardHeader,
@@ -11,8 +11,7 @@ import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
 import { IProduct } from '../../types/products.type';
 import pizzaMock from '../../assets/img/pizza-mock.jpeg';
-
-
+import styles from './style.module.scss';
 
 const ProductCard: FC<IProduct> = ({
   id,
@@ -38,34 +37,37 @@ const ProductCard: FC<IProduct> = ({
       rating,
     })
   }
-  return (
-    <Card className="mt-6 w-72 md:w-80 h-[425px]">
-      <CardHeader className="relative h-56 text-black">
 
+  return (
+    <Card className={styles.ProductCard}>
+      <CardHeader className={styles.ProductCard__CardHeader}>
         <img src={pizzaMock} alt={name} />
       </CardHeader>
-      <CardBody className="text-black">
-        <div className="flex justify-between items-center mb-2">
-          <Typography className="text-black font-content text-lg font-bold">
+      <CardBody>
+        <div className={styles.ProductCard__CardBody}>
+          <Typography className={styles.ProductCard__ProductName}>
             {name}
           </Typography>
           <Typography>
-            <span className="font-content text-sm font-bold">{rating}.0</span>
+            <span className={styles.ProductCard__ProductRating}>{rating}.0</span>
             <i
               className="fa-solid fa-star bg-BrandLightGreen p-1 rounded-full"
               style={{ color: '#068c52' }}
             ></i>
           </Typography>
         </div>
-        <Typography className='font-content h-16'>{description}</Typography>
+        <Typography 
+        className={styles.ProductCard__ProductDesc}>
+          {description}
+        </Typography>
       </CardBody>
-      <CardFooter className="pt-0 flex justify-between items-center">
+      <CardFooter className={styles.ProductCard__CardFooter}>
         <Typography variant="h4" className="text-black font-content">
           {price}$
         </Typography>
         <Button
           variant="outlined"
-          className="font-content rounded-full border-BrandDarkGreen text-BrandDarkGreen hover:bg-BrandDarkGreen hover:text-white"
+          className={styles.ProductCard__Button}
           onClick={handlerClick}
         >
           Add to Cart

@@ -1,0 +1,67 @@
+.CustomStepper {
+    @apply basis-full lg:basis-1/2 py-4 w-full bg-inherit;
+
+    &__CardHeader {
+        @apply grid h-16 lg:h-20 m-0 place-items-end bg-BrandLightGreen shadow-none rounded-none;
+    }
+
+    &__StepOne {
+        @apply h-6 w-10 md:w-12 text-BrandDarkGreen cursor-pointer md:me-2;
+
+        div {
+            @apply absolute -bottom-0.5 w-max text-center text-xs;
+        }
+
+        &__Typography {
+            @apply font-content text-BrandDarkGreen;
+        }
+    }
+
+    &__StepTwo {
+        @apply h-6 w-14 text-BrandDarkGreen cursor-pointer md:me-2;
+
+        div {
+            @apply absolute -bottom-0.5 w-max text-center text-xs;
+        }
+
+        &__Typography {
+            @apply font-content text-BrandDarkGreen;
+        }
+    }
+
+    &__StepThree {
+        @apply h-6 w-24 md:w-28 text-BrandDarkGreen cursor-pointer md:me-2;
+
+        div {
+            @apply absolute -bottom-0.5 w-max text-center text-xs;
+        }
+
+        &__Typography {
+            @apply font-content text-BrandDarkGreen;
+        }
+    }
+
+    &__StepFour {
+        @apply h-6 w-16 md:w-20 text-BrandDarkGreen cursor-pointer md:me-2;
+
+        div {
+            @apply absolute -bottom-0.5 w-max text-center text-xs;
+        }
+
+        &__Typography {
+            @apply font-content text-BrandDarkGreen;
+        }
+    }
+
+    &__StepFive {
+        @apply h-6 w-20 md:w-24 text-BrandDarkGreen cursor-pointer md:me-2;
+
+        div {
+            @apply absolute -bottom-0.5 w-max text-center text-xs;
+        }
+
+        &__Typography {
+            @apply font-content text-BrandDarkGreen;
+        }
+    }
+}

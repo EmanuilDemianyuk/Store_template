@@ -26,6 +26,7 @@ const DrawerSlide:FC = () => {
       onClose={handlerClose}
       className={styles.drawer}
       overlay={false}
+      size={350}
       >
         <div className={styles.container}>
           <Typography variant="h5" className={styles.Typography}>

@@ -7,7 +7,6 @@ import styles from './style.module.scss';
 
 function SideDishes() {
     const { data, isLoading, error } = useGetProductsQuery(PATH__ITEM__SIDE_DISHES);
-    console.log(data);
 
     return (
         <div className={styles.CategoryBlock}>

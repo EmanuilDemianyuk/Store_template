@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCard from '../ProductCard';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { IProduct, ProductsSwipperProps } from '../../types/products.type';
+import { ProductsSwipperProps } from '../../types/products.type';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -27,17 +27,17 @@ function ProductsSwipper (props: ProductsSwipperProps) {
                     slidesPerView: 3,
                     spaceBetween: 50
                 },
-                1000:{
+                915:{
                     slidesPerView: 3,
-                    spaceBetween: 50
+                    spaceBetween: 30
                 },
                 865:{
                     slidesPerView: 2,
-                    spaceBetween: 10
+                    spaceBetween: 30
                 },
-                670: {
+                500: {
                     slidesPerView: 2,
-                    spaceBetween: 10
+                    spaceBetween: 20
                 },
                 400:{
                     slidesPerView: 1,
