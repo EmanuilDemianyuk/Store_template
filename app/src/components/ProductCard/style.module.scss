@@ -1,0 +1,31 @@
+.ProductCard {
+    @apply mt-6 w-full sm:w-64 md:w-72 lg:w-80 h-[425px];
+
+    &__CardHeader {
+        @apply relative h-56 text-black;
+    }
+
+    &__CardBody {
+        @apply flex justify-between items-center mb-2;
+    }
+
+    &__ProductName {
+        @apply text-black font-content text-lg font-bold;
+    }
+
+    &__ProductRating {
+        @apply font-content text-sm font-bold;
+    }
+
+    &__ProductDesc {
+        @apply font-content h-16;
+    }
+
+    &__CardFooter {
+        @apply pt-0 flex justify-between items-center;
+    }
+
+    &__Button {
+        @apply font-content rounded-full border-BrandDarkGreen text-BrandDarkGreen hover:bg-BrandDarkGreen hover:text-white;
+    }
+}

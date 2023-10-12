@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Stepper, Step, CardHeader, Typography } from "@material-tailwind/react";
-
-interface CustomStepperProps {
-    activeStep: number;
-    setActiveStep: React.Dispatch<React.SetStateAction<number>>;
-}
+import { CustomStepperProps } from "../../../types/products.type";
+import styles from './style.module.scss';
 
 export function CustomStepper({ activeStep, setActiveStep }: CustomStepperProps) {
     return (
-        <div className="basis-full lg:basis-1/2 py-4 w-full bg-inherit">
-            <CardHeader floated={false} className="grid h-16 lg:h-20 m-0 place-items-end bg-BrandLightGreen shadow-none rounded-none">
+        <div className={styles.CustomStepper}>
+            <CardHeader floated={false} className={styles.CustomStepper__CardHeader}>
                 <div className="w-full pe-20 lg:pe-0 lg:px-2 pt-4 pb-8">
                     <Stepper
                         activeStep={activeStep}
@@ -17,53 +14,63 @@ export function CustomStepper({ activeStep, setActiveStep }: CustomStepperProps)
                         activeLineClassName="bg-BrandLightGreen"
                     >
                         <Step
-                            className="h-6 w-10 md:w-12 text-BrandDarkGreen cursor-pointer md:me-2"
+                            className={styles.CustomStepper__StepOne}
                             activeClassName="ring-0 !bg-BrandLightGreen border-[1px] border-BrandDarkGreen"
                             completedClassName="!bg-gray-300"
                             onClick={() => setActiveStep(0)}
                         >
-                            <div className="absolute -bottom-0.5 w-max text-center text-xs">
-                                <Typography variant="h6"className="font-content text-BrandDarkGreen">All</Typography>
+                            <div>
+                                <Typography 
+                                variant="h6" 
+                                className={styles.CustomStepper__StepOne__Typography}>All</Typography>
                             </div>
                         </Step>
                         <Step
-                            className="h-6 w-14 text-BrandDarkGreen cursor-pointer md:me-2"
+                            className={styles.CustomStepper__StepTwo}
                             activeClassName="ring-0 !bg-BrandLightGreen border-[1px] border-BrandDarkGreen"
                             completedClassName="!bg-gray-300"
                             onClick={() => setActiveStep(1)}
                         >
-                            <div className="absolute -bottom-0.5 w-max text-center text-xs">
-                                <Typography variant="h6" className="text-BrandDarkGreen font-content">Pizza</Typography>
+                            <div>
+                                <Typography 
+                                variant="h6" 
+                                className={styles.CustomStepper__StepTwo__Typography}>Pizza</Typography>
                             </div>
                         </Step>
                         <Step
-                            className="h-6 w-24 md:w-28 text-BrandDarkGreen cursor-pointer md:me-2"
+                            className={styles.CustomStepper__StepThree}
                             activeClassName="ring-0 !bg-BrandLightGreen border-[1px] border-BrandDarkGreen"
                             completedClassName="!bg-gray-300"
                             onClick={() => setActiveStep(2)}
                         >
                             <div className="absolute -bottom-0.5 w-max text-center text-xs">
-                                <Typography variant="h6" className="text-BrandDarkGreen font-content">Sidedishes</Typography>
+                                <Typography 
+                                variant="h6" 
+                                className={styles.CustomStepper__StepThree__Typography}>Sidedishes</Typography>
                             </div>
                         </Step>
                         <Step
-                            className="h-6 w-16 md:w-20 text-BrandDarkGreen cursor-pointer md:me-2"
+                            className={styles.CustomStepper__StepFour}
                             activeClassName="ring-0 !bg-BrandLightGreen border-[1px] border-BrandDarkGreen"
                             completedClassName="!bg-gray-300"
                             onClick={() => setActiveStep(3)}
                         >
                             <div className="absolute -bottom-0.5 w-max text-center text-xs">
-                                <Typography variant="h6" className="text-BrandDarkGreen font-content">Drinks</Typography>
+                                <Typography 
+                                variant="h6" 
+                                className={styles.CustomStepper__StepFour__Typography}>Drinks</Typography>
                             </div>
                         </Step>
                         <Step
-                            className="h-6 w-20 md:w-24 text-BrandDarkGreen cursor-pointer md:me-2"
+                            className={styles.CustomStepper__StepFive}
                             activeClassName="ring-0 !bg-BrandLightGreen border-[1px] border-BrandDarkGreen"
                             completedClassName="!bg-gray-300"
                             onClick={() => setActiveStep(4)}
                         >
                             <div className="absolute -bottom-0.5 w-max text-center text-xs">
-                                <Typography variant="h6" className="text-BrandDarkGreen font-content">Desserts</Typography>
+                                <Typography 
+                                variant="h6" 
+                                className={styles.CustomStepper__StepFive__Typography}>Desserts</Typography>
                             </div>
                         </Step>
                     </Stepper>

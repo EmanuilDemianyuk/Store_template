@@ -9,32 +9,32 @@ import styles from './style.module.scss';
 function Quality():JSX.Element {
     return (
         <section className={styles.Quality}>
-            <div>
-                <div className={styles.containerImg}>
+            <div className={styles.Quality__Wrap}>
+                <div className={styles.Quality__containerImgOne}>
                     <img
                     src={qfood}
                     alt="food"
                     />
                 </div>
-                <div className={styles.containerDescription}>
+                <div className={styles.Quality__containerDescription}>
                     <h3>Quality Pride: our place selects the finest ingredients for Your Delight.</h3>
                     <p>
                     At our restaurant, we take pride in using only locally sourced, organic ingredients for our dishes. We believe in supporting local farmers and ensuring the freshest, most wholesome ingredients in every meal we serve.
                     </p>
-                    <div className={styles.containerDescription__imgBox}>
+                    <div className={styles.Quality__imgBox}>
                         <img src={basil} alt="basil"/>
                     </div>
                 </div>
             </div>
-            <div>
-                <div className={styles.MadeToOrder}>
+            <div className={styles.Quality__Wrap}>
+                <div className={styles.Quality__MadeToOrder}>
                     <h3>Made-to-Order: Every Dish Prepared Fresh!</h3>
                         <DefaultTimeline />
-                    <div className={styles.MadeToOrder__imgBox}>
+                    <div className={styles.Quality__imgBox}>
                         <img src={tomatos} alt="basil"/>
                     </div>
                 </div>
-                <div className={styles.pizzaProcess}>
+                <div className={styles.Quality__pizzaProcess}>
                     <img
                     src={pizzaprocess}
                     alt="food"

@@ -2,7 +2,7 @@
     @apply h-full;
 
     .drawer {
-        @apply p-4 bg-BrandWrapperGB;
+        @apply p-4 bg-BrandWrapperGB overflow-y-auto;
     }
     .container {
         @apply mb-6 flex items-center justify-between;

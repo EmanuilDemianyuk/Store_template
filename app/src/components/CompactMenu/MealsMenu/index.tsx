@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ProgressBar } from  'react-loader-spinner'
-import { useGetProductsQuery, useGetTopProductsQuery } from '../../../store/products/products.api';
+import { useGetTopProductsQuery } from '../../../store/products/products.api';
 import ProductsSwipper from '../../ProductsSwipper';
 import { CustomStepper } from '../CustomStepper';
 import styles from './style.module.scss';
@@ -15,8 +15,8 @@ const MealsMenu = () => {
 
   return (
     <>
-        <div className='flex flex-wrap items-center'>
-          <h3 className="mt-4 lg:mt-0 basis-full lg:basis-1/2 font-header text-3xl lg:text-4xl">Simple Meals for You</h3>
+        <div className={styles.MealsMenu}>
+          <h3>Simple Meals for You</h3>
           {
           isLoading ? 
             <ProgressBar
@@ -25,8 +25,8 @@ const MealsMenu = () => {
             ariaLabel="progress-bar-loading"
             wrapperStyle={{}}
             wrapperClass="progress-bar-wrapper"
-            borderColor = '#068C52'
-            barColor = '#068C52'
+            borderColor="#068C52"
+            barColor="#068C52"
             />
             : error ? 
             <div>

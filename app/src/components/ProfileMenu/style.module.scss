@@ -1,0 +1,22 @@
+.ProfileMenu {
+
+    &__MenuList {
+        @apply bg-BrandWrapperGB border-BrandDarkGreen;
+    }
+
+    &__MenuItem {
+        @apply flex items-center gap-2;
+    }
+
+    &__Typography {
+        @apply font-content font-bold text-BrandDarkGreen;
+    }
+
+    hr {
+        @apply my-2 border-blue-gray-50;
+    }
+
+    &__TypographyAccent {
+        @apply font-content font-bold text-orange-500;
+    }
+}

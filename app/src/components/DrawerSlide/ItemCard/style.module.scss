@@ -10,14 +10,15 @@
 
     }
     &__infoCon {
+        @apply basis-1/2;
         .text {
             span {
-                @apply tracking-wide;
+                @apply tracking-wide font-content;
             }
         }
         .price {
             p {
-                @apply text-left font-medium;
+                @apply text-left font-content font-medium;
             }
         }
     }

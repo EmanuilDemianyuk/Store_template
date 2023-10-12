@@ -1,20 +1,23 @@
 .DefaultTimeline {
     @apply pe-10;
 
-    .TimelineHeader {
+    &__TimelineHeader {
         @apply h-3;
     }
-    .TimelineIcon{
+
+    &__TimelineIcon{
         @apply bg-BrandDarkGreen;
     }
-    .Typograph_header {
+
+    &__Title {
         @apply font-content;
     }
-    .Typograph_boddy {
-        @apply font-content text-gray-600 pl-5;
-    }
-    .TimelineBody {
-        @apply pb-8;
+
+    &__Text {
+        @apply font-content font-bold text-gray-600 pl-5;
     }
 
+    &__TimelineBody {
+        @apply pb-2;
+    }
 }

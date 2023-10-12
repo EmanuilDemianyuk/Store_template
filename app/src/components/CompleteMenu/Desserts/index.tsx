@@ -7,7 +7,6 @@ import styles from './style.module.scss';
 
 function Desserts() {
     const { data, isLoading, error } = useGetProductsQuery(PATH__ITEM__DESSERTS);
-    console.log(data);
 
     return (
         <div className={styles.CategoryBlock}>

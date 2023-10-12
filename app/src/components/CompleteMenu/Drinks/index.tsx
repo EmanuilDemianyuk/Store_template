@@ -12,8 +12,6 @@ function Drinks() {
     const nonAlcoholic = data?.filter(item => item.type === 'non-alcoholic');
     const alcoholic = data?.filter(item => item.type === 'alcoholic');
 
-    console.log(data);
-
     const showAlcoholic = () => {
         return setIsVisible(true);
     }
