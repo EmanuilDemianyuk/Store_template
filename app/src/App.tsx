@@ -11,6 +11,7 @@ import { About } from "./Page/About";
 import { Contact } from "./Page/Contact";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
+import Checkout from "./Page/Checkout";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/menu" element={<Menu/>}/>
               <Route path="/about" element={<About/>}/>
               <Route path="/contact" element={<Contact/>}/>
+              <Route path="/checkout" element={<Checkout/>}/>
             </Route>
         </Routes>
       </BrowserRouter>
