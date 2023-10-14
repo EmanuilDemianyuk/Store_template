@@ -20,14 +20,12 @@ export default function NavMenu() {
   const location = useLocation();
   const menuRef = useRef(null);
 
-  const { card } = useTypedSelector(state => state)
+  const { card, drawer: {openRight} } = useTypedSelector(state => state);
   const isSomethingExists = card.length;
 
   const USER__ACTIVE = true;
 
-  const { openRight } = useTypedSelector(state => state.drawer);
   const { handlerDrawerSlide } = useActions();
-
   const handlerDrawButton = () => {
     handlerDrawerSlide(!openRight);
   }

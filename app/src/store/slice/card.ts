@@ -1,7 +1,11 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { IProduct } from "../../types/products.type";
 
-const initialState: IProduct[] = [];
+const localDate: [] = [];
+
+const initialState: IProduct[] = [
+    ...localDate,
+];
 
 export const cardSlice = createSlice({
     name: 'card',
