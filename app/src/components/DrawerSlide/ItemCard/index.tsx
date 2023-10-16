@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { IProduct } from '../../../types/products.type';
 import styles from './style.module.scss';
 import { IconButton } from '@material-tailwind/react';
@@ -51,4 +51,4 @@ const ItemCard: FC<IProduct> = ({
   )
 }
 
-export default ItemCard
+export default ItemCard;

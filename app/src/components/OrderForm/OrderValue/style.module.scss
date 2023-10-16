@@ -1,0 +1,10 @@
+.OrderValue {
+
+    &__blockFour {
+        @apply flex gap-4 my-4;
+    }
+
+    &__Typography {
+        @apply font-content;
+    }
+}
