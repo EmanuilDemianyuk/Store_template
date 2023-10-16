@@ -13,14 +13,12 @@ const OrderCard: FC<IProduct> = ({
   const { remodeItem } = useActions();
 
   const handlerClick = () => remodeItem({id});
- 
-  const timePicture: string = 'https://www.pizzabix.ua/wp-content/uploads/2023/06/nagetsy-vlasnogo-vyrobnycztva.webp';
 
   return (
     <li key={id} className={styles.OrderCard}>
         <div className={styles.OrderCard__block}>
             <div className={styles.OrderCard__imgBox}>
-                <img src={timePicture} alt='food' />
+                <img src={img} alt='food' />
             </div>
             <div>
                 <p className={styles.OrderCard__name}>{name}</p>
