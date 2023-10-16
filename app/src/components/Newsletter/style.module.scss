@@ -11,8 +11,9 @@
         @apply flex flex-col gap-3 py-3 sm:flex-row;
 
         .inputEmail {
-            @apply text-white bg-inherit border leading-7 rounded-md py-1.5 px-3 font-content invalid:border-red-500 invalid:text-red-500;
+            @apply text-white bg-inherit border leading-7 rounded-md py-1.5 px-3 font-content;
         }
+
         .inputSubmit {
             @apply text-white 
             bg-BrandDarkGreen cursor-pointer
@@ -21,5 +22,9 @@
             hover:text-black
               hover:font-medium py-2 px-6 rounded-md leading-7;
         }
+    }
+
+    &__errorMessage {
+        @apply text-red-500 text-left text-xs font-content;
     }
 }

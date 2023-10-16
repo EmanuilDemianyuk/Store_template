@@ -17,15 +17,19 @@ app.use('/products/drinks', require("./routes/products/drinks/index"));
 app.use('/products/sideDishes', require("./routes/products/sideDishes/index"));
 app.use('/products/', require("./routes/products/allMenu/index"));
 
-connectToDb((err) => {
-  if(!err) {
-    app.listen(PORT, (err) => {
-      err ? console.log(err) : console.log(`Server running on port ${PORT}`);
-    });
-    db = getDb();
-  } 
-  else {
-    console.log(`DB connection error: ${err}`);
-  } 
-})
+app.listen(PORT, (err) => {
+  err ? console.log(err) : console.log(`Server running on port ${PORT}`);
+});
+
+// connectToDb((err) => {
+//   if(!err) {
+//     app.listen(PORT, (err) => {
+//       err ? console.log(err) : console.log(`Server running on port ${PORT}`);
+//     });
+//     db = getDb();
+//   } 
+//   else {
+//     console.log(`DB connection error: ${err}`);
+//   } 
+// })
 

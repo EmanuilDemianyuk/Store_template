@@ -14,7 +14,7 @@
                 @apply text-BrandDarkGreen leading-7 pb-3 font-header;
             }
             a {
-                @apply text-white block leading-7 font-content;
+                @apply text-white block leading-7 font-content hover:text-BrandDarkGreen hover:underline;
             }
         }
     }

@@ -1,0 +1,31 @@
+.OrderCard {
+    @apply font-content p-2 border-r-2 text-lg;
+
+    &__block {
+        @apply flex gap-4 items-center;
+    }
+
+    &__imgBox {
+        @apply h-12 w-12;
+
+        img {
+            @apply w-full h-full object-cover;
+        }
+    }
+
+    &__name {
+        @apply whitespace-pre font-semibold;
+    }
+
+    &__price {
+        @apply text-BrandDarkGreen;
+
+        span {
+            @apply text-black;
+        }
+    }
+
+    &__iconBtn {
+        @apply h-4 w-4 text-red-500;
+    }
+}

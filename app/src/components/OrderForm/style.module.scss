@@ -9,6 +9,14 @@
         @apply my-4 w-full;
     }
 
+    &__ordersCon {
+        @apply my-4 p-6 bg-white rounded-lg shadow-md w-full overflow-hidden;
+    }
+
+    &__list {
+        @apply my-2 overflow-x-scroll flex gap-4 h-full;
+    }
+
     &__h5 {
         @apply font-content;
     }

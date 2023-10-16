@@ -1,35 +1,55 @@
-import React, { useState, ChangeEvent } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { DevTool } from '@hookform/devtools';
 import styles from './style.module.scss';
 
+type FormValues = {
+  email: string;
+}
 
-const  Newsletter = ():JSX.Element => {
-  const [inpValue, setInpValue] = useState<string>('');  
-  const handlerForm = (e: any) => {
-    e.preventDefault();
-    e.target.reset();
+const Newsletter = ():JSX.Element => {
+  const form = useForm<FormValues>({
+    mode: 'onChange',
+    defaultValues: {
+      email: '',
+    }
+  });
+  const { register, resetField, control, handleSubmit, formState } = form;
+  const { errors } = formState;
+
+  const onSubmit = (data: FormValues) => {
+    console.log(data);
+    resetField('email');
   }
-  const handlerInput = (e: ChangeEvent<HTMLInputElement>) => {
-    const { target: { value } } = e;
-    setInpValue(value);
-  }
+
   return (
     <div className={styles.Newsletter}>
         <h5>SUBSCRIBE TO OUR NEWSLETTER</h5>
         <p>The latest news, articles, and resources, sent to your inbox weekly</p>
-        <form onSubmit={handlerForm}>
+
+        <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <input 
             type='email' 
-            value={inpValue}
-            onChange={handlerInput}
-            minLength={1}
-            maxLength={99}
             placeholder='Enter your email'
+            {...register('email', {
+              required: 'Email is required',
+              pattern: {
+                value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                message: 'Invalid email format'
+              }
+            })}
             className={styles.inputEmail}/>
+
             <input
             value="Subscribe"
             type='submit'
             className={styles.inputSubmit}/>
         </form>
+
+        <div className={styles.Newsletter__errorMessage}>
+          {errors.email?.message}
+        </div>
+        <DevTool control={control} />
     </div>
   )
 }
