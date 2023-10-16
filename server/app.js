@@ -5,8 +5,8 @@ const mongoose = require('mongoose');
 const productRouters = require('./routes/product-routers');
 const imageRouters = require('./routes/image-routers');
 
-const userDB = 'emikbemik';
-const passwordDB = 'k8GZvkmaZbhVQJ7x';
+const userDB = '';
+const passwordDB = '';
 
 const URL__T0__DB = `mongodb+srv://${userDB}:${passwordDB}@cluster0.f6hpu31.mongodb.net/Store_Template`;
 
