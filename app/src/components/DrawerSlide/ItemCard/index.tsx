@@ -15,11 +15,11 @@ const ItemCard: FC<IProduct> = ({
   const handlerClick = () => {
     remodeItem({id});
   }
-  const timePicture: string = 'https://www.pizzabix.ua/wp-content/uploads/2023/06/nagetsy-vlasnogo-vyrobnycztva.webp';
+
   return (
     <div key={id} className={styles.ItemCard}>
         <div className={styles.ItemCard__imgCon}>
-          <img src={timePicture} alt="logoItem"/>
+          <img src={img} alt="logoItem"/>
         </div>
         <div className={styles.ItemCard__infoCon}>
           <div className={styles.text}>

@@ -8,7 +8,7 @@ export const productApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl: BASE__URL__API}),
     endpoints: build => ({
         getTopProducts: build.query<IProduct[], number>({query: (minRating) => `?rating=${minRating}`}),
-        getProducts: build.query<IProduct[], string>({query: (type: string) => type})
+        getProducts: build.query<IProduct[], string>({query: (type: string) => `/category?value=${type}`})
     })
 })
 

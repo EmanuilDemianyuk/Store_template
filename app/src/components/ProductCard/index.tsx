@@ -7,10 +7,8 @@ import {
     Typography,
     Button,
 } from "@material-tailwind/react";
-import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
 import { IProduct } from '../../types/products.type';
-import pizzaMock from '../../assets/img/pizza-mock.jpeg';
 import styles from './style.module.scss';
 
 const ProductCard: FC<IProduct> = ({
@@ -41,7 +39,7 @@ const ProductCard: FC<IProduct> = ({
   return (
     <Card className={styles.ProductCard}>
       <CardHeader className={styles.ProductCard__CardHeader}>
-        <img src={pizzaMock} alt={name} />
+        <img src={img} alt={name} />
       </CardHeader>
       <CardBody>
         <div className={styles.ProductCard__CardBody}>
