@@ -3,6 +3,10 @@
 
     &__CardHeader {
         @apply relative h-56 text-black;
+
+        img {
+            @apply w-full h-full object-cover;
+        }
     }
 
     &__CardBody {
