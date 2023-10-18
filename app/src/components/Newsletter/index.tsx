@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { DevTool } from '@hookform/devtools';
+// import { DevTool } from '@hookform/devtools';
 import styles from './style.module.scss';
 
 type FormValues = {
@@ -49,7 +49,7 @@ const Newsletter = ():JSX.Element => {
         <div className={styles.Newsletter__errorMessage}>
           {errors.email?.message}
         </div>
-        <DevTool control={control} />
+        {/* <DevTool control={control} /> */}
     </div>
   )
 }

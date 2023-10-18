@@ -6,7 +6,7 @@ import getTotalPrice from '../../../functions/getTotalPrice';
 import styles from './style.module.scss';
 
 interface OrderValueProps {
-    deliveryMethod: boolean;
+    deliveryMethod: string | undefined;
     products: IProduct[];
 }
 
@@ -29,7 +29,7 @@ const OrderValue = (props: OrderValueProps):JSX.Element => {
             className={styles.OrderValue__Typography}
             >
                 {
-                    deliveryMethod ? 
+                    deliveryMethod === 'Delivery' ? 
                     (<span>Delivery cost: {DELIVERY_COST}$</span>)
                     :
                     (<span>Delivery cost: 0$</span>)
@@ -40,7 +40,7 @@ const OrderValue = (props: OrderValueProps):JSX.Element => {
             className={styles.OrderValue__Typography}
             >
                 {
-                    deliveryMethod ? 
+                    deliveryMethod === 'Delivery' ?  
                     (<span>Discount: 0%</span>)
                     :
                     (<span>Discount: {DISCOUNT}%</span>)
@@ -58,7 +58,7 @@ const OrderValue = (props: OrderValueProps):JSX.Element => {
                 className='font-content text-orange-600'
                 >
                     {
-                        deliveryMethod ?
+                        deliveryMethod === 'Delivery' ? 
                         (`${delivery}$`)
                         :
                         (`${pickup.toFixed(2)}$`)
