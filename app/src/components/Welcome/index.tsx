@@ -1,11 +1,7 @@
 import React from 'react';
 import { Button, Avatar } from "@material-tailwind/react";
-import lemonade from '../../assets/img/lemonade-home.png';
-import ponehome from '../../assets/img/ponehome.png';
-import fries from '../../assets/img/frieshome.png';
-import ptwohome from '../../assets/img/ptwohome.png';
-import styles from './style.module.scss'
 import { Link } from 'react-router-dom';
+import styles from './style.module.scss';
 
 
 function Welcome():JSX.Element {

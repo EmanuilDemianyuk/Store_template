@@ -9,13 +9,37 @@ import {
 import OrderValue from './OrderValue';
 import OrderCard from './OrderCard';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { useForm } from 'react-hook-form';
+import { DevTool } from '@hookform/devtools';
 import styles from './style.module.scss';
 
-function OrderForm():JSX.Element {
-    const [deliveryMethod, setDeliveryMethod] = useState<boolean>(true);
-    const { card } = useTypedSelector(state => state);
+type OrderFormValues = {
+    deliveryMethod: string;
+    city: string;
+    street: string;
+    house: string;
+    entrance: string;
+    floor: string;
+    apartment: string;
+    name: string;
+    mobile: string;
+    deliveryTime: string;
+    paymentMethod: string;
+    call: string;
+    comment: string;
+    publicOffer: string;
+}
 
-    const onChangeDelivery = () => setDeliveryMethod(!deliveryMethod);
+function OrderForm():JSX.Element {
+    const form = useForm<OrderFormValues>();
+    const { register, control, handleSubmit, formState, watch } = form;
+    const { errors } = formState;
+
+    const onSubmit = (data: object) => alert(JSON.stringify(data));
+
+    const deliveryMethod = watch('deliveryMethod');
+
+    const { card } = useTypedSelector(state => state);
     
     return (
         <section className={styles.OrderForm}>
@@ -43,7 +67,7 @@ function OrderForm():JSX.Element {
                     </ul>
                 }
             </div>
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)} noValidate>
                 <Typography 
                 variant='h5'
                 className={styles.OrderForm__h5}
@@ -52,26 +76,29 @@ function OrderForm():JSX.Element {
                 </Typography>
                 <div className={styles.OrderForm__blockOne}>
                     <Radio 
-                        name="delivery" 
+                        {...register('deliveryMethod', {
+                            required: 'Delivery method is required'
+                        })}
+                        name="deliveryMethod" 
                         label="Delivery"
                         value='Delivery'
                         color='orange' 
                         crossOrigin={undefined}
-                        checked={deliveryMethod} 
-                        onChange={() => onChangeDelivery()}
                     />
                     <Radio 
-                        name="delivery" 
+                        {...register('deliveryMethod', {
+                            required: 'Delivery method is required'
+                        })}
+                        name="deliveryMethod" 
                         label="Pickup" 
                         value='Pickup'
                         color='orange' 
                         crossOrigin={undefined}
-                        checked={!deliveryMethod} 
-                        onChange={() => onChangeDelivery()} 
                     />
+                    <p className={styles.OrderForm__errorMsg}>{errors.deliveryMethod?.message}</p>
                 </div>
                 {
-                    deliveryMethod ?
+                    deliveryMethod === 'Delivery' &&
                     (
                         <div>
                         <Typography 
@@ -81,54 +108,80 @@ function OrderForm():JSX.Element {
                             Delivery address
                         </Typography>
                         <div className={styles.OrderForm__blockTwo}>
+                            <div>
                             <Input 
+                                {...register('city')}
+                                value="Harrisburg"
                                 size="lg"
                                 color="green"
+                                name="city"
                                 label="Harrisburg"
                                 crossOrigin={undefined} 
                                 disabled={true}
                                 className="rounded-lg" 
                             />
+                            </div>
+                            <div>
                             <Input 
+                                {...register('street', {
+                                    required: 'Street is required'
+                                })}
                                 size="lg"
                                 color="green"
+                                name='street'
                                 label="Street*"
                                 crossOrigin={undefined} 
                                 className="rounded-lg" 
                             />
+                            <p className={styles.OrderForm__errorMsg}>{errors.street?.message}</p>
+                            </div>
                         </div>
                         <div className={styles.OrderForm__blockThree}>
                             <div>
                             <Input 
+                                {...register('house', {
+                                    required: 'House building is required'
+                                })}
                                 size="lg"
                                 color="green"
+                                name='house'
                                 label="House building*"
                                 crossOrigin={undefined} 
                                 className="rounded-lg" 
                             />
+                            <p className={styles.OrderForm__errorMsg}>{errors.house?.message}</p>
                             </div>
                             <div>
                             <Input 
+                                {...register('entrance', {
+                                    required: 'Entrance is required'
+                                })}
                                 size="lg"
                                 color="green"
-                                label="Entrance"
+                                name='entrance'
+                                label="Entrance*"
                                 crossOrigin={undefined} 
                                 className="rounded-lg" 
                             />
+                            <p className={styles.OrderForm__errorMsg}>{errors.entrance?.message}</p>
                             </div>
                             <div>
                             <Input 
+                                {...register('floor')}
                                 size="lg"
                                 color="green"
+                                name='floor'
                                 label="Floor"
                                 crossOrigin={undefined} 
                                 className="rounded-lg" 
                             />
                             </div>
                             <div>
-                            <Input 
+                            <Input
+                                {...register('apartment')} 
                                 size="lg"
                                 color="green"
+                                name='apartment'
                                 label="Apartment"
                                 crossOrigin={undefined} 
                                 className="rounded-lg" 
@@ -137,7 +190,6 @@ function OrderForm():JSX.Element {
                         </div>
                         </div>
                     )
-                    :  <></>
                 }
                 <Typography 
                 variant='h5'
@@ -146,23 +198,43 @@ function OrderForm():JSX.Element {
                     Contacts
                 </Typography>
                 <div className={styles.OrderForm__blockTwo}>
+                    <div>
                     <Input 
+                        {...register('name', {
+                            required: 'Name is required',
+                            minLength: 3
+                        })}
                         size="lg"
                         color="green"
+                        name='name'
                         label="Name*"
                         crossOrigin={undefined} 
                         className="rounded-lg" 
                     />
+                    <p className={styles.OrderForm__errorMsg}>{errors.name?.message}</p>
+                    </div>
+                    <div>
                     <Input 
+                        {...register('mobile', {
+                            required: 'Mobile number is required',
+                            pattern: {
+                                value: /^\+380\d{9}$/,
+                                message: 'Mobile number must start with +380 and 9 more digits'
+                            }
+                        })}
+                        type='text'
                         size="lg"
                         color="green"
+                        name='mobile'
                         label="Mobile number*"
                         crossOrigin={undefined} 
                         className="rounded-lg" 
                     />
+                    <p className={styles.OrderForm__errorMsg}>{errors.mobile?.message}</p>
+                    </div> 
                 </div>
                 {
-                    deliveryMethod ?
+                    deliveryMethod === 'Delivery' &&
                     (
                         <div>
                         <Typography 
@@ -173,21 +245,29 @@ function OrderForm():JSX.Element {
                         </Typography>
                         <div className={styles.OrderForm__blockOne}>
                             <Radio 
-                                name="time" 
+                                {...register('deliveryTime', {
+                                    required: 'Delivery Time is required'
+                                })}
+                                value="Quick"
+                                name="deliveryTime" 
                                 label="Delivery as soon as possible"
                                 color='orange' 
                                 crossOrigin={undefined} 
-                                defaultChecked 
                             />
                             <Radio 
-                                name="time" 
+                                {...register('deliveryTime', {
+                                    required: 'Delivery Time is required'
+                                })}
+                                value="Normal"
+                                name="deliveryTime" 
                                 label="Normal delivery (from one hour to two hours)" 
                                 color='orange' 
                                 crossOrigin={undefined} 
                             />
+                            <p className={styles.OrderForm__errorMsg}>{errors.deliveryTime?.message}</p>
                         </div>
                         </div>
-                    ) : <></>
+                    )
                 }
                 <Typography 
                 variant='h5'
@@ -197,36 +277,53 @@ function OrderForm():JSX.Element {
                 </Typography>
                 <div className={styles.OrderForm__blockOne}>
                     <Radio 
-                        name="payment" 
+                        {...register('paymentMethod', {
+                            required: 'Payment method is required'
+                        })}
+                        value="Cash"
+                        name="paymentMethod" 
                         label="Cash"
                         color='orange' 
                         crossOrigin={undefined} 
-                        defaultChecked 
                     />
                     <Radio 
-                        name="payment" 
+                        {...register('paymentMethod', {
+                            required: 'Payment method is required'
+                        })}
+                        value="Bank card"
+                        name="paymentMethod" 
                         label="Bank card upon receipt" 
                         color='orange' 
                         crossOrigin={undefined} 
                     />
+                    <p className={styles.OrderForm__errorMsg}>{errors.paymentMethod?.message}</p>
                 </div>
                 <Checkbox 
+                    {...register('call')}
+                    name="call"
                     label="Do not call me back to clarify the order"
                     color='orange'  
                     crossOrigin={undefined} 
                 />
                 <div className='my-4'>
-                    <Textarea 
+                    <Textarea
+                        {...register('comment')}
+                        name="comment" 
                         label="Comment"
                         color="green"
                     />
                 </div>
                 <OrderValue deliveryMethod={deliveryMethod} products={card} />
                 <Checkbox 
+                    {...register('publicOffer', {
+                        required: 'Public offer is required'
+                    })}
+                    name="publicOffer" 
                     label="I agree with the public offer agreement"
                     color='orange'  
                     crossOrigin={undefined} 
                 />
+                <p className={styles.OrderForm__errorMsg}>{errors.publicOffer?.message}</p>
                 <div className={styles.OrderForm__blockBtn}>
                     <button 
                     type='submit'
@@ -235,6 +332,7 @@ function OrderForm():JSX.Element {
                     </button>
                 </div>
             </form>
+            <DevTool control={control} />
         </section>
     );
 }
