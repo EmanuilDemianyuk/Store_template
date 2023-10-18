@@ -17,24 +17,26 @@ const MealsMenu = () => {
     <>
         <div className={styles.MealsMenu}>
           <h3>Simple Meals for You</h3>
-          {
-          isLoading ? 
-            <ProgressBar
-            height="100"
-            width="80"
-            ariaLabel="progress-bar-loading"
-            wrapperStyle={{}}
-            wrapperClass="progress-bar-wrapper"
-            borderColor="#068C52"
-            barColor="#068C52"
-            />
-            : error ? 
-            <div>
-              <h1>Error</h1>
-            </div>
-            :
-            <CustomStepper activeStep={activeStep} setActiveStep={setActiveStep} />
-          }
+          <div className={styles.dataContainer}>
+            {
+            isLoading ? 
+              <ProgressBar
+              height="100"
+              width="80"
+              ariaLabel="progress-bar-loading"
+              wrapperStyle={{}}
+              wrapperClass="progress-bar-wrapper"
+              borderColor="#068C52"
+              barColor="#068C52"
+              />
+              : error ? 
+              <div>
+                <h1>Error</h1>
+              </div>
+              :
+              <CustomStepper activeStep={activeStep} setActiveStep={setActiveStep} />
+            }
+          </div>
         </div>
           {
             activeStep === 0 ? 

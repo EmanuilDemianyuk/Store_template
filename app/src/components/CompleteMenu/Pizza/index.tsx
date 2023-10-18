@@ -36,26 +36,28 @@ function Pizza() {
                     </Button>
                 </ButtonGroup>
             </div>
-            {
-                isLoading ?
-                <ProgressBar
-                height="100"
-                width="80"
-                ariaLabel="progress-bar-loading"
-                wrapperStyle={{}}
-                wrapperClass="progress-bar-wrapper"
-                borderColor = '#068C52'
-                barColor = '#068C52'
-                />
-                : error ?
-                <div>
-                    <h1>Error</h1>
-                </div>
-                :  isVisible ? 
-                <ProductsSwipper products={vegetarian} /> 
-                : 
-                <ProductsSwipper products={notVegetarian} />
-            }
+            <div className={styles.dataContainer}>
+                {
+                    isLoading ?
+                    <ProgressBar
+                    height="100"
+                    width="80"
+                    ariaLabel="progress-bar-loading"
+                    wrapperStyle={{}}
+                    wrapperClass="progress-bar-wrapper"
+                    borderColor = '#068C52'
+                    barColor = '#068C52'
+                    />
+                    : error ?
+                    <div>
+                        <h1>Error</h1>
+                    </div>
+                    :  isVisible ? 
+                    <ProductsSwipper products={vegetarian} /> 
+                    : 
+                    <ProductsSwipper products={notVegetarian} />
+                }
+            </div>
         </div>
     );
 }

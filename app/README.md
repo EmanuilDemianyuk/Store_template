@@ -5,15 +5,9 @@
 
 ## front end
 
--- реалізація localStorage EM
-
 -- створення user storage | slice EM  
 
 -- добавити логіку валідації інпут групи в /checkout AR
-
--- створення user storage | slice
-
-
 
 
 ## back end
@@ -21,6 +15,7 @@
 
 
 ## Done
+-- реалізація localStorage EM
 -- переписання роутерів в server під запит mongobd EM
 -- виділяти тегі у футері при наведенні 
 -- в /checkout добавити позиції які замовив кліент а також можливість редарувати замовлення

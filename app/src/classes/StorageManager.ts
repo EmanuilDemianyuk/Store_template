@@ -1,7 +1,7 @@
-import { IProduct, IStorage } from "../typesOrInterface/interface";
+import { IStorage } from "../typesOrInterface/interface";
 import { Nullable } from "../typesOrInterface/types";
 
-class LocalStorageManager {
+class StorageManager {
     private storage: IStorage;
 
     constructor(storage: IStorage) {
@@ -29,4 +29,5 @@ class LocalStorageManager {
     }
 }
 
-export const localStorageManager = new LocalStorageManager(localStorage);
+export const localStorageManager = new StorageManager(localStorage);
+// export const sessionStorageManager = new StorageManager(localStorage);
