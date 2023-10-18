@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ProductsSwipperProps } from '../../../types/products.type';
+import { ProductsSwipperProps } from '../../../typesOrInterface/interface';
 import styles from './style.module.scss';
 import { Link } from 'react-router-dom';
 

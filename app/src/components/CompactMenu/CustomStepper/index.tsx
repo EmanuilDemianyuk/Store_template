@@ -1,6 +1,6 @@
 import React from "react";
 import { Stepper, Step, CardHeader, Typography } from "@material-tailwind/react";
-import { CustomStepperProps } from "../../../types/products.type";
+import { CustomStepperProps } from "../../../typesOrInterface/interface";
 import styles from './style.module.scss';
 
 export function CustomStepper({ activeStep, setActiveStep }: CustomStepperProps) {

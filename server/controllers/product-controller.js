@@ -32,8 +32,9 @@ const getProductsByCategory = (req, res) => {
     .catch((err) => handlerError(res, err));
 }
 const getProductById = (req, res) => {
+    const { id } = req.params;
     Product
-    .findById((req.params.id))
+    .findById((id))
     .then((product) => {
       res
       .status(200)
@@ -43,8 +44,9 @@ const getProductById = (req, res) => {
 };
 
 const deleteProductById = (req, res) => {
+    const { id } = req.params;
     Product
-    .findByIdAndDelete((req.params.id))
+    .findByIdAndDelete((id))
     .then((result) => {
       res
       .status(200)

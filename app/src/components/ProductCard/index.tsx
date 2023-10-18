@@ -8,7 +8,7 @@ import {
     Button,
 } from "@material-tailwind/react";
 import { useActions } from '../../hooks/useActions';
-import { IProduct } from '../../types/products.type';
+import { IProduct } from '../../typesOrInterface/interface';
 import styles from './style.module.scss';
 
 const ProductCard: FC<IProduct> = ({
