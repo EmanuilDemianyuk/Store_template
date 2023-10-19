@@ -9,24 +9,26 @@
 </p>
 
 <h3>Technologies: </h3>
+<p>Front end : </p>
+   <ul>
+      <p>-- React : </p>
+        <li>redux toolKit</li>
+        <li>redux</li>
+        <li>react router dom</li>
+        <li>react hook form</li>
+        <li>classname</li>
+      <p>-- TypeScript</p>
+      <p>Tailwind</p>
+      <p>Material tailwind</p>
+      <p>SCSS</p>
+   </ul>
+   
+<p>Back end : </p>
 <ul>
-    <li> 
-        React
-            <li>React Router-Dom</li>
-            <li>classNames</li>
-    </li>
-    <li>Redux toolKit</li>
-    <li>Typescript</li>
-    <li>
-        TailwindCss
-            <li>TailwindMaterialCss</li>
-    </li>
-    <li>SCSS</li>
-    <li>
-        Node.js
-            <li>Express</li>
-            <li>Cors</li>
-            <li>Nodemon</li>
-    </li>
-    <li>PostgresQl</li>
+    <p>-- Node.js :</p>
+        <li>Express</li>
+        <li>Cors</li>
+        <li>Nodemon</li>
+        <li>Mongodb</li>
+        <li>Mongoose</li>
 </ul>
