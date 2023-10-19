@@ -8,9 +8,9 @@ import {
 } from "@material-tailwind/react";
 import OrderValue from './OrderValue';
 import OrderCard from './OrderCard';
+import OrderSuccess from '../OrderSuccess';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useForm } from 'react-hook-form';
-import { DevTool } from '@hookform/devtools';
 import styles from './style.module.scss';
 
 type OrderFormValues = {
@@ -31,11 +31,15 @@ type OrderFormValues = {
 }
 
 function OrderForm():JSX.Element {
+    const [submitSuccess, setSubmitSuccess] = useState<boolean>(false);
     const form = useForm<OrderFormValues>();
     const { register, control, handleSubmit, formState, watch } = form;
     const { errors } = formState;
 
-    const onSubmit = (data: object) => alert(JSON.stringify(data));
+    const onSubmit = (data: OrderFormValues) => {
+        // console.log(JSON.stringify(data));
+        setSubmitSuccess(true);
+    };
 
     const deliveryMethod = watch('deliveryMethod');
 
@@ -332,7 +336,7 @@ function OrderForm():JSX.Element {
                     </button>
                 </div>
             </form>
-            <DevTool control={control} />
+            {submitSuccess && <OrderSuccess />}
         </section>
     );
 }
