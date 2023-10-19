@@ -16,3 +16,6 @@
         @apply text-BrandDarkGreen border-BrandDarkGreen rounded-e-3xl font-content hover:bg-BrandDarkGreen hover:text-white;
     }
 }
+.dataContainer {
+    @apply flex justify-center;
+}
