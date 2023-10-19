@@ -6,10 +6,10 @@
     }
 
     &__imgBox {
-        @apply h-12 w-12;
+        @apply h-16 w-16;
 
         img {
-            @apply w-full h-full object-cover;
+            @apply w-full h-full object-cover rounded-lg;
         }
     }
 

@@ -1,0 +1,19 @@
+.OrderSuccess {
+    @apply relative top-0 left-0;
+
+    &__Card {
+        @apply absolute bottom-20 left-0 mx-auto w-full bg-white shadow-md rounded-lg z-50 h-96;
+    }
+
+    &__CardBody {
+        @apply h-full w-full flex flex-col justify-center items-center;
+
+        p {
+            @apply uppercase text-xl text-BrandDarkGreen font-content;
+        }
+    }
+
+    &__iconCon {
+        @apply flex justify-center items-center mb-8;
+    }
+}
