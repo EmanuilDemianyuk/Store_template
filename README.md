@@ -18,9 +18,9 @@
         <li>react hook form</li>
         <li>classname</li>
       <p>-- TypeScript</p>
-      <p>Tailwind</p>
-      <p>Material tailwind</p>
-      <p>SCSS</p>
+      <p>-- Tailwind</p>
+      <p>-- Material tailwind</p>
+      <p>-- SCSS</p>
    </ul>
    
 <p>Back end : </p>
@@ -29,6 +29,6 @@
         <li>Express</li>
         <li>Cors</li>
         <li>Nodemon</li>
-        <li>Mongodb</li>
-        <li>Mongoose</li>
+    <p>-- Mongodb</li>
+    <p>-- Mongoose</li>
 </ul>
