@@ -30,4 +30,4 @@ class StorageManager {
 }
 
 export const localStorageManager = new StorageManager(localStorage);
-// export const sessionStorageManager = new StorageManager(localStorage);
+// export const sessionStorageManager = new StorageManager(sessionStorage);
