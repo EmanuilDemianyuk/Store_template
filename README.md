@@ -12,11 +12,11 @@
 <p>Front end : </p>
    <ul>
       <p>-- React : </p>
-        <li>redux toolKit</li>
-        <li>redux</li>
-        <li>react router dom</li>
-        <li>react hook form</li>
-        <li>classname</li>
+    <li>redux toolKit</li>
+    <li>redux</li>
+    <li>react router dom</li>
+    <li>react hook form</li>
+    <li>classname</li>
       <p>-- TypeScript</p>
       <p>-- Tailwind</p>
       <p>-- Material tailwind</p>
@@ -26,9 +26,9 @@
 <p>Back end : </p>
 <ul>
     <p>-- Node.js :</p>
-        <li>Express</li>
-        <li>Cors</li>
-        <li>Nodemon</li>
+    <li>Express</li>
+    <li>Cors</li>
+    <li>Nodemon</li>
     <p>-- Mongodb</li>
     <p>-- Mongoose</li>
 </ul>
