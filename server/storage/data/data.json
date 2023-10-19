@@ -1,105 +1,5 @@
 [
     {
-        "id": 22,
-        "name": "Panacotta",
-        "description": "Very soft and smoosy",
-        "price": 7,
-        "img": "http://localhost:8000/image/?icon=desserts-1.jpeg",
-        "category": "desserts",
-        "type": "sugar-free",
-        "rating": 4
-    },
-    {
-        "id": 23,
-        "name": "Brownies Cake",
-        "description": "Super chocolate",
-        "price": 8,
-        "img": "http://localhost:8000/image/?icon=desserts-2.jpeg",
-        "category": "desserts",
-        "type": "sugar",
-        "rating": 5
-    },
-    {
-        "id": 24,
-        "name": "Lemon Cake",
-        "description": "Very light",
-        "price": 8,
-        "img": "http://localhost:8000/image/?icon=desserts-3.jpeg",
-        "category": "desserts",
-        "type": "sugar",
-        "rating": 5
-    },
-    {
-        "id": 15,
-        "name": "Classic Lemonade",
-        "description": "Fresh",
-        "price": 6,
-        "img": "http://localhost:8000/image/?icon=drinks-1.jpeg",
-        "category": "drinks",
-        "type": "non-alcoholic",
-        "rating": 5
-    },
-    {
-        "id": 16,
-        "name": "Raspberry-lime Lemonade",
-        "description": "Pinky",
-        "price": 7,
-        "img": "http://localhost:8000/image/?icon=drinks-2.jpeg",
-        "category": "drinks",
-        "type": "non-alcoholic",
-        "rating": 4
-    },
-    {
-        "id": 17,
-        "name": "Lavender Lemonade",
-        "description": "Avant-garde",
-        "price": 7,
-        "img": "http://localhost:8000/image/?icon=drinks-3.jpeg",
-        "category": "drinks",
-        "type": "non-alcoholic",
-        "rating": 3
-    },
-    {
-        "id": 18,
-        "name": "Сoffee Lemonade",
-        "description": "Tonic",
-        "price": 5,
-        "img": "http://localhost:8000/image/?icon=drinks-4.jpeg",
-        "category": "drinks",
-        "type": "non-alcoholic",
-        "rating": 5
-    },
-    {
-        "id": 19,
-        "name": "Daiquiri Cocktail",
-        "description": "White rum, sugar syrup, lime juice, ice",
-        "price": 12,
-        "img": "http://localhost:8000/image/?icon=drinks-5.jpeg",
-        "category": "drinks",
-        "type": "alcoholic",
-        "rating": 5
-    },
-    {
-        "id": 20,
-        "name": "Negroni Cocktail",
-        "description": "Dry gin, bitters, red vermouth, orange, ice",
-        "price": 12,
-        "img": "http://localhost:8000/image/?icon=drinks-6.jpeg",
-        "category": "drinks",
-        "type": "alcoholic",
-        "rating": 3
-    },
-    {
-        "id": 21,
-        "name": "Gin and tonic",
-        "description": "London dry gin, tonic, lime, ice",
-        "price": 12,
-        "img": "http://localhost:8000/image/?icon=drinks-7.jpeg",
-        "category": "drinks",
-        "type": "alcoholic",
-        "rating": 2
-    },
-    {
         "id": 1,
         "name": "Margherita",
         "description": "Classic delight with 100% real mozzarella cheese",
@@ -198,6 +98,106 @@
         "category": "pizza",
         "type": "not-vegetarian",
         "rating": 5
+    },
+    {
+        "id": 22,
+        "name": "Panacotta",
+        "description": "Very soft and smoosy",
+        "price": 7,
+        "img": "http://localhost:8000/image/?icon=desserts-1.jpeg",
+        "category": "desserts",
+        "type": "sugar-free",
+        "rating": 4
+    },
+    {
+        "id": 23,
+        "name": "Brownies Cake",
+        "description": "Super chocolate",
+        "price": 8,
+        "img": "http://localhost:8000/image/?icon=desserts-2.jpeg",
+        "category": "desserts",
+        "type": "sugar",
+        "rating": 5
+    },
+    {
+        "id": 24,
+        "name": "Lemon Cake",
+        "description": "Very light",
+        "price": 8,
+        "img": "http://localhost:8000/image/?icon=desserts-3.jpeg",
+        "category": "desserts",
+        "type": "sugar",
+        "rating": 5
+    },
+    {
+        "id": 15,
+        "name": "Classic Lemonade",
+        "description": "Fresh",
+        "price": 6,
+        "img": "http://localhost:8000/image/?icon=drinks-1.jpeg",
+        "category": "drinks",
+        "type": "non-alcoholic",
+        "rating": 5
+    },
+    {
+        "id": 16,
+        "name": "Raspberry-lime Lemonade",
+        "description": "Pinky",
+        "price": 7,
+        "img": "http://localhost:8000/image/?icon=drinks-2.jpeg",
+        "category": "drinks",
+        "type": "non-alcoholic",
+        "rating": 4
+    },
+    {
+        "id": 17,
+        "name": "Lavender Lemonade",
+        "description": "Avant-garde",
+        "price": 7,
+        "img": "http://localhost:8000/image/?icon=drinks-3.jpeg",
+        "category": "drinks",
+        "type": "non-alcoholic",
+        "rating": 3
+    },
+    {
+        "id": 18,
+        "name": "Сoffee Lemonade",
+        "description": "Tonic",
+        "price": 5,
+        "img": "http://localhost:8000/image/?icon=drinks-4.jpeg",
+        "category": "drinks",
+        "type": "non-alcoholic",
+        "rating": 5
+    },
+    {
+        "id": 19,
+        "name": "Daiquiri Cocktail",
+        "description": "White rum, sugar syrup, lime juice, ice",
+        "price": 12,
+        "img": "http://localhost:8000/image/?icon=drinks-5.jpeg",
+        "category": "drinks",
+        "type": "alcoholic",
+        "rating": 5
+    },
+    {
+        "id": 20,
+        "name": "Negroni Cocktail",
+        "description": "Dry gin, bitters, red vermouth, orange, ice",
+        "price": 12,
+        "img": "http://localhost:8000/image/?icon=drinks-6.jpeg",
+        "category": "drinks",
+        "type": "alcoholic",
+        "rating": 3
+    },
+    {
+        "id": 21,
+        "name": "Gin and tonic",
+        "description": "London dry gin, tonic, lime, ice",
+        "price": 12,
+        "img": "http://localhost:8000/image/?icon=drinks-7.jpeg",
+        "category": "drinks",
+        "type": "alcoholic",
+        "rating": 2
     },
     {
         "id": 11,

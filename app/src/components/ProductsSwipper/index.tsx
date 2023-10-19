@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCard from '../ProductCard';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { ProductsSwipperProps } from '../../types/products.type';
+import { ProductsSwipperProps } from '../../typesOrInterface/interface';
 import 'swiper/css';
 import 'swiper/css/navigation';
 

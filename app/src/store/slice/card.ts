@@ -1,21 +1,26 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { IProduct } from "../../types/products.type";
+import { IProduct } from "../../typesOrInterface/interface";
+import { localStorageManager } from "../../classes/StorageManager";
+import { ORDER__CACHE__KEY } from "../../constants/localStorageKey";
 
-const localDate: [] = [];
+const localData = localStorageManager.getItem<IProduct[]>(ORDER__CACHE__KEY)
 
-const initialState: IProduct[] = [
-    ...localDate,
-];
+const initialState: IProduct[] = localData && Array.isArray(localData) ? [...localData] : [];
 
 export const cardSlice = createSlice({
     name: 'card',
     initialState,
     reducers: {
         addItem: (state, action:PayloadAction<IProduct>) => {
-            state.push(action.payload)
+            const { payload } = action;
+            state.push(payload);
+            localStorageManager.setItem<IProduct[]>(ORDER__CACHE__KEY, state)
         },
         remodeItem: (state, action:PayloadAction<{id: number}>) => {
-            return state.filter(p => p.id !== action.payload.id)
+            const { payload: {id} } = action;
+            state = state.filter(p => p.id !== id)
+            localStorageManager.setItem<IProduct[]>(ORDER__CACHE__KEY, state)
+            return state;
         },
     }
 })

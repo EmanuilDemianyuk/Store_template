@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from '@material-tailwind/react';
 import { DELIVERY_COST, DISCOUNT } from '../../../constants/orderValues';
-import { IProduct } from '../../../types/products.type';
+import { IProduct } from '../../../typesOrInterface/interface';
 import getTotalPrice from '../../../functions/getTotalPrice';
 import styles from './style.module.scss';
 
