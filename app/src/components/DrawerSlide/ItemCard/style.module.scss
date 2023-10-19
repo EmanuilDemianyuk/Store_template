@@ -2,7 +2,7 @@
     @apply flex py-3 justify-between items-center border-b-2 border-gray-400; 
 
     &__imgCon {
-        @apply flex max-w-[3.75rem] max-h-[3.75rem] overflow-hidden rounded-md;
+        @apply flex w-[3.75rem] h-[3.75rem] overflow-hidden rounded-lg;
 
         img {
             @apply w-full h-full object-cover;
