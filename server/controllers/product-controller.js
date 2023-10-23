@@ -1,8 +1,6 @@
 const Product = require('../models/product');
 
-const handlerError = (res, error) => {
-    res.status(500).json({ error })
-};
+const handlerError = require('../functions/functions');
 
 const getProducts = (req, res) => {
     const { rating } = req.query;
