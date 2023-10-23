@@ -39,6 +39,7 @@ function OrderForm():JSX.Element {
     const onSubmit = (data: OrderFormValues) => {
         // console.log(JSON.stringify(data));
         setSubmitSuccess(true);
+        
     };
 
     const deliveryMethod = watch('deliveryMethod');

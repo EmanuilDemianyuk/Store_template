@@ -4,13 +4,16 @@ import {
   CardBody,
 } from "@material-tailwind/react";
 import styles from './style.module.scss';
+import { useActions } from "../../hooks/useActions";
  
 function OrderSuccess():JSX.Element {
   const [message, setMessage] = useState<boolean>(true);
+  const { removeAllItem } = useActions();
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setMessage(false);
+      removeAllItem();
       window.location.replace('http://localhost:3000/');
     }, 3000);
   

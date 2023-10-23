@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ProgressBar } from 'react-loader-spinner';
 import { PATH__ITEM__DRINKS } from '../../../constants/urlAPI';
-import { useGetProductsQuery } from '../../../store/products/products.api';
+import { useGetProductsQuery } from '../../../store/api/products.api';
 import ProductsSwipper from '../../ProductsSwipper';
 import { Button, ButtonGroup } from '@material-tailwind/react';
 import styles from './style.module.scss';

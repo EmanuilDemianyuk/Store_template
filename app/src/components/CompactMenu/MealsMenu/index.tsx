@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ProgressBar } from  'react-loader-spinner'
-import { useGetTopProductsQuery } from '../../../store/products/products.api';
+import { useGetTopProductsQuery } from '../../../store/api/products.api';
 import ProductsSwipper from '../../ProductsSwipper';
 import { CustomStepper } from '../CustomStepper';
 import styles from './style.module.scss';

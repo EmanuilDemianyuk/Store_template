@@ -23,3 +23,20 @@ export interface IStorage {
     removeItem(key: string): void;
     clear():void;
 }
+export interface IUserAddress {
+    address: {
+        city: string
+        street: string
+        number: number
+        entrance: never
+        floor: Nullable<string>
+        apartment: Nullable<string>
+    }
+}
+export interface IUser {
+    id: number;
+    userName: string
+    password: number
+    phone: number
+    address: IUserAddress
+}

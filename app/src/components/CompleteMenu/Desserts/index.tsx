@@ -1,7 +1,7 @@
 import React from 'react';
 import { ProgressBar } from 'react-loader-spinner';
 import { PATH__ITEM__DESSERTS } from '../../../constants/urlAPI';
-import { useGetProductsQuery } from '../../../store/products/products.api';
+import { useGetProductsQuery } from '../../../store/api/products.api';
 import ProductsSwipper from '../../ProductsSwipper';
 import styles from './style.module.scss';
 

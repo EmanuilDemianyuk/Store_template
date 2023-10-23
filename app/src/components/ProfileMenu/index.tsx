@@ -87,7 +87,7 @@ const ProfileMenu:FC = () => {
               <Typography 
               variant="small" 
               className={styles.ProfileMenu__Typography}>
-                Inbox
+                Order History
               </Typography>
             </MenuItem>
             <MenuItem className={styles.ProfileMenu__MenuItem}>

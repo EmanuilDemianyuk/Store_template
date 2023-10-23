@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Navbar,
   Collapse,
@@ -20,10 +20,11 @@ export default function NavMenu() {
   const location = useLocation();
   const menuRef = useRef(null);
 
-  const { card, drawer: {openRight} } = useTypedSelector(state => state);
+  const { users, card, drawer: {openRight} } = useTypedSelector(state => state);
   const isSomethingExists = card.length;
 
-  const USER__ACTIVE = true;
+  const USER__ACTIVE = !users;
+
 
   const { handlerDrawerSlide } = useActions();
   const handlerDrawButton = () => {
