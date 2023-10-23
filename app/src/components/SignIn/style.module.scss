@@ -1,0 +1,49 @@
+.SignIn {
+    &__icon {
+        @apply rounded-full bg-BrandDarkGreen hidden lg:inline-block;
+    }
+
+    &__Dialog {
+        @apply bg-transparent shadow-none;
+    }
+
+    &__Card {
+        @apply mx-auto w-full max-w-[24rem] bg-BrandWrapperGB text-BrandDarkGreen;
+    }
+
+    &__CardBody {
+        @apply flex flex-col gap-4;
+    }
+
+    &__h4 {
+        @apply text-BrandDarkGreen font-content;
+    }
+
+    &__p {
+        @apply mb-3 font-content;
+    }
+
+    &__h6 {
+        @apply -mb-2 font-content;
+    }
+
+    &__CardFooter {
+        @apply pt-0;
+    }
+
+    &__Button {
+        @apply bg-BrandDarkGreen hover:bg-BrandLightGreen hover:text-BrandDarkGreen rounded-full font-content;
+    }
+
+    &__linkBox {
+        @apply mt-4 flex justify-center font-content;
+    }
+
+    &__link {
+        @apply ml-1 font-content font-bold text-black;
+    }
+
+    &__errorMsg {
+        @apply text-xs text-red-500 font-content;
+    }
+}

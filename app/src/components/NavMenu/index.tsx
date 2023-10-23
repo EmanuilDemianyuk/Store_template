@@ -14,6 +14,7 @@ import styles from './style.module.scss';
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { useActions } from "../../hooks/useActions";
 import ProfileMenu from "../ProfileMenu";
+import { SignIn } from "../SignIn";
  
 export default function NavMenu() {
   const [openNav, setOpenNav] = useState(false);
@@ -23,7 +24,7 @@ export default function NavMenu() {
   const { card, drawer: {openRight} } = useTypedSelector(state => state);
   const isSomethingExists = card.length;
 
-  const USER__ACTIVE = true;
+  const USER__ACTIVE = false;
 
   const { handlerDrawerSlide } = useActions();
   const handlerDrawButton = () => {
@@ -102,9 +103,7 @@ export default function NavMenu() {
             
           {
             !USER__ACTIVE 
-            ? <IconButton className={styles.NavBar__icon}>
-                <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
-              </IconButton>
+            ? <SignIn />
             : <div className={styles.NavBar__icon} >
                 <ProfileMenu/>
               </div>
