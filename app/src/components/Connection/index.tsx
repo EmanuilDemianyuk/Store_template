@@ -1,4 +1,3 @@
-import React from 'react';
 import Location from '../Location';
 import backcontact from '../../assets/img/bg-contact.jpeg';
 import styles from './style.module.scss';

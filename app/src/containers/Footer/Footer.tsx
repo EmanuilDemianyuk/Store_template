@@ -1,10 +1,8 @@
-import React from 'react';
 import Newsletter from '../../components/Newsletter';
 import WetPrinting from '../../components/WetPrinting';
 import styles from './style.module.scss';
 
-
-const Footer = () => {
+const Footer = ():JSX.Element => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__mainContainer}>

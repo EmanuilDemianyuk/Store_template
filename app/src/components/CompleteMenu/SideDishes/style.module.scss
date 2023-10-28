@@ -4,6 +4,14 @@
     h3 {
         @apply font-header mb-8 text-3xl border-b-4 border-BrandDarkGreen;
     }
+
+    &__error {
+        @apply text-center;
+
+        h6 {
+            @apply text-red-500 font-content;
+        }
+    }
 }
 .dataContainer {
     @apply flex justify-center;

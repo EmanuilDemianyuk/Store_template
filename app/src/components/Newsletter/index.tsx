@@ -1,6 +1,4 @@
-import React from 'react';
 import { useForm } from 'react-hook-form';
-// import { DevTool } from '@hookform/devtools';
 import styles from './style.module.scss';
 
 type FormValues = {
@@ -14,11 +12,10 @@ const Newsletter = ():JSX.Element => {
       email: '',
     }
   });
-  const { register, resetField, control, handleSubmit, formState } = form;
+  const { register, resetField, handleSubmit, formState } = form;
   const { errors } = formState;
 
   const onSubmit = (data: FormValues) => {
-    console.log(data);
     resetField('email');
   }
 
@@ -49,7 +46,6 @@ const Newsletter = ():JSX.Element => {
         <div className={styles.Newsletter__errorMessage}>
           {errors.email?.message}
         </div>
-        {/* <DevTool control={control} /> */}
     </div>
   )
 }

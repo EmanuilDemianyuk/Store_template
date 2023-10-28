@@ -1,4 +1,3 @@
-import React from 'react';
 import { CarouselCustom } from '../CarouselCustom';
 import styles from './style.module.scss';
 

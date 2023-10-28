@@ -1,4 +1,3 @@
-import React from 'react';
 import Quality from '../components/Quality';
 import SocialMedia from '../components/SocialMedia';
 

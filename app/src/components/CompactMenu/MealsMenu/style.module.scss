@@ -4,6 +4,14 @@
     h3 {
         @apply mt-4 lg:mt-0 basis-full lg:basis-1/2 font-header text-3xl lg:text-4xl;
     }
+
+    &__error {
+        @apply text-center;
+
+        h6 {
+            @apply text-red-500 font-content;
+        }
+    }
 }
 .dataContainer {
     @apply flex justify-center;
