@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const withMT = require("@material-tailwind/react/utils/withMT");
+// const img = require('./src/assets/img/')
 
 module.exports = withMT({
   content: [
@@ -24,7 +25,22 @@ module.exports = withMT({
         'lightGreenWetPrinting': ' #C9FFBF'
       }
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'welcome': "url('../../assets/img/pizza-welcome-1.jpeg')",
+      },
+      keyframes: {
+        scroll: {
+          '100%': { 'background-position': '0px -3%' }
+        }
+      },
+      animation: {
+        scroll: 'scroll 20s linear 1'
+      },
+      height: {
+        '425': '26.5rem'
+      }
+    },
   },
   plugins: [],
 })
