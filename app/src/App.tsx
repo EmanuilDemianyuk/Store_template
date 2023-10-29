@@ -1,4 +1,3 @@
-// import styles from './App.module.scss';
 import {
   BrowserRouter,
   Route,

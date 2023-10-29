@@ -6,7 +6,7 @@ import ProductsSwipper from '../../ProductsSwipper';
 import { Button, ButtonGroup } from '@material-tailwind/react';
 import styles from './style.module.scss';
 
-function Pizza() {
+function Pizza():JSX.Element {
     const [isVisible, setIsVisible] = useState<boolean>(false);
     const { data, isLoading, error } = useGetProductsQuery(PATH__ITEM__PIZZAS);
     const notVegetarian = data?.filter(item => item.type === 'not-vegetarian');
@@ -49,8 +49,9 @@ function Pizza() {
                     barColor = '#068C52'
                     />
                     : error ?
-                    <div>
-                        <h1>Error</h1>
+                    <div className={styles.CategoryBlock__error}>
+                        <i className="fa-solid fa-triangle-exclamation fa-bounce fa-2xl" style={{color: "#f83a3a"}}></i>
+                        <h6>Error! Check your connection to the server.</h6>
                     </div>
                     :  isVisible ? 
                     <ProductsSwipper products={vegetarian} /> 

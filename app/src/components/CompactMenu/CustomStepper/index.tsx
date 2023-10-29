@@ -1,4 +1,3 @@
-import React from "react";
 import { Stepper, Step, CardHeader, Typography } from "@material-tailwind/react";
 import { CustomStepperProps } from "../../../typesOrInterface/interface";
 import styles from './style.module.scss';

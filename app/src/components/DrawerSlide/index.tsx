@@ -1,16 +1,16 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import {
     Typography,
     IconButton,
     Drawer,
   } from "@material-tailwind/react";
-import styles from './style.module.scss';
 import ItemCard from './ItemCard';
+import DrawerNav from './DrawerNav';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 import { useActions } from '../../hooks/useActions';
-import DrawerNav from './DrawerNav';
+import styles from './style.module.scss';
 
-const DrawerSlide:FC = () => {
+const DrawerSlide:FC = ():JSX.Element => {
   const { drawer: {openRight}, card } = useTypedSelector(state => state);
   const { handlerDrawerSlide } = useActions();
 

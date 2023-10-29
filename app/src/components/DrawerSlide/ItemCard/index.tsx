@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { IProduct } from '../../../typesOrInterface/interface';
-import styles from './style.module.scss';
 import { IconButton } from '@material-tailwind/react';
 import { useActions } from '../../../hooks/useActions';
+import styles from './style.module.scss';
 
 const ItemCard: FC<IProduct> = ({
   id,

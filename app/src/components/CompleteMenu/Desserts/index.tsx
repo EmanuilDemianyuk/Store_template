@@ -1,11 +1,10 @@
-import React from 'react';
 import { ProgressBar } from 'react-loader-spinner';
 import { PATH__ITEM__DESSERTS } from '../../../constants/urlAPI';
 import { useGetProductsQuery } from '../../../store/api/products.api';
 import ProductsSwipper from '../../ProductsSwipper';
 import styles from './style.module.scss';
 
-function Desserts() {
+function Desserts():JSX.Element {
     const { data, isLoading, error } = useGetProductsQuery(PATH__ITEM__DESSERTS);
 
     return (
@@ -24,8 +23,9 @@ function Desserts() {
                     barColor = '#068C52'
                     />
                     : error ?
-                    <div>
-                        <h1>Error</h1>
+                    <div className={styles.CategoryBlock__error}>
+                        <i className="fa-solid fa-triangle-exclamation fa-bounce fa-2xl" style={{color: "#f83a3a"}}></i>
+                        <h6>Error! Check your connection to the server.</h6>
                     </div>
                     :
                     <ProductsSwipper products={data} />

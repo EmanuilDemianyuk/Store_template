@@ -5,7 +5,10 @@ import ProductsSwipper from '../../ProductsSwipper';
 import { CustomStepper } from '../CustomStepper';
 import styles from './style.module.scss';
 
-const MealsMenu = () => {
+/**
+ *  @description The component returns the products with the highest rating filtered by category 
+ */
+const MealsMenu = ():JSX.Element => {
   const [activeStep, setActiveStep] = useState<number>(0);
   const { data, isLoading, error } = useGetTopProductsQuery(5);
   const pizza = data?.filter(item => item.category === 'pizza');
@@ -30,8 +33,9 @@ const MealsMenu = () => {
               barColor="#068C52"
               />
               : error ? 
-              <div>
-                <h1>Error</h1>
+              <div className={styles.MealsMenu__error}>
+                <i className="fa-solid fa-triangle-exclamation fa-bounce fa-2xl" style={{color: "#f83a3a"}}></i>
+                <h6>Error! Check your connection to the server.</h6>
               </div>
               :
               <CustomStepper activeStep={activeStep} setActiveStep={setActiveStep} />

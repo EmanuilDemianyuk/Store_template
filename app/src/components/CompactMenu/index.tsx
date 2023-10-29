@@ -1,9 +1,8 @@
-import React from 'react';
 import MealsMenu from './MealsMenu';
 import { Link } from 'react-router-dom';
 import styles from './style.module.scss';
 
-const CompactMenu = () => {
+const CompactMenu = ():JSX.Element => {
   return (
     <div className={styles.CompactMenu}>    
         <section>
