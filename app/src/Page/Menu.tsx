@@ -1,7 +1,6 @@
-import React from 'react';
 import { CompleteMenu } from '../components/CompleteMenu';
 
-export const Menu = () => {
+export const Menu = ():JSX.Element => {
   return (
     <CompleteMenu />
   );

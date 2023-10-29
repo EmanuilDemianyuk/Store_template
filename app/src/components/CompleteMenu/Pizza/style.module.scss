@@ -15,6 +15,14 @@
     &__rightBtn {
         @apply text-BrandDarkGreen border-BrandDarkGreen rounded-e-3xl font-content hover:bg-BrandDarkGreen hover:text-white;
     }
+
+    &__error {
+        @apply text-center;
+
+        h6 {
+            @apply text-red-500 font-content;
+        }
+    }
 }
 .dataContainer {
     @apply flex justify-center;

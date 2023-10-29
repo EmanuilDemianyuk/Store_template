@@ -1,10 +1,8 @@
-import React from 'react';
 import logofacebook  from './../../assets/svg/SocialIcons/logo-facebook.svg';
 import logogithub  from './../../assets/svg/SocialIcons/logo-github.svg';
 import logoinstagram  from './../../assets/svg/SocialIcons/logo-instagram.svg';
 import logotwitter  from './../../assets/svg/SocialIcons/logo-twitter.svg';
 import styles from './style.module.scss';
-
 
 const WetPrinting = ():JSX.Element => {
   return (

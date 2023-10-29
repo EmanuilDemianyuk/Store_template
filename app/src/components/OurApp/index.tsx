@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from "@material-tailwind/react";
 import google from '../../assets/img/gpIcon.png';
 import apple from '../../assets/img/apsIcon.png';

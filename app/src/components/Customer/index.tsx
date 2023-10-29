@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     Card,
     CardHeader,
@@ -10,10 +9,10 @@ import ReadonlyRating from '../ReadonlyRating';
 import styles from './style.module.scss';
 
 interface CustomerProps {
-    fullName: string,
-    rate: number,
-    date: string,
-    imageSrc: string
+  fullName: string;
+  rate: number;
+  date: string;
+  imageSrc: string;
 }
 
 function Customer({fullName, rate, date, imageSrc}: CustomerProps):JSX.Element {

@@ -1,4 +1,3 @@
-import React from 'react';
 import qfood from '../../assets/img/quality.jpeg';
 import pizzaprocess from '../../assets/img/process.jpeg';
 import basil from '../../assets/img/basil.png';

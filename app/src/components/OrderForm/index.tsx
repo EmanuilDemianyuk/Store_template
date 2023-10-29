@@ -33,11 +33,10 @@ type OrderFormValues = {
 function OrderForm():JSX.Element {
     const [submitSuccess, setSubmitSuccess] = useState<boolean>(false);
     const form = useForm<OrderFormValues>();
-    const { register, control, handleSubmit, formState, watch } = form;
+    const { register, handleSubmit, formState, watch } = form;
     const { errors } = formState;
 
     const onSubmit = (data: OrderFormValues) => {
-        // console.log(JSON.stringify(data));
         setSubmitSuccess(true);
     };
 

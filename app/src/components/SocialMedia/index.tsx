@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from "@material-tailwind/react";
 import igOne from '../../assets/img/teamone.jpeg';
 import igTwo from '../../assets/img/about-ig-two.jpeg';
