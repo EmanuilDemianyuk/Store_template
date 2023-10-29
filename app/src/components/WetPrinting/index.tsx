@@ -11,16 +11,16 @@ const WetPrinting = ():JSX.Element => {
     <div className={styles.WetPrinting}>
         <p>© 2023 All rights reserved</p>
         <div>
-            <a href='https://www.facebook.com/' target='_blank'>
+            <a href='https://www.facebook.com/' rel="noreferrer" target='_blank'>
                 <img src={logofacebook} alt='socialLogo' />
             </a>
-            <a href='https://twitter.com/' target='_blank'>
+            <a href='https://twitter.com/' rel="noreferrer" target='_blank'>
                 <img src={logotwitter} alt='socialLogo'/>
-            </a>
-            <a href='https://www.instagram.com/' target='_blank'>
+            </a> 
+            <a href='https://www.instagram.com/' rel="noreferrer" target='_blank'>
                 <img src={logoinstagram} alt='socialLogo'/>
             </a>
-            <a href='https://github.com/' target='_blank'>
+            <a href='https://github.com/' rel="noreferrer" target='_blank'>
                 <img src={logogithub} alt='socialLogo'/>
             </a>
         </div>
