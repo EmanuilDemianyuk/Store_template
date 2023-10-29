@@ -2,7 +2,6 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { IProduct } from "../../typesOrInterface/interface";
 import { localStorageManager } from "../../classes/StorageManager";
 import { ORDER__CACHE__KEY } from "../../constants/localStorageKey";
-import { stat } from "fs";
 
 const localData = localStorageManager.getItem<IProduct[]>(ORDER__CACHE__KEY)
 

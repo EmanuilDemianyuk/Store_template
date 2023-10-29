@@ -12,7 +12,7 @@ export const store = configureStore({
         drawer: drawerReducer
     },
     middleware: getDefaultMiddleware => 
-        getDefaultMiddleware().concat(productApi.middleware)
+        getDefaultMiddleware().concat(productApi.middleware, usersApi.middleware)
 })
 
 export type TypeRootState = ReturnType<typeof store.getState>

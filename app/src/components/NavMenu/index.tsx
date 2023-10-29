@@ -15,19 +15,21 @@ import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { useActions } from "../../hooks/useActions";
 import ProfileMenu from "../ProfileMenu";
 import { SignIn } from "../SignIn";
+import { readerMutations } from "../../functions/readerMutations";
  
 export default function NavMenu() {
   const [openNav, setOpenNav] = useState(false);
   const location = useLocation();
   const menuRef = useRef(null);
 
-  const { users, card, drawer: {openRight} } = useTypedSelector(state => state);
+  const { users: { mutations }, card, drawer: {openRight} } = useTypedSelector(state => state);
   const isSomethingExists = card.length;
+  const userMutationState = readerMutations(mutations);
 
-  const USER__ACTIVE = !users;
-
-
+  const USER__VERIFCATION = false; 
+console.log(mutations)
   const { handlerDrawerSlide } = useActions();
+
   const handlerDrawButton = () => {
     handlerDrawerSlide(!openRight);
   }
@@ -103,7 +105,7 @@ export default function NavMenu() {
           <div className={styles.NavBar__container_iconButton}>
             
           {
-            !USER__ACTIVE 
+            !USER__VERIFCATION 
             ? <SignIn />
             : <div className={styles.NavBar__icon} >
                 <ProfileMenu/>
@@ -166,7 +168,7 @@ export default function NavMenu() {
             {navList}
               <div className={styles.MobileNav__iconBox}>
                 {
-                  !USER__ACTIVE 
+                  !USER__VERIFCATION  
                   ? <IconButton 
                     className={styles.IconButton}>
                       <i className="fa-solid fa-circle-user fa-2xl"     style={{color: "#dcfce7"}}></i>

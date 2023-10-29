@@ -25,18 +25,23 @@ export interface IStorage {
 }
 export interface IUserAddress {
     address: {
-        city: string
-        street: string
-        number: number
-        entrance: never
-        floor: Nullable<string>
-        apartment: Nullable<string>
+        city: string;
+        street: string;
+        number: number;
+        entrance: number;
+        floor: Nullable<string>;
+        apartment: Nullable<string>;
     }
 }
 export interface IUser {
     id: number;
-    userName: string
-    password: number
-    phone: number
-    address: IUserAddress
+    userName: string;
+    email: string
+    password: string;
+    phone: string;
+    address: Nullable<IUserAddress>;
+}
+export interface ILoginUser {
+    email: string;
+    password: string;
 }

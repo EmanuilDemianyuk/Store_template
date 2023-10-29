@@ -12,6 +12,10 @@ import {
 } from "@material-tailwind/react";
 import { useForm } from 'react-hook-form';
 import styles from './style.module.scss';
+import { useActions } from "../../hooks/useActions";
+import { useTypedSelector } from "../../hooks/useTypedSelector";
+import { useVerificationUserMutation } from "../../store/api/users.api";
+import { ILoginUser } from "../../typesOrInterface/interface";
 
 type SignInValues = {
     email: string;
@@ -21,22 +25,25 @@ type SignInValues = {
 export function SignIn():JSX.Element {
   const [open, setOpen] = useState<boolean>(false);
   const handleOpen = () => setOpen((cur) => !cur);
-
+  
+  const [verificationUser, { data, error, isLoading }]  = useVerificationUserMutation();
+  
+  
   const form = useForm<SignInValues>({
     mode: 'onChange',
     defaultValues: {
       email: '',
-      password: ''
+      password: '',
     }
   });
   const { register, resetField, control, handleSubmit, formState } = form;
   const { errors } = formState;
 
-  const onSubmit = (data: SignInValues) => {
-    // console.log(data);
+  const onSubmit = (dataForm: SignInValues) => {
     resetField('email');
     resetField('password');
     handleOpen();
+    verificationUser(dataForm);
   };
  
   return (
