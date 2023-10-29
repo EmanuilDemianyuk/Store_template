@@ -1,11 +1,11 @@
 .Connection {
-    @apply container my-0 py-2 md:my-5 max-h-max max-w-screen-xl md:py-10 px-4 lg:px-8 lg:py-2;
+    @apply container max-h-max max-w-screen-xl my-0 py-2 md:my-5 md:py-10 px-4 lg:px-8 lg:py-2;
 
     &__imgBox {
         @apply w-full max-h-48 lg:max-h-60 overflow-hidden;
 
         img {
-            @apply w-full h-full object-cover rounded-t-[16px];
+            @apply w-full h-full object-cover rounded-t-2xl;
         }
     }
     &__telephone {
