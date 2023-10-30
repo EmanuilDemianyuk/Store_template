@@ -15,7 +15,14 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://store-template-server.vercel.app/"],
+    methods: ["POST", "GET", "DELETE", "PUT"],
+    credentials: true
+  }
+));
+
 app.use(productRouters);
 app.use(imageRouters);
 app.use(userRouters);
