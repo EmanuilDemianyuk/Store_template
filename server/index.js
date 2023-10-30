@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cors(
   {
-    origin: ["https://store-template-server.vercel.app/"],
+    origin: ["https://store-template-dusky.vercel.app"],
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true
   }
