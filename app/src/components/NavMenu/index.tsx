@@ -27,7 +27,7 @@ export default function NavMenu() {
   const userMutationState = readerMutations(mutations);
 
   const USER__VERIFCATION = false; 
-console.log(mutations)
+
   const { handlerDrawerSlide } = useActions();
 
   const handlerDrawButton = () => {
