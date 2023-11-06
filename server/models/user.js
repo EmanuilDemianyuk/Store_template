@@ -13,8 +13,8 @@ const userSchema = new Schema({
         street: String,
         number: Number,
         entrance: Number,
-        floor: String,
-        apartment: String,
+        floor: [String],
+        apartment: [String],
     },
     orders: [Array]
 })

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React from 'react';
 import {
     Menu,
     MenuHandler,
@@ -9,8 +9,10 @@ import {
 } from "@material-tailwind/react";
 import avatar from '../../assets/img/customer-1.jpeg';
 import styles from './style.module.scss';
+import Cookies from 'js-cookie';
+import { USER__CASHE__KEY } from '../../constants/browserApiKey';
 
-const ProfileMenu:FC = () => {
+const ProfileMenu = ({openModalWindow, setOpenModalWindow}: any) => {
     return (
         <Menu>
           <MenuHandler>
@@ -112,7 +114,12 @@ const ProfileMenu:FC = () => {
               </Typography>
             </MenuItem>
             <hr />
-            <MenuItem className={styles.ProfileMenu__MenuItem}>
+            <MenuItem 
+            className={styles.ProfileMenu__MenuItem} 
+            onClick={() => {
+              Cookies.remove(USER__CASHE__KEY);
+              setOpenModalWindow(!openModalWindow)
+            }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

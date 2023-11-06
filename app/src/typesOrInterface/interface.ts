@@ -39,9 +39,13 @@ export interface IUser {
     email: string
     password: string;
     phone: string;
-    address: Nullable<IUserAddress>;
+    address: IUserAddress;
 }
 export interface ILoginUser {
     email: string;
     password: string;
+}
+export interface IUserCashe {
+    message: string,
+    userData: IUser
 }

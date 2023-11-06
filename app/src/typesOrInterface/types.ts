@@ -5,3 +5,10 @@ export type TResponseMutations = {
     message: string,
     userData: IUser 
 }
+
+export type TStatusCode = {
+    status: number,
+    data: {
+        message: string
+    }
+}

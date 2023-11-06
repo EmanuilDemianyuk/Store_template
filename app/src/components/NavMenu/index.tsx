@@ -15,18 +15,19 @@ import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { useActions } from "../../hooks/useActions";
 import ProfileMenu from "../ProfileMenu";
 import { SignIn } from "../SignIn";
-import { readerMutations } from "../../functions/readerMutations";
+import useAuth from "../../hooks/useAuth";
  
 export default function NavMenu() {
-  const [openNav, setOpenNav] = useState(false);
+  const [openNav, setOpenNav] = useState<boolean>(false);
+  const [openModalWindow, setOpenModalWindow] = useState<boolean>(false);
   const location = useLocation();
   const menuRef = useRef(null);
 
-  const { users: { mutations }, card, drawer: {openRight} } = useTypedSelector(state => state);
+  const { card, drawer: {openRight} } = useTypedSelector(state => state);
   const isSomethingExists = card.length;
-  const userMutationState = readerMutations(mutations);
 
-  const USER__VERIFCATION = false; 
+  const payload = useAuth();
+  const USER__VERIFCATION = !!payload?.message; 
 
   const { handlerDrawerSlide } = useActions();
 
@@ -106,9 +107,13 @@ export default function NavMenu() {
             
           {
             !USER__VERIFCATION 
-            ? <SignIn />
+            ? <SignIn openModalWindow={openModalWindow} 
+            setOpenModalWindow={setOpenModalWindow}/>
             : <div className={styles.NavBar__icon} >
-                <ProfileMenu/>
+                <ProfileMenu
+                openModalWindow={openModalWindow} 
+                setOpenModalWindow={setOpenModalWindow}
+                />
               </div>
           }
 

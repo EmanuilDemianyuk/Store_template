@@ -14,11 +14,11 @@ function OrderSuccess():JSX.Element {
     const timer = setTimeout(() => {
       setMessage(false);
       removeAllItem();
-      window.location.replace('http://localhost:3000/');
+      window.location.replace('/');
     }, 3000);
   
     return () => clearTimeout(timer);
-  }, [])
+  })
   
   return (
     <>

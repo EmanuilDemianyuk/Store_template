@@ -7,26 +7,28 @@ import {
   CardFooter,
   Typography,
   Input,
-  Checkbox,
   IconButton,
+  Checkbox
 } from "@material-tailwind/react";
 import { useForm } from 'react-hook-form';
 import styles from './style.module.scss';
-import { useActions } from "../../hooks/useActions";
-import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { useVerificationUserMutation } from "../../store/api/users.api";
-import { ILoginUser } from "../../typesOrInterface/interface";
+import Cookies from 'js-cookie';
+import { USER__CASHE__KEY } from "../../constants/browserApiKey";
+import { TStatusCode } from "../../typesOrInterface/types";
+import cookiesLifeCycle from "../../functions/cookiesLifeCycle";
 
 type SignInValues = {
     email: string;
     password: string;
 }
  
-export function SignIn():JSX.Element {
-  const [open, setOpen] = useState<boolean>(false);
-  const handleOpen = () => setOpen((cur) => !cur);
+export function SignIn({openModalWindow, setOpenModalWindow}: any):JSX.Element {
+  const [checked, setChecked] = useState<boolean>(false);
+  const [authFail, setAuthFail] = useState<TStatusCode | undefined>();
+  const handleModalWindow = () => setOpenModalWindow(!openModalWindow);
   
-  const [verificationUser, { data, error, isLoading }]  = useVerificationUserMutation();
+  const [verificationUser]  = useVerificationUserMutation();
   
   
   const form = useForm<SignInValues>({
@@ -36,25 +38,33 @@ export function SignIn():JSX.Element {
       password: '',
     }
   });
-  const { register, resetField, control, handleSubmit, formState } = form;
-  const { errors } = formState;
+  const { register, reset, handleSubmit, formState: { errors } } = form;
 
-  const onSubmit = (dataForm: SignInValues) => {
-    resetField('email');
-    resetField('password');
-    handleOpen();
-    verificationUser(dataForm);
+  const onSubmit = async (dataForm: SignInValues) => {    
+    try {
+      const payload = await verificationUser(dataForm).unwrap();
+      const userData = JSON.stringify(payload)
+      Cookies.set(USER__CASHE__KEY, userData, cookiesLifeCycle(checked, 7));
+
+      reset();
+      handleModalWindow();
+    } 
+    catch (error) {
+      if(typeof error === 'object') {
+        setAuthFail(error as TStatusCode);
+      }
+    }
   };
- 
+
   return (
     <>
-      <IconButton onClick={handleOpen} className={styles.SignIn__icon}>
+      <IconButton onClick={handleModalWindow} className={styles.SignIn__icon}>
         <i className="fa-solid fa-circle-user fa-2xl" style={{color: "#dcfce7"}}></i>
       </IconButton>
       <Dialog
         size="xs"
-        open={open}
-        handler={handleOpen}
+        open={openModalWindow}
+        handler={handleModalWindow}
         className={styles.SignIn__Dialog}
       >
         <Card className={styles.SignIn__Card}>
@@ -107,9 +117,9 @@ export function SignIn():JSX.Element {
                 })}
                 />
                 <p className={styles.SignIn__errorMsg}>{errors.password?.message}</p>
-           {/* <div className="-ml-2.5 -mt-3">
-             <Checkbox label="Remember Me" crossOrigin={undefined} />
-           </div> */}
+                { 
+                  authFail && <p className={styles.SignIn__errorMsg}>{authFail?.data.message}</p>
+                }
             </CardBody>
             <CardFooter className={styles.SignIn__CardFooter}>
                 <Button 
@@ -120,16 +130,19 @@ export function SignIn():JSX.Element {
                 >
                     Sign In
                 </Button>
+                <Checkbox crossOrigin='true' onChange={() => {
+                 setChecked(!checked) 
+                }} label="Remember Me" />
                 <Typography 
                 variant="small" 
                 className={styles.SignIn__linkBox}>
                     Don&apos;t have an account?
                     <Typography
                     as="a"
-                    href="#signup"
+                    href="/signup"
                     variant="small"
                     className={styles.SignIn__link}
-                    onClick={handleOpen}
+                    onClick={handleModalWindow}
                     >
                     Sign up
                     </Typography>
