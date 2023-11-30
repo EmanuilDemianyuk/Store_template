@@ -9,7 +9,7 @@
 <p>This is a e-commerce website built with React(Typescript) and TailwindCSS. This is a team project written by 2 developers. This is the site of a restaurant specializing in pizzas, hence the name YumPizza.</p>
 <p>The following tasks were completed in the project: writing a database, storing cookies, adding products to the cart, and a checkout form.</p>
 
-👉 Live Demo: <a href='https://store-template-dusky.vercel.app/'>YumPizza Demo</a>
+👉 Live Demo: <a href='https://store-template-dusky.vercel.app/' target='_blank'>YumPizza Demo</a>
 
 <h3>Build with:</h3>
 
