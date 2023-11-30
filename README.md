@@ -14,32 +14,10 @@
 <h3>Build with:</h3>
 
 <p>» Frontend</p>
-<ul>
-    <li>React(Typescript):
-        <ul>
-            <li>Redux ToolKit</li>
-            <li>Redux</li>
-            <li>React router dom</li>
-            <li>React hook form</li>
-            <li>Classname</li>
-            <li>TailwindCSS</li>
-            <li>Material Tailwind</li>
-            <li>SCSS</li>
-            <li>Swiper</li>
-            <li>React-loader-spinner</li>
-            <li>Js-cookie</li>
-        </ul>
-    </li>
-</ul>
+[![Frontend](https://skillicons.dev/icons?i=react,ts,redux,sass,tailwind)](https://skillicons.dev)
+
 <p>» Backend</p>
-<ul>
-    <li>Cors</li>
-    <li>Dotenv</li>
-    <li>Express</li>
-    <li>Mongodb</li>
-    <li>Mongoose</li>
-    <li>Nodemon</li>
-</ul>
+[![Backend](https://skillicons.dev/icons?i=nodejs,express,mongodb)](https://skillicons.dev)
 
 <h2>Screenshots of the Project 📸</h2>
 <br>
