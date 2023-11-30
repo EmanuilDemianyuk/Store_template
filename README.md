@@ -16,10 +16,10 @@
 [![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
 
 <p>» Frontend</p>
-![Frontend](https://skillicons.dev/icons?i=react,ts,redux,sass,tailwind)](https://skillicons.dev)
+[![Frontend](https://skillicons.dev/icons?i=react,ts,redux,sass,tailwind)](https://skillicons.dev)
 
 <p>» Backend</p>
-![Backend](https://skillicons.dev/icons?i=nodejs,express,mongodb)](https://skillicons.dev)
+[![Backend](https://skillicons.dev/icons?i=nodejs,express,mongodb)](https://skillicons.dev)
 
 <h2>Screenshots of the Project 📸</h2>
 <br>
