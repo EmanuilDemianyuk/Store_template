@@ -13,8 +13,6 @@
 
 <h3>Build with:</h3>
 
-[![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
-
 <h4>» Frontend</h4>
 
 [![My Skills](https://skillicons.dev/icons?i=react,ts,redux,sass,tailwind)](https://skillicons.dev)
