@@ -1,5 +1,5 @@
 <div align='center'>
-<img src='https://cdn-icons-png.flaticon.com/512/1161/1161623.png'/>
+<img width="200px" src='https://cdn-icons-png.flaticon.com/512/1161/1161623.png'/>
 <br>
 <h1 align='center'>YumPizza</h1>
 </div>
@@ -13,7 +13,7 @@
 
 <h3>Build with:</h3>
 
-» Frontend <br>
+<p>» Frontend</p>
 <ul>
     <li>React(Typescript):
         <ul>
@@ -31,7 +31,7 @@
         </ul>
     </li>
 </ul>
-» Backend <br>
+<p>» Backend</p>
 <ul>
     <li>Cors</li>
     <li>Dotenv</li>
