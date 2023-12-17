@@ -1,4 +1,4 @@
-export const PATH = "http://localhost:8000";
+export const PATH = "https://store-template-server.vercel.app";
 
 export const BASE__URL__API = `${PATH}/products`;
 export const PATH__ITEM__PIZZAS = "pizza";
