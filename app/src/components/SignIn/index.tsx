@@ -113,7 +113,7 @@ export function SignIn({openModalWindow, setOpenModalWindow}: any):JSX.Element {
                 type="password"
                 {...register('password', {
                     required: 'Password is required',
-                    minLength: 5
+                    minLength: 8
                 })}
                 />
                 <p className={styles.SignIn__errorMsg}>{errors.password?.message}</p>
