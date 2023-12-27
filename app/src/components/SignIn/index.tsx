@@ -17,6 +17,7 @@ import Cookies from 'js-cookie';
 import { USER__CASHE__KEY } from "../../constants/browserApiKey";
 import { TStatusCode } from "../../typesOrInterface/types";
 import cookiesLifeCycle from "../../functions/cookiesLifeCycle";
+import SignUp from "../SignUp";
 
 type SignInValues = {
     email: string;
@@ -24,13 +25,11 @@ type SignInValues = {
 }
  
 export function SignIn({openModalWindow, setOpenModalWindow}: any):JSX.Element {
+  const [signUp, setSignUp] = useState<boolean>(false);
   const [checked, setChecked] = useState<boolean>(false);
   const [authFail, setAuthFail] = useState<TStatusCode | undefined>();
-  const handleModalWindow = () => setOpenModalWindow(!openModalWindow);
-  
   const [verificationUser]  = useVerificationUserMutation();
-  
-  
+
   const form = useForm<SignInValues>({
     mode: 'onChange',
     defaultValues: {
@@ -39,6 +38,15 @@ export function SignIn({openModalWindow, setOpenModalWindow}: any):JSX.Element {
     }
   });
   const { register, reset, handleSubmit, formState: { errors } } = form;
+
+  const handleModalWindow = () => {
+    setOpenModalWindow(!openModalWindow);
+    setSignUp(false);
+  };
+
+  const handleSignUp = () => {
+    setSignUp(true);
+  };
 
   const onSubmit = async (dataForm: SignInValues) => {    
     try {
@@ -67,89 +75,89 @@ export function SignIn({openModalWindow, setOpenModalWindow}: any):JSX.Element {
         handler={handleModalWindow}
         className={styles.SignIn__Dialog}
       >
-        <Card className={styles.SignIn__Card}>
-            <form onSubmit={handleSubmit(onSubmit)} noValidate>
-            <CardBody className={styles.SignIn__CardBody}>
-                <Typography 
-                variant="h4" 
-                className={styles.SignIn__h4}>
-                    Sign In
-                </Typography>
-                <Typography
-                    className={styles.SignIn__p}
-                    variant="paragraph"
-                    color="gray"
-                >
-                    Enter your email and password to Sign In.
-                </Typography>
-                <Typography 
-                className={styles.SignIn__h6}
-                variant="h6">
-                    Your Email
-                </Typography>
-                <Input 
-                label="Email" 
-                size="lg" 
-                crossOrigin={undefined} 
-                type="email"
-                {...register('email', {
-                    required: 'Email is required',
-                    pattern: {
-                      value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                      message: 'Invalid email format'
-                    }
-                })}
-                />
-                <p className={styles.SignIn__errorMsg}>{errors.email?.message}</p>
-                <Typography 
-                className={styles.SignIn__h6}
-                variant="h6">
-                    Your Password
-                </Typography>
-                <Input 
-                label="Password" 
-                size="lg" 
-                crossOrigin={undefined} 
-                type="password"
-                {...register('password', {
-                    required: 'Password is required',
-                    minLength: 8
-                })}
-                />
-                <p className={styles.SignIn__errorMsg}>{errors.password?.message}</p>
-                { 
-                  authFail && <p className={styles.SignIn__errorMsg}>{authFail?.data.message}</p>
-                }
-            </CardBody>
-            <CardFooter className={styles.SignIn__CardFooter}>
-                <Button 
-                variant="filled" 
-                type="submit"
-                fullWidth
-                className={styles.SignIn__Button}
-                >
-                    Sign In
-                </Button>
-                <Checkbox crossOrigin='true' onChange={() => {
-                 setChecked(!checked) 
-                }} label="Remember Me" />
-                <Typography 
-                variant="small" 
-                className={styles.SignIn__linkBox}>
-                    Don&apos;t have an account?
-                    <Typography
-                    as="a"
-                    href="/signup"
-                    variant="small"
-                    className={styles.SignIn__link}
-                    onClick={handleModalWindow}
-                    >
-                    Sign up
-                    </Typography>
-                </Typography>
-            </CardFooter>
-            </form>
-        </Card>
+        {signUp ? <SignUp /> : (
+           <Card className={styles.SignIn__Card}>
+           <form onSubmit={handleSubmit(onSubmit)} noValidate>
+           <CardBody className={styles.SignIn__CardBody}>
+               <Typography 
+               variant="h4" 
+               className={styles.SignIn__h4}>
+                   Sign In
+               </Typography>
+               <Typography
+                   className={styles.SignIn__p}
+                   variant="paragraph"
+                   color="gray"
+               >
+                   Enter your email and password to Sign In.
+               </Typography>
+               <Typography 
+               className={styles.SignIn__h6}
+               variant="h6">
+                   Your Email
+               </Typography>
+               <Input 
+               label="Email" 
+               size="lg" 
+               crossOrigin={undefined} 
+               type="email"
+               {...register('email', {
+                   required: 'Email is required',
+                   pattern: {
+                     value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                     message: 'Invalid email format'
+                   }
+               })}
+               />
+               <p className={styles.SignIn__errorMsg}>{errors.email?.message}</p>
+               <Typography 
+               className={styles.SignIn__h6}
+               variant="h6">
+                   Your Password
+               </Typography>
+               <Input 
+               label="Password" 
+               size="lg" 
+               crossOrigin={undefined} 
+               type="password"
+               {...register('password', {
+                   required: 'Password is required',
+                   minLength: 8
+               })}
+               />
+               <p className={styles.SignIn__errorMsg}>{errors.password?.message}</p>
+               { 
+                 authFail && <p className={styles.SignIn__errorMsg}>{authFail?.data.message}</p>
+               }
+               <Checkbox crossOrigin='true' onChange={() => {
+                setChecked(!checked) 
+               }} label="Remember Me" />
+               <Button 
+               variant="filled" 
+               type="submit"
+               fullWidth
+               className={styles.SignIn__Button}
+               >
+                  Sign In
+               </Button>
+           </CardBody>
+           </form>
+           <CardFooter className={styles.SignIn__CardFooter}>
+               <Typography 
+               variant="small" 
+               className={styles.SignIn__linkBox}>
+                   Don&apos;t have an account?
+                   <Typography
+                   variant="small"
+                   className={styles.SignIn__link}
+                   onClick={handleSignUp}
+                   >
+                     Sign up
+                   </Typography>
+               </Typography>
+           </CardFooter>
+          </Card>
+        )}
       </Dialog>
     </>
   );

@@ -40,7 +40,7 @@
     }
 
     &__link {
-        @apply ml-1 font-content font-bold text-black;
+        @apply cursor-pointer ml-1 font-content font-bold text-black hover:underline;
     }
 
     &__errorMsg {
