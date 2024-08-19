@@ -30,6 +30,7 @@
 </div>
 
 <br><br>
+
 <h3 align='center'>Menu Page 🍕</h3>
 
 <div align='center'>
@@ -56,8 +57,3 @@
 
 <div align='center'>
 <img src='screenshots/ordering-page.png'/>
-
-
-
-
-
