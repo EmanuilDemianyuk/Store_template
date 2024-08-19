@@ -1,18 +1,17 @@
 import { ProgressBar } from 'react-loader-spinner';
-import { PATH__ITEM__SIDE_DISHES } from '../../../constants/urlAPI';
-import { useGetProductsQuery } from '../../../store/api/products.api';
 import ProductsSwipper from '../../ProductsSwipper';
+import { useAppSelector } from '../../../hooks/useAppSelector';
 import styles from './style.module.scss';
 
 function SideDishes(): JSX.Element {
-    const { data, isLoading, error } = useGetProductsQuery(PATH__ITEM__SIDE_DISHES);
+    const { products: { side_dishes }, error, status } = useAppSelector(state => state.product);
 
     return (
         <div className={styles.CategoryBlock}>
             <h3>Sidedishes</h3>
             <div className={styles.dataContainer}>
                 {
-                    isLoading ?
+                    status !== "succeeded" ?
                         <ProgressBar
                             height="100"
                             width="80"
@@ -28,7 +27,7 @@ function SideDishes(): JSX.Element {
                                 <h6>Error! Check your connection to the server.</h6>
                             </div>
                             :
-                            <ProductsSwipper products={data} />
+                            <ProductsSwipper products={side_dishes} />
                 }
             </div>
         </div>
