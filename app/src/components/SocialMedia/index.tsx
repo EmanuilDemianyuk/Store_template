@@ -5,7 +5,7 @@ import igThree from '../../assets/img/about-ig-one.jpeg';
 import igFour from '../../assets/img/about-ig-three.jpeg';
 import styles from './style.module.scss';
 
-function SocialMedia():JSX.Element {
+function SocialMedia(): JSX.Element {
     return (
         <section className={styles.SocialMedia}>
             <div className={styles.SocialMedia__instaLinkBtn}>
@@ -14,7 +14,7 @@ function SocialMedia():JSX.Element {
                     <Button variant="outlined" className={styles.buttonIns}>
                         <a href='https://www.instagram.com/' target="_blank" rel="noreferrer">
                             Insta
-                            <i className="fa-solid fa-arrow-right ms-1" style={{color: '#000000'}}></i>
+                            <i className="fa-solid fa-arrow-right ms-1" style={{ color: '#000000' }}></i>
                         </a>
                     </Button>
                 </div>
@@ -25,10 +25,11 @@ function SocialMedia():JSX.Element {
                         <img
                             src={igOne}
                             alt="process"
+                            loading='lazy'
                         />
                         <figcaption>
                             <div>
-                                <a href='https://www.instagram.com/' target="_blank"    rel="noreferrer">
+                                <a href='https://www.instagram.com/' target="_blank" rel="noreferrer">
                                     Pizza in the process
                                 </a>
                             </div>
@@ -41,10 +42,11 @@ function SocialMedia():JSX.Element {
                         <img
                             src={igTwo}
                             alt="share in insta"
+                            loading='lazy'
                         />
                         <figcaption>
                             <div>
-                                <a href='https://www.instagram.com/' target="_blank"    rel="noreferrer">
+                                <a href='https://www.instagram.com/' target="_blank" rel="noreferrer">
                                     Take a photo
                                 </a>
                             </div>
@@ -57,10 +59,11 @@ function SocialMedia():JSX.Element {
                         <img
                             src={igThree}
                             alt="pizza"
+                            loading='lazy'
                         />
                         <figcaption>
                             <div>
-                                <a href='https://www.instagram.com/' target="_blank"    rel="noreferrer">
+                                <a href='https://www.instagram.com/' target="_blank" rel="noreferrer">
                                     Enjoy
                                 </a>
                             </div>
@@ -73,10 +76,11 @@ function SocialMedia():JSX.Element {
                         <img
                             src={igFour}
                             alt="pizza on table"
+                            loading='lazy'
                         />
                         <figcaption>
                             <div>
-                                <a href='https://www.instagram.com/' target="_blank"    rel="noreferrer">
+                                <a href='https://www.instagram.com/' target="_blank" rel="noreferrer">
                                     Share with friends
                                 </a>
                             </div>

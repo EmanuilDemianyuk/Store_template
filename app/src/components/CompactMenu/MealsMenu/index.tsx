@@ -15,14 +15,13 @@ const MealsMenu = (): JSX.Element => {
   const { topProducts, error, status } = useAppSelector(state => state.product)
   const dispatch = useDispatch();
 
-
   const pizza = topProducts.filter(item => item.category === 'pizza');
-  const sideDishes = topProducts.filter(item => item.category === 'side-dishes');
+  const sideDishes = topProducts.filter(item => item.category === 'side_dishes');
   const desserts = topProducts.filter(item => item.category === 'desserts');
   const drinks = topProducts.filter(item => item.category === 'drinks');
 
   useEffect(() => {
-    dispatch<any>(getTopProducts(5))
+    dispatch<any>(getTopProducts(4))
   }, [dispatch]);
 
   return (

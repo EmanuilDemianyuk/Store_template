@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import {
-    Card,
-    CardHeader,
-    CardBody,
-    CardFooter,
-    Typography,
-    Button,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+  Button,
 } from "@material-tailwind/react";
 import { useActions } from '../../hooks/useActions';
 import { IProduct } from '../../typesOrInterface/interface';
@@ -39,7 +39,7 @@ const ProductCard: FC<IProduct> = ({
   return (
     <Card className={styles.ProductCard}>
       <CardHeader className={styles.ProductCard__CardHeader}>
-        <img src={img} alt={name} />
+        <img src={img} alt={name} loading='lazy' />
       </CardHeader>
       <CardBody>
         <div className={styles.ProductCard__CardBody}>
@@ -54,8 +54,8 @@ const ProductCard: FC<IProduct> = ({
             ></i>
           </Typography>
         </div>
-        <Typography 
-        className={styles.ProductCard__ProductDesc}>
+        <Typography
+          className={styles.ProductCard__ProductDesc}>
           {description}
         </Typography>
       </CardBody>

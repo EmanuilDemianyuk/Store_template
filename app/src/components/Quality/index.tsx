@@ -5,38 +5,48 @@ import tomatos from '../../assets/img/tomatos.png';
 import { DefaultTimeline } from '../DefaultTimeline';
 import styles from './style.module.scss';
 
-function Quality():JSX.Element {
+function Quality(): JSX.Element {
     return (
         <section className={styles.Quality}>
             <div className={styles.Quality__Wrap}>
                 <div className={styles.Quality__containerImgOne}>
                     <img
-                    src={qfood}
-                    alt="food"
+                        src={qfood}
+                        alt="food"
+                        loading='lazy'
                     />
                 </div>
                 <div className={styles.Quality__containerDescription}>
                     <h3>Quality Pride: our place selects the finest ingredients for Your Delight.</h3>
                     <p>
-                    At our restaurant, we take pride in using only locally sourced, organic ingredients for our dishes. We believe in supporting local farmers and ensuring the freshest, most wholesome ingredients in every meal we serve.
+                        At our restaurant, we take pride in using only locally sourced, organic ingredients for our dishes. We believe in supporting local farmers and ensuring the freshest, most wholesome ingredients in every meal we serve.
                     </p>
                     <div className={styles.Quality__imgBox}>
-                        <img src={basil} alt="basil"/>
+                        <img
+                            src={basil}
+                            alt="basil"
+                            loading='lazy'
+                        />
                     </div>
                 </div>
             </div>
             <div className={styles.Quality__Wrap}>
                 <div className={styles.Quality__MadeToOrder}>
                     <h3>Made-to-Order: Every Dish Prepared Fresh!</h3>
-                        <DefaultTimeline />
+                    <DefaultTimeline />
                     <div className={styles.Quality__imgBox}>
-                        <img src={tomatos} alt="basil"/>
+                        <img
+                            src={tomatos}
+                            alt="basil"
+                            loading='lazy'
+                        />
                     </div>
                 </div>
                 <div className={styles.Quality__pizzaProcess}>
                     <img
-                    src={pizzaprocess}
-                    alt="food"
+                        src={pizzaprocess}
+                        alt="food"
+                        loading='lazy'
                     />
                 </div>
             </div>
